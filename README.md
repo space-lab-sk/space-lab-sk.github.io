@@ -14,7 +14,7 @@ The **master theses** are popular nowdays. Here you can find our work and work o
 
 ### Our team's theses:
 
-Simon Mackovjak, theses in solar physics: [Bachelor thesis (SK)](https://github.com/space-lab-sk/space-lab-sk.github.io/blob/develop/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](https://github.com/space-lab-sk/space-lab-sk.github.io/blob/develop/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](https://github.com/space-lab-sk/space-lab-sk.github.io/blob/develop/pdfs/mackovjak_2014_phd_thesis.pdf). 
+Simon Mackovjak, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
 
 ### Our students' theses:
 
