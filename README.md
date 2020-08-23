@@ -18,3 +18,5 @@ Simon Mackovjak, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak
 
 ### Our students' theses:
 
+Matej Varga, thesis in machine learning and space weather [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf)
+
