@@ -8,15 +8,25 @@ Explore our [Website](http://www.space-lab.sk/) and follow us on [Facebook](http
 
 # Welcome to SPACE::LAB GitHub Page
 
-We would like to use this GitHub repo to shere our work that might be interesting for you.
+We would like to use this GitHub repo to shere our work.
 
-The **master theses** are popular nowdays. Here you can find our work and work of our students:
+## Airglow science
 
-### Our team's theses:
+### Papers
+- **Airglow data-driven modeling over a period of three solar cycles**: [Supplemental materials](/papers/mackovjak_2021)
 
-Simon Mackovjak, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
 
-### Our students' theses:
 
-Matej Varga, thesis in machine learning and space weather [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf)
+## Cosmic rays science
 
+
+## The theses of our team and our students:
+- **Simon Mackovjak**, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
+
+- **Matej Varga**, thesis in machine learning and space weather [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf)
+
+
+
+*------------------------------------------------------------------------------------------*
+
+*SPACE::LAB GitHub Page is under construction. It does not contain all the information yet.*
