@@ -19,13 +19,13 @@ We would like to use this GitHub repo to shere our work.
 
 ### AMON program
 - Documentation
-    * Feasibility study: [PDF](https://github.com/space-lab-sk/amon-es/documentation/2018_SK1-05_Final_report.pdf)
-    * Technical note - Theoretical study: [PDF](https://github.com/space-lab-sk/amon-es/documentation/2019_SK2-09_TN-TS.pdf)
-    * Technical notes - AMON-ES (Airglow MONitor - Extended Station): [PDF-1](https://github.com/space-lab-sk/amon-es/documentation/2019_SK2-09_TN1-AE.pdf), [PDF-2](https://github.com/space-lab-sk/amon-es/documentation/2020_SK2-09_TN2-AE.pdf)
+    * Feasibility study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2018_SK1-05_Final_report.pdf)
+    * Technical note - Theoretical study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2019_SK2-09_TN-TS.pdf)
+    * Technical notes - AMON-ES (Airglow MONitor - Extended Station): [PDF-1](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2019_SK2-09_TN1-AE.pdf), [PDF-2](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2020_SK2-09_TN2-AE.pdf)
     
 - Data & Code
-    * Samples of AMON-ES data: [Data folder](https://github.com/space-lab-sk/amon-es/data/)
-    * Basic visualization in Python: [Python notebooks](https://github.com/space-lab-sk/amon-es/python_notebooks/)
+    * Samples of AMON-ES data: [Data folder](https://github.com/space-lab-sk/amon-es/tree/master/data_samples)
+    * Basic visualization in Python: [Python notebooks](https://github.com/space-lab-sk/amon-es/tree/master/python_notebooks)
     
 
 
