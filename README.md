@@ -10,14 +10,15 @@ Explore our [Website](http://www.space-lab.sk/) and follow us on [Facebook](http
 
 We would like to use this GitHub repo to shere our work.
 
-## Airglow science
+## Space Weather science
 
 ### Papers
 - Ultra-violet imaging of the night-time earth by EUSO-Balloon towards space-based UHECR observations: [Online](https://doi.org/10.1016/j.astropartphys.2018.10.008), [PDF](/papers/JEM-EUSO_Mackovjak-Shinozaki_2019.pdf)
 - Airglow monitoring by one-pixel detector: [Online](https://doi.org/10.1016/j.nima.2018.12.073), [PDF](/papers/Mackovjak_2019.pdf)
-- Data-driven modeling of atomic oxygen airglow over a period of three solar cycles: [Preprint](https://www.essoar.org/doi/10.1002/essoar.10505187.2), [Python notebook & data](https://github.com/space-lab-sk/airglow_data-driven_model)
+- Data-driven modeling of atomic oxygen airglow over a period of three solar cycles: [Pre-print](https://www.essoar.org/doi/abs/10.1002/essoar.10505187.2), [Full Text](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2020JA028991), [Python notebook & data](https://github.com/space-lab-sk/airglow_data-driven_model)
+- SCSS-Net: Solar Corona Structures Segmentation by Deep Learning: [Python notebook & data](https://github.com/space-lab-sk/scss-net)
 
-### AMON program
+### AMON program (Airglow Monitoring)
 - Documentation
     * Feasibility study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2018_SK1-05_Final_report.pdf)
     * Technical note - Theoretical study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2019_SK2-09_TN-TS.pdf)
@@ -38,8 +39,8 @@ We would like to use this GitHub repo to shere our work.
 - **Simon Mackovjak**, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
 
 - **Matej Varga**, thesis in machine learning and space weather: [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf)
-
-
+- **Martin Harman**, thesis in deep learning and solar corona: [Diploma thesis (SK)](/pdfs/2021_Martin_Harman-DP_SCSS-net.pdf)
+- **Adrián Kundrát**, thesis in deep learning and atmospheric science: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf)
 
 *------------------------------------------------------------------------------------------*
 
