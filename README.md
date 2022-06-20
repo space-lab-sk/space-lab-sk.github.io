@@ -33,13 +33,16 @@ We would like to use this GitHub repo to shere our work.
     * Basic visualization in Python: [Python notebooks](https://github.com/space-lab-sk/amon-es/tree/master/python_notebooks)
     
 
-## The theses of our team and our students:
+### The theses of our team and our students:
 - **Simon Mackovjak**, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
 - **Matej Varga**, theses in machine learning and space weather: [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf), [Diploma thesis (SK)](/pdfs/2022_Matej_Varga-DP-Ionosfericke_scintilacie.pdf)
 
-- **Martin Harman**, thesis in deep learning and solar corona: [Diploma thesis (SK)](/pdfs/2021_Martin_Harman-DP_SCSS-net.pdf)
-- **Adrián Kundrát**, thesis in deep learning and atmospheric science: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf)
-- **Samuel Jaščur**, thesis in unsupervised learning and atmospheric science: [Diploma thesis (SK)](/pdfs/2022_Samuel_Jascur-DP-Nekontrolovane_ucenie.pdf)
+- **Martin Harman**, thesis in deep learning and solar corona segmentation: [Diploma thesis (SK)](/pdfs/2021_Martin_Harman-DP_SCSS-net.pdf)
+- **Adrián Kundrát**, thesis in deep learning and atmospherics detection: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf)
+- **Samuel Jaščur**, thesis in unsupervised learning and atmospherics detection: [Diploma thesis (SK)](/pdfs/2022_Samuel_Jascur-DP-Nekontrolovane_ucenie.pdf)
+- **Petra Kamenská**, thesis in deep learning and TLEs detection: [Bachelor thesis (SK)](/pdfs/2022_Petra_Kamenska-BP-TLE_detekcia_AMOS.pdf)
+- **Kamila Jenčíková**, thesis in deep learning and meteors detection: [Bachelor thesis (SK)](/pdfs/2022_Kamila_Jencikova-BP-Detekcia_radio_meteorov.pdf)
+- **Michal Bencúr**, thesis in deep learning and airglow science: [Bachelor thesis (SK)](/pdfs/2022_Michal_Bencur-BP-GOLD_data.pdf)
 
 *------------------------------------------------------------------------------------------*
 
