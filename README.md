@@ -38,11 +38,16 @@ We would like to use this GitHub repo to shere our work.
 - **Matej Varga**, theses in machine learning and space weather: [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf), [Diploma thesis (SK)](/pdfs/2022_Matej_Varga-DP-Ionosfericke_scintilacie.pdf)
 
 - **Martin Harman**, thesis in deep learning and solar corona segmentation: [Diploma thesis (SK)](/pdfs/2021_Martin_Harman-DP_SCSS-net.pdf)
-- **Adrián Kundrát**, thesis in deep learning and atmospherics detection: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf)
+- **Adrián Kundrát**, theses in deep learning for detection and prediction tasks: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf), [Diploma thesis (SK)](/pdfs/2023_Adrian_Kundrat-DP-ASPIS.pdf)
 - **Samuel Jaščur**, thesis in unsupervised learning and atmospherics detection: [Diploma thesis (SK)](/pdfs/2022_Samuel_Jascur-DP-Nekontrolovane_ucenie.pdf)
 - **Petra Kamenská**, thesis in deep learning and TLEs detection: [Bachelor thesis (SK)](/pdfs/2022_Petra_Kamenska-BP-TLE_detekcia_AMOS.pdf)
 - **Kamila Jenčíková**, thesis in deep learning and meteors detection: [Bachelor thesis (SK)](/pdfs/2022_Kamila_Jencikova-BP-Detekcia_radio_meteorov.pdf)
 - **Michal Bencúr**, thesis in deep learning and airglow science: [Bachelor thesis (SK)](/pdfs/2022_Michal_Bencur-BP-GOLD_data.pdf)
+- **Veronika Motúzová**, thesis in Dst prediction by LSTM: [Diploma thesis (SK)](/pdfs/2023_Veronika_Motuzova-DP-Dst_prediction.pdf)
+- **Lívia Potočňáková**, thesis in segmentation of flare ribbons by SCSS-Net: [Diploma thesis (SK)](/pdfs/2023_Livia_Potocnakova-DP-Flare_ribbons_detection.pdf)
+- **Erik Kandalík**, thesis in AMON-ES data engineering: [Diploma thesis (SK)](/pdfs/2023_Erik_Kandalik-DP-AMON-ES.pdf)
+- **Lívia Muranková**, thesis in deep learning and TLEs detection: [Bachelor thesis (SK)](/pdfs/2023_Livia_Murankova-BP-TLE_AMOS.pdf)
+- **Adam Majirský**, thesis in SCSS-Net application to SOHO data: [Bachelor thesis (SK)](/pdfs/2023_Adam_Majirsky-BP-SCSS-Net_SOHO.pdf)
 
 *------------------------------------------------------------------------------------------*
 
