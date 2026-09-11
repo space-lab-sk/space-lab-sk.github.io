@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — SPACE::LAB · Department of Space Physics · Košice</title>
+<link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
+<meta name="description" content="Contact the Department of Space Physics, IEP SAS — Bulharská 2, Košice. Contacts for cooperation, how to find us, and our social networks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.page-hero h1{max-width:16ch;margin:0 0 20px}
+.page-hero .lede{max-width:62ch}
+.csplit{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start}
+.addr{font-size:17px;line-height:1.75;color:var(--text-muted);margin:0 0 26px}
+.addr strong{display:block;color:#fff;font-weight:700;font-size:19px;margin-bottom:6px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:14px;align-items:baseline}
+.kv dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);opacity:.8}
+.kv dd{margin:0;font-family:var(--font-mono);font-size:13px;color:#fff}
+.kv dd a{color:#fff;border-bottom:1px solid var(--border);transition:.15s}
+.kv dd a:hover{border-bottom-color:#fff}
+.person{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--border)}
+.person__ph{width:56px;height:56px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--text-muted);overflow:hidden}
+.person__ph img{width:100%;height:100%;object-fit:cover}
+.person h4{font-size:16px;margin:0 0 3px;font-weight:700}
+.person .role{font-size:13px;color:var(--text-muted);margin:0 0 5px}
+.person a{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.03em;transition:.15s}
+.person a:hover{color:#fff}
+.maplink{display:block;position:relative;border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;background:var(--surface);transition:border-color .18s}
+.maplink:hover{border-color:var(--sky-blue)}
+.mapart{display:block;width:100%;height:380px;border:0;filter:invert(.92) hue-rotate(185deg) saturate(.7) brightness(.96) contrast(.92)}
+.mapbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.04em;transition:color .15s}
+.mapbar:hover{color:#fff}
+.mapbar span.on{color:#fff}
+.travel{display:grid;gap:22px;margin-top:36px}
+.trav{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:start}
+.trav__n{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);padding-top:3px;white-space:nowrap}
+.trav h4{font-size:16px;margin:0 0 6px;font-weight:700}
+.trav p{font-size:15px;color:var(--text-muted);margin:0;max-width:76ch}
+.soc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.soc a{display:flex;flex-direction:column;gap:14px;padding:24px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);backdrop-filter:blur(12px);transition:border-color .18s,transform .18s,box-shadow .18s}
+.soc a:hover{border-color:var(--sky-blue);transform:translateY(-2px);box-shadow:var(--lift-shadow)}
+.soc svg{width:24px;height:24px;color:#fff}
+.soc b{font-size:15px;font-weight:700;display:block}
+.soc em{font-style:normal;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--text-muted);display:block;margin-top:3px}
+@media(max-width:900px){.csplit{grid-template-columns:1fr;gap:36px}.soc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.soc{grid-template-columns:1fr}.trav{grid-template-columns:1fr;gap:6px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
+      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+      <a href="results.html">Results</a>
+      <a href="public.html">For the Public</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" aria-label="Language">
+        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
+      </div>
+      <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="results.html">Results</a>
+  <a href="public.html">For the Public</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
+</div>
+
+<main>
+
+<section class="page-hero">
+  <div class="page-hero__bg">
+    <img src="assets/img/starfield.png" alt="Starfield" fetchpriority="high">
+    <div class="page-hero__veil"></div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow" data-edit="ct-eyebrow">Contact</span>
+    <h1 class="display" data-edit="ct-title">Find us in Košice</h1>
+    <p class="lede" data-edit="ct-lede">We are the Department of Space Physics — known publicly as SPACE::LAB. We conduct space science research and develop spaceborne instruments in Košice, and operate continuous measurements at Lomnický štít, 2634 m above sea level.</p>
+  </div>
+</section>
+
+<nav class="subnav" aria-label="Contact sections">
+  <div class="wrap">
+    <a href="#info" data-anchor="info">Contact Information</a>
+    <a href="#travel" data-anchor="travel">How to Get to Us</a>
+    <a href="#social" data-anchor="social">Social Networks</a>
+  </div>
+</nav>
+
+<!-- ===== CONTACT INFORMATION ===== -->
+<section id="info">
+  <div class="wrap">
+    <div class="sec-head">
+      <hr class="rule">
+      <span class="eyebrow" data-edit="info-eyebrow">Contact Information</span>
+      <h2 data-edit="info-title">Write to us or come by</h2>
+    </div>
+    <div class="csplit">
+      <div>
+        <p class="addr" data-edit="info-addr"><strong>Department of Space Physics</strong>Institute of Experimental Physics<br>Slovak Academy of Sciences<br>Bulharská 2<br>040 01 Košice, Slovakia</p>
+        <dl class="kv">
+          <dt>Mailing address</dt><dd data-edit="info-mail-addr">Watsonova 47, 040 01 Košice, Slovakia</dd>
+          <dt>Email</dt><dd><a href="mailto:space-lab@saske.sk" data-edit="info-email">space-lab@saske.sk</a></dd>
+          <dt>Web</dt><dd><a href="https://space.saske.sk/" data-edit="info-web">space.saske.sk</a></dd>
+          <dt>Institute</dt><dd><a href="https://uef.saske.sk/" data-edit="info-inst">uef.saske.sk</a></dd>
+          <dt>Coordinates</dt><dd data-edit="info-coords">48.7077° N, 21.2589° E</dd>
+        </dl>
+      </div>
+      <div>
+        <h3 data-edit="coopc-title" style="font-size:20px;margin:0 0 6px">Contacts for cooperation</h3>
+        <p class="dim" data-edit="coopc-lede" style="font-size:15px;margin:0 0 14px">For research collaboration, instrument development, data access, student projects or media enquiries.</p>
+        <article class="person">
+          <div class="person__ph"><img src="assets/img/staff-mackovjak.png" alt="Šimon Mackovjak" style="object-position:50% 15%"></div>
+          <div>
+            <h4 data-edit="cp1-name">RNDr. Šimon Mackovjak, PhD.</h4>
+            <p class="role" data-edit="cp1-role">Head of Department · scientific cooperation, ESA projects</p>
+            <a href="mailto:mackovjak@saske.sk" data-edit="cp1-mail">mackovjak@saske.sk</a>
+          </div>
+        </article>
+        <article class="person">
+          <div class="person__ph" aria-hidden="true">JB</div>
+          <div>
+            <h4 data-edit="cp2-name">Ing. Ján Baláž, PhD.</h4>
+            <p class="role" data-edit="cp2-role">Deputy · space instrumentation and flight hardware</p>
+            <a href="mailto:jan.balaz@saske.sk" data-edit="cp2-mail">jan.balaz@saske.sk</a>
+          </div>
+        </article>
+        <article class="person">
+          <div class="person__ph" aria-hidden="true">PB</div>
+          <div>
+            <h4 data-edit="cp5-name">RNDr. Pavol Bobík, PhD.</h4>
+            <p class="role" data-edit="cp5-role">Senior Scientist · contact for media · public information officer</p>
+            <a href="mailto:bobik@saske.sk" data-edit="cp5-mail">bobik@saske.sk</a>
+          </div>
+        </article>
+        <article class="person">
+          <div class="person__ph" aria-hidden="true">RL</div>
+          <div>
+            <h4 data-edit="cp3-name">Mgr. Ronald Langer</h4>
+            <p class="role" data-edit="cp3-role">Research Operations Manager · laboratory access and measurements</p>
+            <a href="mailto:langer@saske.sk" data-edit="cp3-mail">langer@saske.sk</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO GET TO US ===== -->
+<section class="band" id="travel">
+  <div class="wrap">
+    <div class="sec-head">
+      <hr class="rule">
+      <span class="eyebrow" data-edit="trv-eyebrow">How to Get to Us</span>
+      <h2 data-edit="trv-title">Bulharská 2, Košice</h2>
+    </div>
+    <div class="maplink">
+      <iframe class="mapart" src="https://www.openstreetmap.org/export/embed.html?bbox=21.2538%2C48.7028%2C21.2678%2C48.7088&amp;layer=mapnik&amp;marker=48.705833%2C21.260833" title="Map showing the location at Bulharská 2, Košice" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="mapbar" href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">
+        <span class="on" data-edit="map-label">SPACE::LAB · Bulharská 2, Košice</span>
+        <span data-edit="map-cta">Open in Google Maps →</span>
+      </a>
+    </div>
+    <div class="travel">
+      <article class="trav">
+        <span class="trav__n" data-edit="trv1-n">By train</span>
+        <div>
+          <h4 data-edit="trv1-t">From Košice main railway station</h4>
+          <p data-edit="trv1-b">Košice-Železničná stanica is about 2 km away. Take tram 1, 3, 4 or 7 towards Stará nemocnica or Ryba, or walk in roughly 25 minutes.</p>
+        </div>
+      </article>
+      <article class="trav">
+        <span class="trav__n" data-edit="trv2-n">By public transport</span>
+        <div>
+          <h4 data-edit="trv2-t">Nearest stops</h4>
+          <p data-edit="trv2-b"><strong>Stará nemocnica</strong> — trams 1, 3, 4, 7; buses 12, 15, 16, 54.<br><strong>Ryba</strong> — trams 1, 3, 4, 7; buses 24, 30. Both stops are a short walk from Bulharská 2.</p>
+        </div>
+      </article>
+      <article class="trav">
+        <span class="trav__n" data-edit="trv3-n">By car</span>
+        <div>
+          <h4 data-edit="trv3-b-t">Parking</h4>
+          <p data-edit="trv3-b">Enter Bulharská 2, Košice into your navigation. During SPACE::TALK meetups parking is available inside the institute grounds — the entrance is at the end of Pekná street, on the right.</p>
+        </div>
+      </article>
+      <article class="trav">
+        <span class="trav__n" data-edit="trv4-n">By plane</span>
+        <div>
+          <h4 data-edit="trv4-t">Košice International Airport</h4>
+          <p data-edit="trv4-b">The airport (KSC) is about 6 km from the institute, with direct connections to Vienna, Prague, Warsaw and other hubs. A taxi takes around 15 minutes.</p>
+        </div>
+      </article>
+      <article class="trav">
+        <span class="trav__n" data-edit="trv5-n">Lomnický štít</span>
+        <div>
+          <h4 data-edit="trv5-t">Space Physics Laboratory at Lomnický štít</h4>
+          <p data-edit="trv5-b">The laboratory at 2634 m is reached by cable car from Tatranská Lomnica via Skalnaté pleso. Access is restricted — arrange a visit in advance with the research operations manager.</p>
+        </div>
+      </article>
+    </div>
+    </div>
+</section>
+
+<!-- ===== SOCIAL NETWORKS ===== -->
+<section id="social">
+  <div class="wrap">
+    <div class="sec-head">
+      <hr class="rule">
+      <span class="eyebrow" data-edit="soc-eyebrow">Social Networks</span>
+      <h2 data-edit="soc-title">Follow us</h2>
+    </div>
+    <div class="soc">
+      <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        <span><b data-edit="soc1-t">GitHub</b><em data-edit="soc1-h">space-lab-sk</em></span>
+      </a>
+      <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <span><b data-edit="soc3-t">Instagram</b><em data-edit="soc3-h">space.lab.sk</em></span>
+      </a>
+      <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg>
+        <span><b data-edit="soc2-t">Facebook</b><em data-edit="soc2-h">spacelabsk</em></span>
+      </a>
+      <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
+        <span><b data-edit="soc4-t">YouTube</b><em data-edit="soc4-h">SPACE::LAB</em></span>
+      </a>
+      <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg>
+        <span><b data-edit="soc5-t">Meetup</b><em data-edit="soc5-h">SPACE-TALK</em></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
+          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+        </a>
+        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+        <a href="results.html">Results</a>
+        <a href="public.html">For the Public</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
+        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
+        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
+        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+      </div>
+      <div class="footer__col">
+        <h4>Follow</h4>
+        <div class="social">
+          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
+          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
+          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/edit.js"></script>
+</body>
+</html>

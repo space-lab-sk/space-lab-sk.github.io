@@ -1,54 +1,92 @@
-![logo](/images/SPACE-LAB_logotyp.png)
+# space.saske.sk — Department of Space Physics, IEP SAS
 
-SPACE::LAB is an initiative of Department of Space Physics, Institute of Experimental Physics, Slovak Academy of Sciences in Košice.  
-**Our goal is the understanding of space.**
-We study physical processes in space by our own instruments or by participation on the international missions. 
+Website of the **Department of Space Physics**, Institute of Experimental Physics,
+Slovak Academy of Sciences, Košice — public brand **SPACE::LAB**.
 
-Explore our [Website](http://www.space-lab.sk/) and follow us on [Facebook](https://www.facebook.com/spacelabsk), [YouTube](https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ), [Instagram](https://www.instagram.com/space.lab.sk/), or [Meetup](https://www.meetup.com/SPACE-TALK/).
+Static site: plain HTML, one stylesheet, two small scripts. No build step, no
+framework, no dependencies. Open `index.html` in a browser, or serve the folder
+with any static file server.
 
-# Welcome to SPACE::LAB GitHub Page
+```
+python3 -m http.server 8000    # then visit http://localhost:8000
+```
 
-We would like to use this GitHub repo to shere our work.
+## Pages
 
+| File | Contents |
+|---|---|
+| `index.html` | Home — hero, three pillars, partners, public teaser |
+| `about.html` | Mission, history timeline, team, PhD students & cooperators |
+| `research.html` | Space science, space missions (28 entries), Lomnický štít, services & products |
+| `infrastructure.html` | Hub for the two partner-facing facilities |
+| `facility-cleanroom.html` | Space cleanroom — specifications, equipment, access |
+| `facility-lomnicky.html` | Space Physics Laboratory at Lomnický štít |
+| `results.html` | Publications, projects by funding source, data, conferences |
+| `public.html` | Media coverage, education, SPACE::TALK, theses, open positions |
+| `contact.html` | Addresses, contacts for cooperation, travel, social networks |
+| `mission-juice.html` | Mission detail — ACM for JUICE PEP/JDC |
+| `mission-bepicolombo.html` | Mission detail — PICAM electronics-box structure |
 
-### Papers
+## Structure
 
-- Design and construction of hardware and software for autonomous observations of Transient Luminous Events: [Online](https://doi.org/10.1088/1748-0221/16/12/T12016)
-- Automatic Detection of Atmospherics and Tweek Atmospherics in Radio Spectrograms Based on a Deep Learning Approach: [Online](https://doi.org/10.1029/2021EA002007), [Python notebook & data](https://github.com/space-lab-sk/tweeks_detection)
-- SCSS-Net: Solar Corona Structures Segmentation by Deep Learning: [Online](https://doi.org/10.1093/mnras/stab2536), [Pre-print](https://doi.org/10.48550/arXiv.2109.10834), [Python notebook & data](https://github.com/space-lab-sk/scss-net)
-- Data-driven modeling of atomic oxygen airglow over a period of three solar cycles: [Pre-print](https://www.essoar.org/doi/abs/10.1002/essoar.10505187.2), [Full Text](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2020JA028991), [Python notebook & data](https://github.com/space-lab-sk/airglow_data-driven_model)
-- Airglow monitoring by one-pixel detector: [Online](https://doi.org/10.1016/j.nima.2018.12.073), [PDF](/papers/Mackovjak_2019.pdf)
-- Ultra-violet imaging of the night-time earth by EUSO-Balloon towards space-based UHECR observations: [Online](https://doi.org/10.1016/j.astropartphys.2018.10.008), [PDF](/papers/JEM-EUSO_Mackovjak-Shinozaki_2019.pdf)
+```
+css/site.css   design tokens, shared components, shared page scaffolding
+js/site.js     nav, mobile menu, starfield, language toggle, scroll-spy
+js/edit.js     inline content editing (see below)
+assets/logos/  SPACE::LAB wordmark, dark and light variants
+assets/img/    photography, grouped per subject
+```
 
+`css/site.css` holds everything used on more than one page, including the
+sub-page scaffolding (`.page-hero`, `.subnav`, `.glance`, `.spec`, `.fac`,
+`.mbody` …). Each page's own `<style>` block contains **only** its deltas —
+a hero width, a panel offset. Add shared patterns to `site.css`, not to a page.
 
+## Inline editing
 
-### AMON program (Airglow Monitoring)
-- Documentation
-    * Feasibility study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2018_SK1-05_Final_report.pdf)
-    * Technical note - Theoretical study: [PDF](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2019_SK2-09_TN-TS.pdf)
-    * Technical notes - AMON-ES (Airglow MONitor - Extended Station): [PDF-1](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2019_SK2-09_TN1-AE.pdf), [PDF-2](https://github.com/space-lab-sk/amon-es/blob/master/documentation/2020_SK2-09_TN2-AE.pdf)
-    
-- Data & Code
-    * Samples of AMON-ES data: [Data folder](https://github.com/space-lab-sk/amon-es/tree/master/data_samples)
-    * Basic visualization in Python: [Python notebooks](https://github.com/space-lab-sk/amon-es/tree/master/python_notebooks)
-    
+Every editable string carries a `data-edit="key"` attribute. The "Edit content"
+button (bottom right) turns the page into a live editor; changes are stored in
+the visitor's own `localStorage` and never leave the browser. Use "Export JSON"
+in the edit panel to hand edited copy back to a developer.
 
-### The theses of our team and our students:
-- **Simon Mackovjak**, theses in solar physics: [Bachelor thesis (SK)](/pdfs/mackovjak_2008_bc_praca.pdf), [Master thesis (SK)](/pdfs/mackovjak_2010_diplomova_praca.pdf), [PhD thesis (EN)](/pdfs/mackovjak_2014_phd_thesis.pdf). 
-- **Matej Varga**, theses in machine learning and space weather: [Bachelor thesis (SK)](/pdfs/2020_Matej_Varga-Bc_praca-ML_airglow.pdf), [Diploma thesis (SK)](/pdfs/2022_Matej_Varga-DP-Ionosfericke_scintilacie.pdf)
+This is a copy-review tool, not a CMS — edits are per-browser.
 
-- **Martin Harman**, thesis in deep learning and solar corona segmentation: [Diploma thesis (SK)](/pdfs/2021_Martin_Harman-DP_SCSS-net.pdf)
-- **Adrián Kundrát**, theses in deep learning for detection and prediction tasks: [Bachelor thesis (SK)](/pdfs/2021_Adrian_Kundrat-BP-Tweeks_detection.pdf), [Diploma thesis (SK)](/pdfs/2023_Adrian_Kundrat-DP-ASPIS.pdf)
-- **Samuel Jaščur**, thesis in unsupervised learning and atmospherics detection: [Diploma thesis (SK)](/pdfs/2022_Samuel_Jascur-DP-Nekontrolovane_ucenie.pdf)
-- **Petra Kamenská**, thesis in deep learning and TLEs detection: [Bachelor thesis (SK)](/pdfs/2022_Petra_Kamenska-BP-TLE_detekcia_AMOS.pdf)
-- **Kamila Jenčíková**, thesis in deep learning and meteors detection: [Bachelor thesis (SK)](/pdfs/2022_Kamila_Jencikova-BP-Detekcia_radio_meteorov.pdf)
-- **Michal Bencúr**, thesis in deep learning and airglow science: [Bachelor thesis (SK)](/pdfs/2022_Michal_Bencur-BP-GOLD_data.pdf)
-- **Veronika Motúzová**, thesis in Dst prediction by LSTM: [Diploma thesis (SK)](/pdfs/2023_Veronika_Motuzova-DP-Dst_prediction.pdf)
-- **Lívia Potočňáková**, thesis in segmentation of flare ribbons by SCSS-Net: [Diploma thesis (SK)](/pdfs/2023_Livia_Potocnakova-DP-Flare_ribbons_detection.pdf)
-- **Erik Kandalík**, thesis in AMON-ES data engineering: [Diploma thesis (SK)](/pdfs/2023_Erik_Kandalik-DP-AMON-ES.pdf)
-- **Lívia Muranková**, thesis in deep learning and TLEs detection: [Bachelor thesis (SK)](/pdfs/2023_Livia_Murankova-BP-TLE_AMOS.pdf)
-- **Adam Majirský**, thesis in SCSS-Net application to SOHO data: [Bachelor thesis (SK)](/pdfs/2023_Adam_Majirsky-BP-SCSS-Net_SOHO.pdf)
+## Language
 
-*------------------------------------------------------------------------------------------*
+The site is English. The SK/EN toggle in the header is present but not yet
+wired; Slovak translations are pending.
 
-*SPACE::LAB GitHub Page is under construction. It does not contain all the information yet.*
+## Deployment (GitHub Pages)
+
+This folder is the repository root — push its contents, not the folder itself.
+
+```bash
+cd space-lab-website
+git init
+git add .
+git commit -m "Initial commit — SPACE::LAB website"
+git branch -M main
+git remote add origin https://github.com/space-lab-sk/<repo>.git
+git push -u origin main
+```
+
+Then in the repository: **Settings ▸ Pages ▸ Build and deployment**, source
+"Deploy from a branch", branch `main`, folder `/ (root)`. The site appears at
+`https://space-lab-sk.github.io/<repo>/` within a minute or two.
+
+All paths are relative, so the site works from any subdirectory. `.nojekyll`
+is included so GitHub serves the files as-is. For a custom domain
+(`space.saske.sk`), add a `CNAME` file containing the hostname and point a DNS
+CNAME record at `space-lab-sk.github.io`.
+
+`Space Missions Content Brief.md` is kept in the project workspace, not in
+this repository.
+
+## Content notes
+
+- Mission and facility copy is reviewed and approved; figure credits are
+  carried in each caption's `.cred` line.
+- Placeholders reading `[ Add … ]` mark rows awaiting content (VEGA and APVV
+  projects, conference contributions).
+- Photographs are 500–650 kB JPEGs. Generating WebP versions at 1600 px and
+  800 px is a worthwhile pre-launch optimisation.

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infrastructure — SPACE::LAB · Department of Space Physics · Košice</title>
+<link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
+<meta name="description" content="The Space Physics Laboratory at Lomnický štít, our space cleanroom in Košice, and open access for partner instruments through OPENLABS SAV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.page-hero__bg img{opacity:.5}
+.page-hero__veil{background:linear-gradient(180deg,rgba(28,32,51,.62),var(--bg) 94%),linear-gradient(90deg,var(--bg) 10%,rgba(28,32,51,.2) 80%)}
+.spec{margin:6px 0 8px}
+.spec th{width:38%;padding-right:20px}
+.glance{top:calc(var(--nav-h) + 84px)}
+.glance dl{margin:0 0 22px}
+@media(max-width:1000px){.fac{gap:36px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
+      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="research.html">Research</a>
+      <a href="infrastructure.html" class="active">Infrastructure</a>
+      <a href="results.html">Results</a>
+      <a href="public.html">For the Public</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" aria-label="Language">
+        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
+      </div>
+      <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="research.html">Research</a>
+  <a href="infrastructure.html" class="active">Infrastructure</a>
+  <a href="results.html">Results</a>
+  <a href="public.html">For the Public</a>
+  <a href="contact.html">Contact</a>
+  <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
+</div>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero__bg">
+    <img src="assets/img/pillar-data.jpg" alt="" fetchpriority="high">
+    <div class="page-hero__veil"></div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow" data-edit="inf-eyebrow">Infrastructure</span>
+    <h1 class="display" data-edit="inf-title">Built for our research, open to yours</h1>
+    <p class="lede" data-edit="inf-lede">We build and test our own instruments in Slovakia's first space cleanroom in Košice, and we measure the particle environment from a laboratory at 2634 m on Lomnický štít. Both are now open to research institutions and companies — and 130 km apart by road, so a partner can visit both in a day.</p>
+  </div>
+</section>
+
+<section id="facilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <hr class="rule">
+      <span class="eyebrow" data-edit="fac-eyebrow">Our Facilities</span>
+      <h2 data-edit="fac-title">Where our instruments are built and our measurements are made</h2>
+    </div>
+    <div class="faccard">
+      <article class="card card--link">
+        <img src="assets/img/cleanroom/cr-01-interior-wide.jpg" alt="The interior of the space cleanroom in Košice, with the vibration shaker, SPACEVAC chamber and laminar flow bench" loading="lazy" width="2000" height="1333">
+        <div class="in">
+          <div class="meta">
+            <span class="badge badge--esa" data-edit="fc1-loc">Košice</span>
+            <span class="badge badge--active"><span class="dot"></span><span data-edit="fc1-status">In operation</span></span>
+          </div>
+          <h3 data-edit="fc1-title">Space cleanroom</h3>
+          <p data-edit="fc1-body">Twenty-five square metres of ISO class 7 clean space in Košice, with an ISO class 5 laminar zone inside it, opened in May 2026 as the first space cleanroom in Slovakia. We develop, test and integrate flight electronics here under ESD control, to ECSS standards.</p>
+          <p class="cap" data-edit="fc1-cap">Capability: ISO 7 clean assembly, vibration and thermal-vacuum testing</p>
+          <a class="card__more" href="facility-cleanroom.html" data-edit="fc1-link">Explore the cleanroom →</a>
+        </div>
+      </article>
+      <article class="card card--link">
+        <img src="assets/img/pillar-data.jpg" alt="The Space Physics Laboratory at Lomnický štít above a sea of clouds at sunrise" loading="lazy" width="1200" height="700">
+        <div class="in">
+          <div class="meta">
+            <span class="badge badge--esa" data-edit="fc2-loc">2634 m</span>
+            <span class="badge badge--active"><span class="dot"></span><span data-edit="fc2-status">In operation</span></span>
+          </div>
+          <h3 data-edit="fc2-title">Lomnický štít</h3>
+          <p data-edit="fc2-body">At 2634 m, the Space Physics Laboratory at Lomnický štít has run a neutron monitor continuously since 1981 — more than four decades of cosmic ray measurements, now alongside a SEVAN particle monitor and high-energy photon observations during thunderstorms.</p>
+          <p class="cap" data-edit="fc2-cap">Capability: continuous cosmic ray and high-energy particle monitoring</p>
+          <a class="card__more" href="facility-lomnicky.html" data-edit="fc2-link">Explore the laboratory →</a>
+        </div>
+      </article>
+    </div>
+    <p style="padding-top:34px;max-width:68ch;color:var(--text-muted);font-size:15.5px" data-edit="inf-open">Both facilities are being opened to partners under <b style="color:var(--text);font-weight:600">OPENLABS SAV</b>, 2026–2029, funded through Programme Slovakia 2021–2027 (ERDF). Instrument hosting at Lomnický štít and serviced or supervised use of the cleanroom are agreed case by case.</p>
+  </div>
+</section>
+
+<!-- ===== ENQUIRE ===== -->
+<section class="band" id="enquire">
+  <div class="wrap">
+    <div class="enquire">
+      <div>
+        <h2 data-edit="enq-title">Talk to us about access</h2>
+        <p data-edit="enq-body">Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — enquiries about instrument hosting, cleanroom use and joint projects all go to the same place.</p>
+      </div>
+      <a class="btn btn--sky btn--lg" href="contact.html#info" data-edit="enq-cta">Contacts for cooperation →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
+          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
+        </a>
+        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="research.html">Research</a>
+        <a href="results.html">Results</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
+        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
+        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
+        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+      </div>
+      <div class="footer__col">
+        <h4>Follow</h4>
+        <div class="social">
+          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
+          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/edit.js"></script>
+</body>
+</html>
