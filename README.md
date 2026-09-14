@@ -52,8 +52,12 @@ disabled under `prefers-reduced-motion`.
 
 ## Inline editing (for copy review)
 
-The "Edit content" button in the bottom right turns the page into a live editor — click
-any text block to change it. Edits are stored in that visitor's own `localStorage` and
+The editor is opt-in: it loads only when a page is opened with `?edit=1`
+(e.g. `index.html?edit=1`), and stays active while clicking through the site in that
+tab. `?edit=0` or a new tab exits it, so the public site shows no editing UI.
+
+In review mode the "Edit content" button appears in the bottom right and turns the page
+into a live editor — click any text block to change it. Edits are stored in that visitor's own `localStorage` and
 never leave the browser. "Export content (JSON)" downloads every edit made across all
 pages so it can be handed back to a developer.
 

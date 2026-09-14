@@ -12,6 +12,15 @@
 (function () {
   'use strict';
 
+  /* Review mode is opt-in: the editor only loads at ?edit=1. The flag is kept
+     for the tab so it survives clicking through to other pages; ?edit=0 exits. */
+  var FLAG = 'spacelab-edit-mode';
+  try {
+    if (/[?&]edit=1(&|$)/.test(location.search)) sessionStorage.setItem(FLAG, '1');
+    if (/[?&]edit=0(&|$)/.test(location.search)) sessionStorage.removeItem(FLAG);
+    if (sessionStorage.getItem(FLAG) !== '1') return;
+  } catch (e) { return; }
+
   var STORE_KEY = 'spacelab-content-v1';
   var pageKey = location.pathname.split('/').pop() || 'index.html';
 
