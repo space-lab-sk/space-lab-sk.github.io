@@ -1,71 +1,75 @@
 # space.saske.sk — Department of Space Physics, IEP SAS
 
-Website of the **Department of Space Physics** (SPACE::LAB), Institute of Experimental
+Website of the Department of Space Physics (SPACE::LAB), Institute of Experimental
 Physics, Slovak Academy of Sciences, Košice.
 
-Static HTML, CSS and one small vanilla JavaScript file. No build step, no framework,
-no dependencies. Copy the contents of this folder to the repository root and push.
+Static HTML, CSS and two small vanilla JavaScript files. No build step, no framework,
+no dependencies. To preview, open `index.html` in a browser — it works straight from disk.
 
-## Deploying
+## Deploying to GitHub Pages
 
-Copy everything here to the repository root, replacing the previous version, and push.
-GitHub Pages serves it at <https://space-lab-sk.github.io/>.
+Copy the contents of this folder to the repository root and push.
 
-**Check for a `CNAME` file** in the repository root before you overwrite it. If the
-domain `space.saske.sk` is served from this repository, `CNAME` carries that mapping
-and deleting it takes the custom domain down.
+**Check for a `CNAME` file** in the repository root before overwriting it. If
+`space.saske.sk` is served from this repository, `CNAME` carries that mapping and
+deleting it takes the custom domain down.
 
-To preview locally, just open `index.html` in a browser — it works straight from disk.
+`.nojekyll` is included so GitHub serves every file as-is.
 
-## Every old URL still works
+## Pages
 
-All eleven page filenames from the previous version are unchanged, so links already
-shared in papers, ESA reports and emails keep resolving:
+| File | Contents |
+|---|---|
+| `index.html` | Home — hero, pillars, partners, public teaser |
+| `about.html` | Mission, history, team, PhD students, cooperators |
+| `research.html` | Space science, missions, Lomnický štít, services |
+| `results.html` | Publications, projects by funder, data, conferences |
+| `infrastructure.html` | Hub for the two partner-facing facilities |
+| `facility-cleanroom.html` | Space cleanroom — specifications, equipment, access |
+| `facility-lomnicky.html` | Space Physics Laboratory at Lomnický štít |
+| `public.html` | Media, education, SPACE::TALK, theses, open positions |
+| `contact.html` | Addresses, cooperation contacts, travel, social |
+| `mission-juice.html` | Mission detail — ACM for JUICE PEP/JDC |
+| `mission-bepicolombo.html` | Mission detail — PICAM electronics-box structure |
+| `theses.html` · `spacetalk.html` · `summer-school.html` · `media.html` | Detail pages linked from For the Public |
 
-`index.html` · `about.html` · `research.html` · `results.html` · `infrastructure.html` ·
-`public.html` · `contact.html` · `facility-cleanroom.html` · `facility-lomnicky.html` ·
-`mission-juice.html` · `mission-bepicolombo.html`
-
-Four pages are new: `theses.html`, `spacetalk.html`, `summer-school.html`, `media.html`.
+All eleven filenames from the previous version are unchanged, so links already shared
+in papers, ESA reports and emails keep resolving.
 
 ## Structure
 
-| Path | What it is |
-|---|---|
-| `*.html` | one file per page, 15 in total |
-| `css/site.css` | the original stylesheet, unchanged |
-| `css/redesign.css` | additions for the 2026 redesign, layered on top |
-| `js/site.js` | nav, mobile menu, sub-nav scroll-spy, filter chips, hero starfield |
-| `assets/` | logos, icons, photographs |
+```
+css/site.css      original stylesheet — untouched, so the two files can be merged
+css/redesign.css  additions for the 2026 redesign, loaded second
+js/site.js        nav, mobile menu, scroll-spy, filter chips, hero starfield
+js/edit.js        inline content editing for copy review
+assets/           logos, icons, photographs
+```
 
-`css/site.css` is deliberately untouched, so the two files can be diffed and eventually
-merged. Nothing in `redesign.css` depends on load order beyond coming second.
+The site is fully readable with JavaScript off: mission and project disclosure rows use
+native `<details>`, and filter chips degrade to showing every group. All animation is
+disabled under `prefers-reduced-motion`.
 
-## What the JavaScript does
+## Inline editing (for copy review)
 
-`js/site.js` is 150 lines of vanilla JS and the site is fully readable without it:
+The "Edit content" button in the bottom right turns the page into a live editor — click
+any text block to change it. Edits are stored in that visitor's own `localStorage` and
+never leave the browser. "Export content (JSON)" downloads every edit made across all
+pages so it can be handed back to a developer.
 
-- translucent nav bar once the page scrolls
-- mobile menu toggle below 1000px
-- sub-nav smooth scrolling and scroll-spy underline
-- year and decade filter chips on Results and the media archive
-- "Show all 28 missions" expander on Research
-- the drifting starfield on the home hero (disabled under `prefers-reduced-motion`)
+Keys are derived from each element's position in the document, so no special markup is
+needed. Because they are positional, restructuring a page's markup orphans the edits made
+on it — export before a layout change. Navigation labels are deliberately not editable.
 
-Mission and project disclosure rows use native `<details>`, so they open with
-JavaScript off. Filter chips degrade to showing every group.
+To remove the feature, delete `js/edit.js` and its `<script>` tag from the 15 pages.
 
-## Outstanding content
+## Before launch
 
 - Staff research-focus lines read "Research focus" as a placeholder for all but one person.
-- Eight VEGA grant numbers are "To be confirmed".
-- The `200+` peer-reviewed publications figure on the home page is an unverified placeholder.
-- The Košice cathedral photograph on the Contact page is credited to Košice Region
-  Tourism and needs written permission before launch.
+- Eight VEGA grant numbers read "To be confirmed".
+- The `200+` publications figure on the home page is unverified.
+- The Košice cathedral photograph on Contact is credited to Košice Region Tourism and
+  needs written permission.
 - Slovak translation is not done; the SK/EN switch in the header is decorative.
-
-## Images
-
-Photographs are capped at 1800px wide, JPEG quality 0.82 — about 5 MB in total. For the
-live site, consider re-exporting from the originals as WebP with 800px variants and
-`srcset`.
+- Photographs are 1800 px JPEGs, ~5 MB in total. Re-exporting as WebP with 800 px
+  variants and `srcset` is a worthwhile optimisation.

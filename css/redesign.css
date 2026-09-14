@@ -17,12 +17,16 @@
   --btn-shadow-hover:0 10px 28px -12px rgba(0,0,0,.6);
   --lift-hover:translateY(-2px);
   --dur-fast:.15s; --dur:.18s; --dur-slow:.25s;
+  /* links: the neutral cool-gray accent every other hover in the site uses */
+  --link:var(--sky-blue); --link-hover:var(--sky-blue);
 }
 body{font-size:var(--fs-body)}
 .lede{font-size:20px}
 p{max-width:68ch;text-wrap:pretty}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--link)}
+a:hover{color:var(--link-hover)}
+main p a,main li a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in oklch,var(--link) 45%,transparent)}
+main p a:hover,main li a:hover{text-decoration-color:var(--link-hover)}
 ::selection{background:var(--sky-blue);color:var(--bg)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--sky-blue);outline-offset:3px;border-radius:4px}
 img{max-width:100%;display:block}
@@ -43,6 +47,10 @@ main{display:block}
 .badge--active .dot{width:6px;height:6px;border-radius:50%;background:var(--status-active);box-shadow:0 0 8px var(--status-active)}
 /* The one sanctioned use of science blue as a fill. Never as type colour. */
 .badge--plate{background:var(--science-blue);border-color:var(--science-blue);color:#fff}
+
+/* canvas is a replaced element: inset:0 alone leaves it at its intrinsic
+   300x150, so it must be sized explicitly like .hero__img is */
+.hero__starfield{width:100%;height:100%;display:block}
 
 /* ---------- CARDS ---------- */
 .card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:24px;backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);box-shadow:var(--inset-highlight);transition:border-color var(--dur) ease,transform var(--dur) ease,box-shadow var(--dur) ease}
@@ -304,6 +312,11 @@ blockquote.quote cite{font-style:normal;font-family:var(--font-mono);font-size:1
 .feature__data div{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
 .feature__data b{display:block;font-family:var(--font-display);font-weight:900;font-size:26px;color:#fff;letter-spacing:.01em;margin-bottom:4px;text-transform:none}
 .mission{gap:14px;display:flex;flex-direction:column}
+/* .mission is also the old full-width statement block in site.css, whose
+   .mission p rule sets display font at clamp(22px,3vw,30px). On a mission
+   CARD the body copy must read like any other card paragraph. */
+.card.mission p{font-family:var(--font-body);font-weight:400;font-size:inherit;line-height:inherit;letter-spacing:normal;max-width:none;color:var(--text-muted)}
+.card.mission .role{font-family:var(--font-mono);font-size:13.5px;letter-spacing:.03em}
 .staff__photo{width:132px;height:132px;border-radius:50%;margin-bottom:22px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--text-muted)}
 .staff__photo img{width:100%;height:100%;object-fit:cover}
 .staff h3{font-size:19px;margin:0 0 4px}
@@ -372,3 +385,9 @@ blockquote.quote cite{font-style:normal;font-family:var(--font-mono);font-size:1
    pages put the reading column first in the DOM, so reset it. */
 .reading .glance,.marticle .glance,.split .glance{order:1}
 .reading__col,.marticle>.prose{order:0}
+
+/* ---------- EDIT MODE (auto-tagged) ---------- */
+body.editing [contenteditable] { cursor: text }
+body.editing [contenteditable]:focus { outline: 2px solid var(--sky-blue); background: rgba(200,207,224,.1) }
+.edit-fab, .edit-tools, .edit-toast { font-family: var(--font-mono) }
+@media print { .edit-fab, .edit-tools, .edit-toast { display: none !important } }

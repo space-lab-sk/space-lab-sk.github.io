@@ -86,13 +86,14 @@
   });
 
   /* ---------- Hero starfield ----------
-     Deliberately dim and slow. An earlier version with four bright fast-moving
-     points was removed on request: keep drift under ~5 px/s, opacity under 0.55. */
+     Dim and slow: star drift stays under ~5 px/s and peak opacity under 0.55.
+     Stars breathe on a long random phase; three satellite points cross at
+     14-22 px/s — slow enough to read as orbital motion, not as traffic. */
   var canvas = document.querySelector('.hero__starfield');
   if (canvas && canvas.getContext && !reduced) {
     var ctx = canvas.getContext('2d');
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var w = 0, h = 0, stars = [], last = 0;
+    var w = 0, h = 0, stars = [], last = 0, clock = 0;
     var seed = function () {
       var count = Math.round(Math.min(110, Math.max(50, w / 16)));
       stars = [];
@@ -103,7 +104,9 @@
           r: roll < 0.18 ? 1.6 : roll < 0.5 ? 1.1 : 0.8,
           o: 0.14 + Math.random() * 0.4,
           vx: (0.3 + Math.random() * 0.85) * (Math.random() < 0.5 ? -1 : 1),
-          vy: (Math.random() - 0.5) * 0.35
+          vy: (Math.random() - 0.5) * 0.35,
+          ph: Math.random() * Math.PI * 2,
+          tw: 0.5 + Math.random() * 0.7
         });
       }
     };
@@ -116,7 +119,7 @@
     };
     var frame = function (t) {
       var dt = last ? Math.min((t - last) / 1000, 0.05) : 0;
-      last = t;
+      last = t; clock += dt;
       ctx.clearRect(0, 0, w, h);
       ctx.fillStyle = '#fff';
       for (var i = 0; i < stars.length; i++) {
@@ -124,7 +127,7 @@
         s.x += s.vx * dt * 4; s.y += s.vy * dt * 4;
         if (s.x < -2) s.x = w + 2; else if (s.x > w + 2) s.x = -2;
         if (s.y < -2) s.y = h + 2; else if (s.y > h + 2) s.y = -2;
-        ctx.globalAlpha = s.o;
+        ctx.globalAlpha = s.o * (0.72 + 0.28 * Math.sin(clock * s.tw + s.ph));
         ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
       }
       ctx.globalAlpha = 1;
