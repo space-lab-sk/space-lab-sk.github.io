@@ -3,440 +3,295 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research — SPACE::LAB · Department of Space Physics · Košice</title>
+<title>Research — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="Cosmic rays, neutrinos, space weather and airglow — instruments flown on 25+ missions and measurements from 2634 m at Lomnický štít.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Space science, space missions, the Lomnický štít laboratory, and the services and data products of the Department of Space Physics, IEP SAS.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.page-hero h1{max-width:22ch;margin:0 0 20px}
-.page-hero .lede{max-width:62ch}
-/* section sub-nav */
-.card .eyebrow{margin:0 0 10px}
-.card h3{font-size:20px;line-height:1.25}
-.mission-card{display:flex;flex-direction:column;gap:14px}
-.mission-card .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.mission-card h3{font-size:21px;margin:0}
-.mission-card .role{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.03em}
-.mission-list{border-top:1px solid var(--border);margin-top:40px}
-.mrow{border-bottom:1px solid var(--border)}
-.mrow__head{display:grid;grid-template-columns:1fr auto auto auto;gap:20px;align-items:center;width:100%;background:none;border:0;color:var(--text);font-family:var(--font-body);font-size:16px;text-align:left;padding:18px 0;cursor:pointer;transition:color .15s}
-.mrow__head:hover{color:var(--sky-blue)}
-.mrow__name{font-weight:600}
-.mrow__agency,.mrow__years{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
-.mrow__toggle{font-size:18px;color:var(--text-muted);transition:transform .2s}
-.mrow[open] .mrow__toggle{transform:rotate(45deg)}
-.mrow__body{padding:0 0 22px;max-width:76ch;color:var(--text-muted);font-size:15px}
-.mrow__body p{margin:0 0 10px}
-.placeholder-note{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.04em;padding:18px 0 0}
-/* observatory feature */
-.obs{display:grid;grid-template-columns:1.05fr 1fr;gap:0;border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;background:var(--glass);backdrop-filter:blur(12px)}
-.obs__media{min-height:340px;background-size:cover;background-position:center}
-.obs__body{padding:40px}
-.obs__data{display:flex;flex-wrap:wrap;gap:34px;margin-top:26px;border-top:1px solid var(--border);padding-top:22px}
-.obs__data .k{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
-.obs__data .k b{display:block;font-family:var(--font-display);font-weight:900;font-size:26px;color:#fff;letter-spacing:.01em;margin-bottom:4px;text-transform:none}
-.subgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
-@media(max-width:900px){.obs{grid-template-columns:1fr}.subgrid{grid-template-columns:1fr}.mrow__head{grid-template-columns:1fr auto;row-gap:6px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
-  <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="research.html" class="active">Research</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
-
 <section class="page-hero">
   <div class="page-hero__bg">
-    <img src="assets/img/nebula-blue.png" alt="Deep blue nebula and starfield" fetchpriority="high">
-    <div class="page-hero__veil"></div>
+    <img src="assets/img/sun-earth-cme.jpg" alt="" style="opacity:0.6;object-position:center">
+    <div class="page-hero__veil" style="background:linear-gradient(180deg, rgba(28,32,51,.5), rgba(28,32,51,.86) 74%, var(--bg) 98%), linear-gradient(90deg, var(--bg) 4%, rgba(28,32,51,.8) 46%, rgba(28,32,51,.3) 100%)"></div>
   </div>
   <div class="wrap">
-    <span class="eyebrow" data-edit="res-eyebrow">Research</span>
-    <h1 class="display" data-edit="res-title">From a mountaintop to deep space</h1>
-    <p class="lede" data-edit="res-lede">We study cosmic rays, space weather, and airglow — with instruments we design and build ourselves, measurements from 2634 m, and data returned from across the Solar System.</p>
+    <span class="eyebrow">Research</span>
+    <h1 class="display">From a mountaintop to deep space</h1>
+    <p class="lede">We study cosmic rays, space weather, and airglow — with instruments we design and build ourselves, measurements from 2634 m, and data returned from across the Solar System.</p>
   </div>
 </section>
-
-<nav class="subnav" aria-label="Research sections">
+<nav class="subnav" aria-label="Section navigation">
   <div class="wrap">
-    <a href="#science" data-anchor="science">Space Science</a>
-    <a href="#missions" data-anchor="missions">Space Missions</a>
-    <a href="#lomnicky" data-anchor="lomnicky">Lomnický štít</a>
-    <a href="#services" data-anchor="services">Services &amp; Products</a>
+    <a href="#science">Space Science</a>
+    <a href="#missions">Space Missions</a>
+    <a href="#lomnicky">Lomnický štít</a>
+    <a href="#services">Services &amp; Products</a>
   </div>
 </nav>
-
-<!-- ===== SPACE SCIENCE ===== -->
-<section id="science">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="sci-eyebrow">Space Science</span>
-      <h2 data-edit="sci-title">Four questions we ask about space</h2>
-    </div>
-    <div class="grid grid-2">
-      <article class="card card--link">
-        <span class="eyebrow eyebrow--muted" data-edit="sci1-field">Cosmic Rays Science</span>
-        <h3 data-edit="sci1-title">How does the Sun shape the flux of galactic cosmic rays reaching Earth?</h3>
-        <p data-edit="sci1-body">We track solar modulation, Forbush decreases and ground-level enhancements in the uninterrupted neutron monitor record from Lomnický štít, and model how charged particles propagate through the heliosphere and magnetosphere.</p>
-        <span class="card__more" data-edit="sci1-link">Read more →</span>
-      </article>
-      <article class="card card--link">
-        <span class="eyebrow eyebrow--muted" data-edit="sci2-field">Neutrino Science</span>
-        <h3 data-edit="sci2-title">Where do the Universe's highest-energy neutrinos come from?</h3>
-        <p data-edit="sci2-body">Through the KM3NeT deep-sea telescope we search for the cosmic accelerators behind astrophysical neutrinos — messengers that arrive undeflected by magnetic fields and unabsorbed by matter.</p>
-        <span class="card__more" data-edit="sci2-link">Read more →</span>
-      </article>
-      <article class="card card--link">
-        <span class="eyebrow eyebrow--muted" data-edit="sci3-field">Space Weather Science</span>
-        <h3 data-edit="sci3-title">Can we predict when solar activity will disrupt technology on Earth and in orbit?</h3>
-        <p data-edit="sci3-body">We study how coronal mass ejections, the solar wind and geomagnetic storms couple to spacecraft, aviation and ground infrastructure — and apply machine learning to forecast their impact.</p>
-        <span class="card__more" data-edit="sci3-link">Read more →</span>
-      </article>
-      <article class="card card--link">
-        <span class="eyebrow eyebrow--muted" data-edit="sci4-field">Airglow Science</span>
-        <h3 data-edit="sci4-title">What does the faint glow of the upper atmosphere reveal about the boundary to space?</h3>
-        <p data-edit="sci4-body">By measuring airglow emission we probe the dynamics, waves and composition of the region where Earth's atmosphere meets space — and characterise the background that limits observations from orbit.</p>
-        <span class="card__more" data-edit="sci4-link">Read more →</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SPACE MISSIONS ===== -->
-<section class="band" id="missions">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="mis-eyebrow">Space Missions</span>
-      <h2 data-edit="mis-title">Instruments we have flown</h2>
-      <p class="lede" data-edit="mis-lede" style="margin-top:16px">More than 25 missions since 1977 carry hardware or software designed in Košice. Four current highlights, and the full record below.</p>
-    </div>
-
-    <div class="grid grid-2">
-      <article class="card card--link mission-card">
-        <div class="meta">
-          <span class="badge badge--esa" data-edit="m4-agency">TIK · EU Recovery Plan</span>
-          <span class="badge badge--active"><span class="dot"></span><span data-edit="m4-status">ACTIVE · IN PREPARATION</span></span>
-        </div>
-        <h3 data-edit="m4-title">STEPHANIK</h3>
-        <p data-edit="m4-body">A Slovak technology consortium building a modular 150 kg+ satellite platform with interchangeable payloads — developing core subsystems, cleanroom facilities, and a functional ground segment to establish a sovereign Slovak satellite capability.</p>
-        <p class="role" data-edit="m4-role">Our role: consortium member · OBC development and cleanroom facilities</p>
-        <a class="card__more" href="https://stephanik.eu/" target="_blank" rel="noopener" data-edit="m4-link">Visit the project site →</a>
-      </article>
-      <article class="card card--link mission-card">
-        <div class="meta">
-          <span class="badge badge--esa" data-edit="m1-agency">NASA · Balloon</span>
-          <span class="badge badge--active"><span class="dot"></span><span data-edit="m1-status">Active · IN PREPARATION</span></span>
-        </div>
-        <h3 data-edit="m1-title">POEMMA-Balloon with Radio</h3>
-        <p data-edit="m1-body">A stratospheric balloon pathfinder for the POEMMA concept, observing ultra-high-energy cosmic rays and neutrinos from above the clouds through fluorescence and radio signatures.</p>
-        <p class="role" data-edit="m1-role">Our role: EMON instruments delivery</p>
-        <a class="card__more" href="https://doi.org/10.1088/1475-7516/2026/07/001" target="_blank" rel="noopener" data-edit="m1-link">Read the paper →</a>
-      </article>
-      <article class="card card--link mission-card">
-        <div class="meta">
-          <span class="badge badge--esa" data-edit="m2-agency">ESA</span>
-          <span class="badge badge--active"><span class="dot"></span><span data-edit="m2-status">Active · Cruise</span></span>
-        </div>
-        <h3 data-edit="m2-title">JUICE — PEP / JDC / ACM</h3>
-        <p data-edit="m2-body">The Jupiter Icy Moons Explorer arrives in 2031 to survey Ganymede, Europa and Callisto and Jupiter's magnetosphere as a coupled system. For the JDC plasma analyser we designed and delivered the Anti-Coincidence Module, which flags penetrating radiation-belt electrons.</p>
-        <p class="role" data-edit="m2-role">Our role: ACM anti-coincidence module design, testing and delivery</p>
-        <a class="card__more" href="mission-juice.html" data-edit="m2-link">Read the full mission story →</a>
-      </article>
-      <article class="card card--link mission-card">
-        <div class="meta">
-          <span class="badge badge--esa" data-edit="m3-agency">ESA · JAXA</span>
-          <span class="badge badge--active"><span class="dot"></span><span data-edit="m3-status">Active · Arrival</span></span>
-        </div>
-        <h3 data-edit="m3-title">BepiColombo — SERENA / PICAM</h3>
-        <p data-edit="m3-body">Europe's first mission to Mercury reaches orbit in November 2026 to study the planet's exosphere, magnetosphere and its coupling to the Sun. For SERENA's PICAM ion mass spectrometer we designed, verified and built the ultra-light structure carrying its electronics and sensor.</p>
-        <p class="role" data-edit="m3-role">Our role: PICAM electronics-box structure — design, FEA, delivery</p>
-        <a class="card__more" href="mission-bepicolombo.html" data-edit="m3-link">Read the full mission story →</a>
-      </article>
-    </div>
-
-    <div class="mission-list">
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml1-name">JEM-EUSO</span><span class="mrow__agency" data-edit="ml1-agency">JAXA · International</span><span class="mrow__years" data-edit="ml1-years">2008–</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml1-body">A wide-field telescope concept observing extensive air showers from orbit to probe cosmic rays at the highest energies, up to 10²⁰ eV — and the origin of airglow research in our department.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml2-name">HotPay-2 — PEEL</span><span class="mrow__agency" data-edit="ml2-agency">Sounding rocket</span><span class="mrow__years" data-edit="ml2-years">2008</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml2-body">The PEEL particle instrument flown on the HotPay-2 sounding rocket to study the upper atmosphere.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml3-name">Spectrum-R — MEP-2</span><span class="mrow__agency" data-edit="ml3-agency">Radioastron</span><span class="mrow__years" data-edit="ml3-years">2011–2019</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml3-body">The MEP-2 energetic particle spectrometer aboard the Spectrum-R (Radioastron) space radio telescope.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml4-name">Double Star — NUADU</span><span class="mrow__agency" data-edit="ml4-agency">ESA · CNSA</span><span class="mrow__years" data-edit="ml4-years">2003–2008</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml4-body">The NUADU energetic neutral atom imager, built in Košice, mapped the ring current and inner magnetosphere from the TC-2 polar spacecraft.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml5-name">Rosetta — ESS</span><span class="mrow__agency" data-edit="ml5-agency">ESA</span><span class="mrow__years" data-edit="ml5-years">2004–2016</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml5-body">We delivered the ESS communication processor for ESA's comet chaser, which escorted 67P/Churyumov–Gerasimenko and deployed the Philae lander.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml6-name">Coronas-F — SONG-M</span><span class="mrow__agency" data-edit="ml6-agency">Coronas</span><span class="mrow__years" data-edit="ml6-years">2001</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml6-body">Electronics for the SONG-M gamma-ray and neutron instrument observing solar flares.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml7-name">Štefánik Dosimetry</span><span class="mrow__agency" data-edit="ml7-agency">Dosimetry</span><span class="mrow__years" data-edit="ml7-years">—</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml7-body">Radiation dosimetry experiment developed for crewed spaceflight.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml8-name">MIR — SPRUT</span><span class="mrow__agency" data-edit="ml8-agency">MIR station</span><span class="mrow__years" data-edit="ml8-years">—</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml8-body">The SPRUT instrument operated aboard the MIR orbital station.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml9-name">Compass — MEP-1</span><span class="mrow__agency" data-edit="ml9-agency">Compass</span><span class="mrow__years" data-edit="ml9-years">—</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml9-body">The MEP-1 energetic particle spectrometer for the Compass microsatellite.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml10-name">Cesar — EPD</span><span class="mrow__agency" data-edit="ml10-agency">Cesar</span><span class="mrow__years" data-edit="ml10-years">—</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml10-body">The EPD energetic particle detector developed for the Cesar mission.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml11-name">Mars-96 — SLED-2</span><span class="mrow__agency" data-edit="ml11-agency">Mars-96</span><span class="mrow__years" data-edit="ml11-years">1996</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml11-body">SLED-2, a low-energy particle detector built with European partners — an early step in the department's integration with Western European laboratories.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml12-name">MIR — SPE-1M</span><span class="mrow__agency" data-edit="ml12-agency">MIR station</span><span class="mrow__years" data-edit="ml12-years">—</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml12-body">The SPE-1M spectrometer flown on the MIR orbital station.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml13-name">Interball — DOK-2A</span><span class="mrow__agency" data-edit="ml13-agency">Interball</span><span class="mrow__years" data-edit="ml13-years">1995–2000</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml13-body">A DOK-series semiconductor particle detector for the Interball magnetospheric mission.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml14-name">Interball — DOK-SA</span><span class="mrow__agency" data-edit="ml14-agency">Interball</span><span class="mrow__years" data-edit="ml14-years">1995–2000</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml14-body">DOK-SA particle detector flown on the Magion subsatellite of Interball.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml15-name">Interball — DOK-2X</span><span class="mrow__agency" data-edit="ml15-agency">Interball</span><span class="mrow__years" data-edit="ml15-years">1995–2000</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml15-body">DOK-2X detector for the Interball tail probe.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml16-name">Interball — DOK-SX</span><span class="mrow__agency" data-edit="ml16-agency">Interball</span><span class="mrow__years" data-edit="ml16-years">1995–2000</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml16-body">DOK-SX detector flown alongside the Interball tail probe.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml17-name">Coronas-I — SONG-E</span><span class="mrow__agency" data-edit="ml17-agency">Coronas</span><span class="mrow__years" data-edit="ml17-years">1994</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml17-body">Electronics for the SONG-E solar gamma-ray and neutron instrument.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml18-name">Apex — DOK-S</span><span class="mrow__agency" data-edit="ml18-agency">Apex</span><span class="mrow__years" data-edit="ml18-years">1991</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml18-body">DOK-S particle detector for the Apex active plasma experiment.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml19-name">Active — SPE-1</span><span class="mrow__agency" data-edit="ml19-agency">Active</span><span class="mrow__years" data-edit="ml19-years">1989</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml19-body">The SPE-1 spectrometer for the Active magnetospheric mission.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml20-name">Active — DOK-S</span><span class="mrow__agency" data-edit="ml20-agency">Active</span><span class="mrow__years" data-edit="ml20-years">1989</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml20-body">DOK-S semiconductor detector flown on the Active mission and its Magion-2 subsatellite.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml21-name">Intershock — DOK-1</span><span class="mrow__agency" data-edit="ml21-agency">Intershock</span><span class="mrow__years" data-edit="ml21-years">1985</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml21-body">DOK-1, the first of the DOK series of semiconductor detectors, studying the Earth's bow shock.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml22-name">Vertikal-10 — URE-1</span><span class="mrow__agency" data-edit="ml22-agency">Vertikal</span><span class="mrow__years" data-edit="ml22-years">1981</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml22-body">The URE-1 instrument flown on a Vertikal sounding rocket.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml23-name">Prognoz-8 — DOK-T</span><span class="mrow__agency" data-edit="ml23-agency">Prognoz</span><span class="mrow__years" data-edit="ml23-years">1980</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml23-body">DOK-T particle detector aboard Prognoz-8, observing the solar wind and magnetosphere.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml24-name">Interkosmos-17 — SK-1</span><span class="mrow__agency" data-edit="ml24-agency">Interkosmos</span><span class="mrow__years" data-edit="ml24-years">1977</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml24-body">The first instrument designed and built entirely within our department — a gamma-ray and neutron detector launched on 24 September 1977.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml25-name">Interkosmos-13 — PG-1B</span><span class="mrow__agency" data-edit="ml25-agency">Interkosmos</span><span class="mrow__years" data-edit="ml25-years">1975</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml25-body">The PG-1B instrument, part of the department's earliest spaceflight participation.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml26-name">Interkosmos-6 — Emulzie-1</span><span class="mrow__agency" data-edit="ml26-agency">Interkosmos</span><span class="mrow__years" data-edit="ml26-years">1972</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml26-body">A nuclear emulsion experiment recording cosmic ray tracks in orbit.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml27-name">Interkosmos-5 — PG-1A</span><span class="mrow__agency" data-edit="ml27-agency">Interkosmos</span><span class="mrow__years" data-edit="ml27-years">1971</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml27-body">The PG-1A particle instrument, continuing the PG series of early experiments.</p></div>
-      </details>
-      <details class="mrow">
-        <summary class="mrow__head"><span class="mrow__name" data-edit="ml28-name">Interkosmos-3 — PG-1</span><span class="mrow__agency" data-edit="ml28-agency">Interkosmos</span><span class="mrow__years" data-edit="ml28-years">1970</span><span class="mrow__toggle" aria-hidden="true">+</span></summary>
-        <div class="mrow__body"><p data-edit="ml28-body">PG-1, the department's first flight experiment, measuring charged particles in near-Earth space.</p></div>
-      </details>
+<section id="science"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Space Science</span>
+  <h2>Four questions we ask about space</h2>
+  
+</div>
+<div class="grid grid-2">
+  <article class="card"><span class="eyebrow eyebrow--muted">Cosmic Rays Science</span><h3>How does the Sun shape the flux of galactic cosmic rays reaching Earth?</h3><p>We track solar modulation, Forbush decreases and ground-level enhancements in the uninterrupted neutron monitor record from Lomnický štít, and model how charged particles propagate through the heliosphere and magnetosphere.</p></article>
+  <article class="card"><span class="eyebrow eyebrow--muted">Neutrino Science</span><h3>Where do the Universe's highest-energy neutrinos come from?</h3><p>Through the KM3NeT deep-sea telescope we search for the cosmic accelerators behind astrophysical neutrinos — messengers that arrive undeflected by magnetic fields and unabsorbed by matter.</p></article>
+  <article class="card"><span class="eyebrow eyebrow--muted">Space Weather Science</span><h3>Can we predict when solar activity will disrupt technology on Earth and in orbit?</h3><p>We study how coronal mass ejections, the solar wind and geomagnetic storms couple to spacecraft, aviation and ground infrastructure — and apply machine learning to forecast their impact.</p></article>
+  <article class="card"><span class="eyebrow eyebrow--muted">Airglow Science</span><h3>What does the faint glow of the upper atmosphere reveal about the boundary to space?</h3><p>By measuring airglow emission we probe the dynamics, waves and composition of the region where Earth's atmosphere meets space — and characterise the background that limits observations from orbit.</p></article>
+</div>
+</div></section>
+<section id="missions" class="band"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Space Missions</span>
+  <h2>Instruments we have flown</h2>
+  <p class="lede">More than 25 missions since 1977 carry hardware or software designed in Košice. Four current highlights, and the full record below.</p>
+</div>
+<div class="grid grid-2">
+  <a class="card card--link mission" href="https://stephanik.eu/" target="_blank" rel="noopener">
+    <div class="badges"><span class="badge badge--agency">TIK · EU Recovery Plan</span><span class="badge badge--active"><span class="dot"></span>Active · In preparation</span></div>
+    <h3>STEPHANIK</h3>
+    <p>A Slovak technology consortium building a modular 150 kg+ satellite platform with interchangeable payloads — developing core subsystems, cleanroom facilities, and a functional ground segment to establish a sovereign Slovak satellite capability.</p>
+    <p class="mono role">Our role: consortium member · OBC development and cleanroom facilities</p>
+    <span class="card__more">Visit the project site →</span>
+  </a>
+  <a class="card card--link mission" href="https://doi.org/10.1088/1475-7516/2026/07/001" target="_blank" rel="noopener">
+    <div class="badges"><span class="badge badge--agency">NASA · Balloon</span><span class="badge badge--active"><span class="dot"></span>Active · In preparation</span></div>
+    <h3>POEMMA-Balloon with Radio</h3>
+    <p>A stratospheric balloon pathfinder for the POEMMA concept, observing ultra-high-energy cosmic rays and neutrinos from above the clouds through fluorescence and radio signatures.</p>
+    <p class="mono role">Our role: EMON instruments delivery</p>
+    <span class="card__more">Read the paper →</span>
+  </a>
+  <a class="card card--link mission" href="mission-juice.html">
+    <div class="badges"><span class="badge badge--agency">ESA</span><span class="badge badge--active"><span class="dot"></span>Active · Cruise</span></div>
+    <h3>JUICE — PEP / JDC / ACM</h3>
+    <p>The Jupiter Icy Moons Explorer arrives in 2031 to survey Ganymede, Europa and Callisto and Jupiter's magnetosphere as a coupled system. For the JDC plasma analyser we designed and delivered the Anti-Coincidence Module, which flags penetrating radiation-belt electrons.</p>
+    <p class="mono role">Our role: ACM anti-coincidence module design, testing and delivery</p>
+    <span class="card__more">Read the full mission story →</span>
+  </a>
+  <a class="card card--link mission" href="mission-bepicolombo.html">
+    <div class="badges"><span class="badge badge--agency">ESA · JAXA</span><span class="badge badge--active"><span class="dot"></span>Active · Arrival</span></div>
+    <h3>BepiColombo — SERENA / PICAM</h3>
+    <p>Europe's first mission to Mercury reaches orbit in November 2026 to study the planet's exosphere, magnetosphere and its coupling to the Sun. For SERENA's PICAM ion mass spectrometer we designed, verified and built the ultra-light structure carrying its electronics and sensor.</p>
+    <p class="mono role">Our role: PICAM electronics-box structure — design, FEA, delivery</p>
+    <span class="card__more">Read the full mission story →</span>
+  </a>
+</div>
+<div id="mission-list" style="margin-top:40px;border-top:1px solid var(--border)">
+<div><details class="drow"><summary><span class="nm">JEM-EUSO</span><span class="mt">JAXA · International</span><span class="mt">2008–</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>A wide-field telescope concept observing extensive air showers from orbit to probe cosmic rays at the highest energies, up to 10²⁰ eV — and the origin of airglow research in our department.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">HotPay-2 — PEEL</span><span class="mt">Sounding rocket</span><span class="mt">2008</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The PEEL particle instrument flown on the HotPay-2 sounding rocket to study the upper atmosphere.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">Spectrum-R — MEP-2</span><span class="mt">Radioastron</span><span class="mt">2011–2019</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The MEP-2 energetic particle spectrometer aboard the Spectrum-R (Radioastron) space radio telescope.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">Double Star — NUADU</span><span class="mt">ESA · CNSA</span><span class="mt">2003–2008</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The NUADU energetic neutral atom imager, built in Košice, mapped the ring current and inner magnetosphere from the TC-2 polar spacecraft.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">Rosetta — ESS</span><span class="mt">ESA</span><span class="mt">2004–2016</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>We delivered the ESS communication processor for ESA's comet chaser, which escorted 67P/Churyumov–Gerasimenko and deployed the Philae lander.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">Coronas-F — SONG-M</span><span class="mt">Coronas</span><span class="mt">2001</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>Electronics for the SONG-M gamma-ray and neutron instrument observing solar flares.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">Štefánik Dosimetry</span><span class="mt">Dosimetry</span><span class="mt">—</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>Radiation dosimetry experiment developed for crewed spaceflight.</p>
+</div></details>
+</div><div><details class="drow"><summary><span class="nm">MIR — SPRUT</span><span class="mt">MIR station</span><span class="mt">—</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The SPRUT instrument operated aboard the MIR orbital station.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Compass — MEP-1</span><span class="mt">Compass</span><span class="mt">—</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The MEP-1 energetic particle spectrometer for the Compass microsatellite.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Cesar — EPD</span><span class="mt">Cesar</span><span class="mt">—</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The EPD energetic particle detector developed for the Cesar mission.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Mars-96 — SLED-2</span><span class="mt">Mars-96</span><span class="mt">1996</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>SLED-2, a low-energy particle detector built with European partners — an early step in the department's integration with Western European laboratories.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">MIR — SPE-1M</span><span class="mt">MIR station</span><span class="mt">—</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The SPE-1M spectrometer flown on the MIR orbital station.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interball — DOK-2A</span><span class="mt">Interball</span><span class="mt">1995–2000</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>A DOK-series semiconductor particle detector for the Interball magnetospheric mission.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interball — DOK-SA</span><span class="mt">Interball</span><span class="mt">1995–2000</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-SA particle detector flown on the Magion subsatellite of Interball.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interball — DOK-2X</span><span class="mt">Interball</span><span class="mt">1995–2000</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-2X detector for the Interball tail probe.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interball — DOK-SX</span><span class="mt">Interball</span><span class="mt">1995–2000</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-SX detector flown alongside the Interball tail probe.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Coronas-I — SONG-E</span><span class="mt">Coronas</span><span class="mt">1994</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>Electronics for the SONG-E solar gamma-ray and neutron instrument.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Apex — DOK-S</span><span class="mt">Apex</span><span class="mt">1991</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-S particle detector for the Apex active plasma experiment.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Active — SPE-1</span><span class="mt">Active</span><span class="mt">1989</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The SPE-1 spectrometer for the Active magnetospheric mission.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Active — DOK-S</span><span class="mt">Active</span><span class="mt">1989</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-S semiconductor detector flown on the Active mission and its Magion-2 subsatellite.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Intershock — DOK-1</span><span class="mt">Intershock</span><span class="mt">1985</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-1, the first of the DOK series of semiconductor detectors, studying the Earth's bow shock.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Vertikal-10 — URE-1</span><span class="mt">Vertikal</span><span class="mt">1981</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The URE-1 instrument flown on a Vertikal sounding rocket.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Prognoz-8 — DOK-T</span><span class="mt">Prognoz</span><span class="mt">1980</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>DOK-T particle detector aboard Prognoz-8, observing the solar wind and magnetosphere.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interkosmos-17 — SK-1</span><span class="mt">Interkosmos</span><span class="mt">1977</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The first instrument designed and built entirely within our department — a gamma-ray and neutron detector launched on 24 September 1977.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interkosmos-13 — PG-1B</span><span class="mt">Interkosmos</span><span class="mt">1975</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The PG-1B instrument, part of the department's earliest spaceflight participation.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interkosmos-6 — Emulzie-1</span><span class="mt">Interkosmos</span><span class="mt">1972</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>A nuclear emulsion experiment recording cosmic ray tracks in orbit.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interkosmos-5 — PG-1A</span><span class="mt">Interkosmos</span><span class="mt">1971</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>The PG-1A particle instrument, continuing the PG series of early experiments.</p>
+</div></details>
+</div><div hidden><details class="drow"><summary><span class="nm">Interkosmos-3 — PG-1</span><span class="mt">Interkosmos</span><span class="mt">1970</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<p>PG-1, the department's first flight experiment, measuring charged particles in near-Earth space.</p>
+</div></details>
+</div>
+</div>
+<p style="padding-top:18px;margin:0"><button type="button" class="linkbtn" data-showall="mission-list">Show all 28 missions →</button></p>
+</div></section>
+<section id="lomnicky"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Space Physics Laboratory · Lomnický štít</span>
+  <h2>One of the longest cosmic-ray records on Earth</h2>
+  
+</div>
+<div class="feature">
+  <div class="feature__img" role="img" aria-label="Space Physics Laboratory at Lomnický štít above the clouds" style="background-image:url(assets/img/pillar-data.jpg)"></div>
+  <div class="feature__body">
+    <h3>A laboratory at 2634 metres</h3>
+    <p>High in the Tatra mountains, our laboratory has recorded the secondary particles produced when cosmic rays strike the atmosphere without interruption for decades. Thin air and a stable mountain platform make it one of Europe&rsquo;s most valuable observing sites.</p>
+    <div class="feature__data">
+      <div><b>2634 m</b>Altitude a.s.l.</div>
+      <div><b>1981</b>Neutron monitor since</div>
+      <div><b>24/7</b>Continuous operation</div>
     </div>
   </div>
-</section>
-
-<!-- ===== LOMNICKÝ ŠTÍT ===== -->
-<section id="lomnicky">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="lom-eyebrow">Space Physics Laboratory · Lomnický štít</span>
-      <h2 data-edit="lom-title">One of the longest cosmic-ray records on Earth</h2>
-    </div>
-    <div class="obs">
-      <div class="obs__media" style="background-image:url('assets/img/pillar-data.jpg')" role="img" aria-label="Space Physics Laboratory at Lomnický štít above the clouds"></div>
-      <div class="obs__body">
-        <h3 data-edit="lom-sub">A laboratory at 2634 metres</h3>
-        <p data-edit="lom-body">High in the Tatra mountains, our laboratory has recorded the secondary particles produced when cosmic rays strike the atmosphere without interruption for decades. Thin air and a stable mountain platform make it one of Europe's most valuable observing sites.</p>
-        <div class="obs__data">
-          <div class="k"><b data-edit="lom-d1-val">2634 m</b><span data-edit="lom-d1-label">Altitude a.s.l.</span></div>
-          <div class="k"><b data-edit="lom-d2-val">1981</b><span data-edit="lom-d2-label">Neutron monitor since</span></div>
-          <div class="k"><b data-edit="lom-d3-val">24/7</b><span data-edit="lom-d3-label">Continuous operation</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="subgrid">
-      <article class="card">
-        <h3 data-edit="lom1-title">Cosmic Rays Measurements</h3>
-        <p data-edit="lom1-body">Continuous neutron monitor data feeding the global network — used to study solar modulation, Forbush decreases and ground-level enhancements.</p>
-      </article>
-      <article class="card">
-        <h3 data-edit="lom2-title">Instrumentation</h3>
-        <p data-edit="lom2-body">The neutron monitor, supporting detectors and environmental sensors, maintained and upgraded in-house by our engineering team.</p>
-      </article>
-      <article class="card">
-        <h3 data-edit="lom3-title">History</h3>
-        <p data-edit="lom3-body">From the first space physics laboratory built on the peak in 1957 to today's continuously operating station — a record spanning generations of researchers.</p>
-      </article>
-    </div>
-    <p style="padding-top:26px"><a class="card__more" href="facility-lomnicky.html" data-edit="lom-inf-link">Site specifications and partner access →</a></p>
-  </div>
-</section>
-
-<!-- ===== SERVICES & PRODUCTS ===== -->
-<section class="band" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="srv-eyebrow">Services &amp; Products</span>
-      <h2 data-edit="srv-title">What we offer to partners</h2>
-    </div>
-    <div class="grid grid-3">
-      <article class="card card--link">
-        <h3 data-edit="srv1-title">Cleanroom Facilities</h3>
-        <p data-edit="srv1-body">The first dedicated space cleanroom in Slovakia — ISO 7, with ESD protection and controlled temperature and humidity, for developing, testing and integrating spaceborne hardware to ECSS standards.</p>
-        <a class="card__more" href="facility-cleanroom.html" data-edit="srv1-link">Facility details →</a>
-      </article>
-      <article class="card card--link">
-        <h3 data-edit="openlab-title">OpenLab Capabilities</h3>
-        <p data-edit="openlab-body">As part of the OPENLABS SAV project we are building a dedicated open-access space at Lomnický štít where partner institutions and companies can install and operate their own instruments. We provide the site, infrastructure and operational support — power, connectivity, environmental monitoring and on-site logistics at 2634 m.</p>
-        <a class="card__more" href="facility-lomnicky.html" data-edit="openlab-link">Request access →</a>
-      </article>
-      <article class="card card--link">
-        <h3 data-edit="srv2-title">Cosmic Rays Models</h3>
-        <p data-edit="srv2-body">Models of cosmic ray propagation through the heliosphere and magnetosphere, used to compute particle spectra, cut-off rigidities and radiation exposure for mission planning.</p>
-        <span class="card__more" data-edit="srv2-link">Model documentation →</span>
-      </article>
-    </div>
-
-    <h4 class="mono" data-edit="data-label" style="color:var(--text-muted);letter-spacing:.16em;text-transform:uppercase;margin:44px 0 20px">Data Products</h4>
-    <div class="grid grid-3">
-      <article class="card card--link">
-        <h3 data-edit="dp1-title">SCSS-Net</h3>
-        <p data-edit="dp1-body">A neural network for automated segmentation of coronal structures in solar images — turning large observation archives into usable catalogues.</p>
-        <span class="card__more" data-edit="dp1-link">Open portal →</span>
-      </article>
-      <article class="card card--link">
-        <h3 data-edit="dp2-title">ASPIS</h3>
-        <p data-edit="dp2-body">A service for accessing and analysing space-weather relevant datasets, developed in cooperation with ESA.</p>
-        <span class="card__more" data-edit="dp2-link">Open portal →</span>
-      </article>
-      <article class="card card--link">
-        <h3 data-edit="dp3-title">ESADOS</h3>
-        <p data-edit="dp3-body">Dosimetry data and tools for assessing radiation exposure in space and at aviation altitudes.</p>
-        <span class="card__more" data-edit="dp3-link">Open portal →</span>
-      </article>
-    </div>
-  </div>
-</section>
-
+</div>
+<div class="grid grid-3" style="margin-top:32px">
+  <article class="card"><h3>Cosmic Rays Measurements</h3><p>Continuous neutron monitor data feeding the global network — used to study solar modulation, Forbush decreases and ground-level enhancements.</p></article>
+  <article class="card"><h3>Instrumentation</h3><p>The neutron monitor, supporting detectors and environmental sensors, maintained and upgraded in-house by our engineering team.</p></article>
+  <article class="card"><h3>History</h3><p>From the first space physics laboratory built on the peak in 1957 to today&rsquo;s continuously operating station — a record spanning generations of researchers.</p></article>
+</div>
+<p style="padding-top:26px;margin:0"><a class="mono" style="color:var(--sky-blue)" href="facility-lomnicky.html">Site specifications and partner access →</a></p>
+</div></section>
+<section id="services" class="band"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Services &amp; Products</span>
+  <h2>What we offer to partners</h2>
+  
+</div>
+<div class="grid grid-3">
+  <a class="card card--link" href="facility-cleanroom.html"><h3>Cleanroom Facilities</h3><p>The first dedicated space cleanroom in Slovakia — ISO 7, with ESD protection and controlled temperature and humidity, for developing, testing and integrating spaceborne hardware to ECSS standards.</p><span class="card__more">Facility details →</span></a>
+  <a class="card card--link" href="facility-lomnicky.html"><h3>OpenLab Capabilities</h3><p>As part of the OPENLABS SAV project we are building a dedicated open-access space where universities, partner institutions, and companies can use our facilities in Košice and on Lomnický štít.</p><span class="card__more">Request access →</span></a>
+  <a class="card card--link" href="contact.html#info"><h3>Cosmic Rays Models</h3><p>Models of cosmic ray propagation through the heliosphere and magnetosphere, used to compute particle spectra, cut-off rigidities and radiation exposure for mission planning.</p><span class="card__more">Model documentation →</span></a>
+</div>
+<h4 class="mono" style="color:var(--text-muted);letter-spacing:.16em;text-transform:uppercase;margin:44px 0 20px;font-weight:400">Data Products</h4>
+<div class="grid grid-3">
+  <a class="card card--link" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener"><h3>SCSS-Net</h3><p>A neural network for automated segmentation of coronal structures in solar images — turning large observation archives into usable catalogues.</p><span class="card__more">Open portal →</span></a>
+  <a class="card card--link" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener"><h3>ASPIS</h3><p>A service for accessing and analysing space-weather relevant datasets, developed in cooperation with ESA.</p><span class="card__more">Open portal →</span></a>
+  <a class="card card--link" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener"><h3>ESADOS</h3><p>Dosimetry data and tools for assessing radiation exposure in space and at aviation altitudes.</p><span class="card__more">Open portal →</span></a>
+</div>
+</div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="results.html">Results</a>
-        <a href="public.html">For the Public</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="#" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>

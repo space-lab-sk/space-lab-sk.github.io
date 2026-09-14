@@ -3,224 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Space Cleanroom — SPACE::LAB · Košice</title>
+<title>Space cleanroom — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="Slovakia's first space cleanroom — 25 m² at ISO class 7 in Košice, with thermal-vacuum and vibration testing to ECSS standards.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Slovakia’s first space cleanroom: 25 m² at ISO class 7, with vibration and thermal-vacuum testing, in Košice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.page-hero__bg img{opacity:.5}
-.page-hero__veil{background:linear-gradient(180deg,rgba(28,32,51,.62),var(--bg) 94%),linear-gradient(90deg,var(--bg) 10%,rgba(28,32,51,.2) 80%)}
-.spec{margin:6px 0 8px}
-.spec th{width:38%;padding-right:20px}
-.glance{top:calc(var(--nav-h) + 84px)}
-.glance dl{margin:0 0 22px}
-@media(max-width:1000px){.fac{gap:36px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="research.html">Research</a>
-      <a href="infrastructure.html" class="active">Infrastructure</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html" class="active" aria-current="page">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
   <a href="research.html">Research</a>
-  <a href="infrastructure.html" class="active">Infrastructure</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html" class="active">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
 <section class="page-hero">
   <div class="page-hero__bg">
-    <img src="assets/img/cleanroom/cr-01-interior-wide.jpg" alt="" fetchpriority="high">
-    <div class="page-hero__veil"></div>
+    <img src="assets/img/cleanroom/cr-01-interior-wide.jpg" alt="" style="opacity:0.5;object-position:center">
+    <div class="page-hero__veil" style="background:linear-gradient(180deg, rgba(28,32,51,.58), rgba(28,32,51,.88) 74%, var(--bg) 98%), linear-gradient(90deg, var(--bg) 3%, rgba(28,32,51,.8) 46%, rgba(28,32,51,.22) 100%)"></div>
   </div>
   <div class="wrap">
-    <p class="crumb"><a href="infrastructure.html">Infrastructure</a><span>·</span><span>Facility</span></p>
-    <span class="eyebrow" data-edit="crp-eyebrow">Space Cleanroom · Košice</span>
-    <h1 class="display" data-edit="crp-title">Space cleanroom</h1>
-    <p class="lede" data-edit="crp-lede">A speck of dust in the wrong place ends a mission. Since May 2026 the critical phases of our work — assembly, integration, environmental testing — happen in a room built to keep that speck out, in Košice, instead of in someone else's facility abroad.</p>
+    <span class="eyebrow">Space Cleanroom · Košice</span>
+    <h1 class="display">Space cleanroom</h1>
+    <p class="lede">A speck of dust in the wrong place ends a mission. Since May 2026 the critical phases of our work — assembly, integration, environmental testing — happen in a room built to keep that speck out, in Košice, instead of in someone else&rsquo;s facility abroad.</p>
   </div>
 </section>
-<!-- ===== CLEANROOM ===== -->
-<section id="cleanroom">
+<nav class="subnav" aria-label="Section navigation">
   <div class="wrap">
-        <div class="fac">
-      <div class="fac__body">
-        <h3 data-edit="cr-h1">Why a cleanroom</h3>
-        <p data-edit="cr-p2">Flight electronics fail for unglamorous reasons. A particle bridges two pads. A static discharge no one felt degrades a junction that then passes every test and dies in orbit. Neither is recoverable once the hardware has left the ground, so the standard answer is to control the environment in which the hardware is touched at all: particle count, temperature, humidity, and the electrostatic state of every surface and every person.</p>
-        <p data-edit="cr-p3">Our room holds 25 m² at ISO class 7, with an ISO class 5 laminar flow box inside it for the operations that need it — an order of magnitude cleaner, over the bench where the work actually happens. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through rather than through the door. Processes follow ECSS, the standards framework ESA projects are run to.</p>
-        <p data-edit="cr-p4">That last point is the one that matters institutionally. Until 2026, the critical phases of development and testing had to happen elsewhere. Now they happen here.</p>
-
-        <img class="shot" src="assets/img/cleanroom/cr-03-interior-in-use.jpg" alt="A person in white cleanroom garb working at a laminar flow bench inside the cleanroom." loading="lazy" width="2000" height="1333">
-        <p class="shotcap" data-edit="cr-cap3">Work at the laminar flow bench, inside the ISO class 5 zone. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through.<span class="cred">Department of Space Physics, IEP SAS</span></p>
-
-        <h3 data-edit="cr-h2">Electronics assembly and inspection</h3>
-        <p data-edit="cr-p5">The room is equipped for hand work on flight hardware and for looking at it closely afterwards.</p>
-        <table class="spec">
-          <tbody>
-            <tr><th>Soldering</th><td data-edit="ce1">Professional soldering workstations</td></tr>
-            <tr><th>Microscopy</th><td data-edit="ce2">DRV-Z1 3D stereo digital microscope</td></tr>
-            <tr><th>Joint inspection</th><td data-edit="ce3">Ersascope X Inspection System</td></tr>
-            <tr><th>Measurement</th><td data-edit="ce4">Oscilloscopes, power supplies, precision multimeters, function generator, counter</td></tr>
-            <tr><th>Weighing</th><td data-edit="ce5">Analytical precision balance</td></tr>
-          </tbody>
-        </table>
-        <p data-edit="cr-p6">The Ersascope is there for the joints you cannot see — the ones under a package, where the only way to judge a solder fillet is to look at it sideways with optics built for the purpose.</p>
-
-        <h3 data-edit="cr-h3">Vibration testing</h3>
-        <p data-edit="cr-p7">A launch is a few minutes of violence. Qualifying hardware against it means reproducing the loads on the ground, on a shaker, with instrumentation fast enough to see what fails.</p>
-        <table class="spec">
-          <tbody>
-            <tr><th>System</th><td data-edit="cv1">Brüel &amp; Kjær LDS V780</td></tr>
-            <tr><th>Frequency</th><td data-edit="cv2">Up to 4000 Hz</td></tr>
-            <tr><th>Excitation force</th><td data-edit="cv3">Up to 5100 N, sine peak</td></tr>
-            <tr><th>Acceleration</th><td data-edit="cv4">Up to 1050 m·s⁻², sine peak</td></tr>
-            <tr><th>High-speed imaging</th><td data-edit="cv5">Chronos 2.1-HD camera</td></tr>
-          </tbody>
-        </table>
-
-        <h3 data-edit="cr-h4">Thermal-vacuum testing</h3>
-        <div class="fig-split">
-          <div>
-            <p data-edit="cr-p8">Orbit is a vacuum with a temperature gradient. The SPACEVAC chamber puts hardware in both at once, which is how thermal design, outgassing behaviour and the survival of an assembly across its full temperature range get verified before flight rather than after.</p>
-            <table class="spec">
-              <tbody>
-                <tr><th>Chamber</th><td data-edit="ct1">Vakuum Praha SPACEVAC</td></tr>
-                <tr><th>Temperature</th><td data-edit="ct2">−100 °C to +160 °C</td></tr>
-                <tr><th>Vacuum</th><td data-edit="ct3">1 × 10⁻⁷ mbar</td></tr>
-              </tbody>
-            </table>
-            <p data-edit="cr-p9">This chamber has flight heritage. The <a href="mission-juice.html">Anti-Coincidence Module</a> we built for JUICE's Particle Environment Package was thermal-vacuum tested in it before delivery to IRF Kiruna — hardware now in cruise towards Jupiter, and due in orbit around Ganymede, was qualified in this vessel. It has since been moved into the cleanroom.</p>
+    <a href="#cr-environment">Environment</a>
+    <a href="#cr-equipment">Equipment</a>
+    <a href="#cr-opening">Opening</a>
+    <a href="#cr-access">Access</a>
+  </div>
+</nav>
+<section id="cleanroom"><div class="wrap">
+<div class="crumb"><a href="infrastructure.html">Infrastructure</a><span>·</span><span>Facility</span></div>
+<div class="reading">
+  <div class="reading__col prose">
+<h3 id="cr-environment" style=>Why a cleanroom</h3>
+          <p>Flight electronics fail for unglamorous reasons. A particle bridges two pads. A static discharge no one felt degrades a junction that then passes every test and dies in orbit. Neither is recoverable once the hardware has left the ground, so the standard answer is to control the environment in which the hardware is touched at all: particle count, temperature, humidity, and the electrostatic state of every surface and every person.</p>
+          <p>Our room holds 25 m² at ISO class 7, with an ISO class 5 laminar flow box inside it for the operations that need it — an order of magnitude cleaner, over the bench where the work actually happens. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through rather than through the door. Processes follow ECSS, the standards framework ESA projects are run to.</p>
+          <p>That last point is the one that matters institutionally. Until 2026, the critical phases of development and testing had to happen elsewhere. Now they happen here.</p>
+          <figure class=""><img src="assets/img/cleanroom/cr-03-interior-in-use.jpg" alt="A person in white cleanroom garb working at a laminar flow bench inside the cleanroom." loading="lazy"><figcaption>Work at the laminar flow bench, inside the ISO class 5 zone. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+          <h3 id="cr-equipment" style=>Electronics assembly and inspection</h3>
+          <p>The room is equipped for hand work on flight hardware and for looking at it closely afterwards.</p>
+          <table class="spec"><tbody><tr><th>Soldering</th><td>Professional soldering workstations</td></tr><tr><th>Microscopy</th><td>DRV-Z1 3D stereo digital microscope</td></tr><tr><th>Joint inspection</th><td>Ersascope X Inspection System</td></tr><tr><th>Measurement</th><td>Oscilloscopes, power supplies, precision multimeters, function generator, counter</td></tr><tr><th>Weighing</th><td>Analytical precision balance</td></tr></tbody></table>
+          <p>The Ersascope is there for the joints you cannot see — the ones under a package, where the only way to judge a solder fillet is to look at it sideways with optics built for the purpose.</p>
+          <h3>Vibration testing</h3>
+          <p>A launch is a few minutes of violence. Qualifying hardware against it means reproducing the loads on the ground, on a shaker, with instrumentation fast enough to see what fails.</p>
+          <table class="spec"><tbody><tr><th>System</th><td>Brüel & Kjær LDS V780</td></tr><tr><th>Frequency</th><td>Up to 4000 Hz</td></tr><tr><th>Excitation force</th><td>Up to 5100 N, sine peak</td></tr><tr><th>Acceleration</th><td>Up to 1050 m·s⁻², sine peak</td></tr><tr><th>High-speed imaging</th><td>Chronos 2.1-HD camera</td></tr></tbody></table>
+          <h3>Thermal-vacuum testing</h3>
+          <div class="fig-split">
+            <div>
+              <p>Orbit is a vacuum with a temperature gradient. The SPACEVAC chamber puts hardware in both at once, which is how thermal design, outgassing behaviour and the survival of an assembly across its full temperature range get verified before flight rather than after.</p>
+              <table class="spec"><tbody><tr><th>Chamber</th><td>Vakuum Praha SPACEVAC</td></tr><tr><th>Temperature</th><td>−100 °C to +160 °C</td></tr><tr><th>Vacuum</th><td>1 × 10⁻⁷ mbar</td></tr></tbody></table>
+              <p>This chamber has flight heritage. The <a href="mission-juice.html">Anti-Coincidence Module</a> we built for JUICE's Particle Environment Package was thermal-vacuum tested in it before delivery to IRF Kiruna — hardware now in cruise towards Jupiter, and due in orbit around Ganymede, was qualified in this vessel. It has since been moved into the cleanroom.</p>
+            </div>
+            <figure class="" style="margin:0"><img src="assets/img/cleanroom/cr-02-spacevac-rack.jpg" alt="A stainless steel thermal-vacuum chamber on a blue frame beside a rack of laboratory instruments." loading="lazy"><figcaption>The SPACEVAC chamber and its instrument rack. Hardware inside runs from −100 °C to +160 °C at 1 × 10⁻⁷ mbar, exercised over its flight interfaces while the test runs.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
           </div>
-          <figure class="portrait">
-            <img src="assets/img/cleanroom/cr-02-spacevac-rack.jpg" alt="A stainless steel thermal-vacuum chamber on a blue frame beside a rack of laboratory instruments including an oscilloscope and multimeters." loading="lazy" width="1333" height="2000">
-            <figcaption data-edit="cr-cap2">The SPACEVAC chamber and its instrument rack. Hardware inside runs from −100 °C to +160 °C at 1 × 10⁻⁷ mbar, exercised over its flight interfaces while the test runs.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption>
-          </figure>
-        </div>
-
-        <h3 data-edit="cr-h5">Test automation and interfaces</h3>
-        <p data-edit="cr-p10">Environmental testing produces long, dull, unrepeatable runs, so the useful part is automation: National Instruments measurement modules cover temperature, voltage, digital inputs and outputs and relays, driving the test rather than watching it.</p>
-        <p data-edit="cr-p11">Devices under test connect over the buses spacecraft actually use — SpaceWire, MIL-STD-1553, Ethernet, CAN and RS-485/422 — so a unit can be exercised through its flight interfaces while it sits in the chamber or on the shaker.</p>
-
-        <h3 data-edit="cr-h6">Opened in May 2026</h3>
-        <p data-edit="cr-p12">The cleanroom opened officially on 15 May 2026 as the first space cleanroom in Slovakia, built with support from <a href="research.html#missions">TIK STEPHANIK</a> — the satellite platform consortium we are part of — and SAV OPEN LABS, both funded by the European Union.</p>
-        <blockquote class="quote">
-          <p data-edit="cr-q1">The first scientific apparatus from our department flew into space in 1977. Since then we have contributed to more than 25 space missions. The new space cleanroom, with ISO class 7 air cleanliness, opens the door to taking part in the most demanding ESA projects — and it lets us carry out the critical phases of development and testing here at home.</p>
-          <cite data-edit="cr-q1a">Šimon Mackovjak, Head of the Department of Space Physics, IEP SAS</cite>
-        </blockquote>
-        <p data-edit="cr-p13">The opening was attended by guests from the Slovak Academy of Sciences, the STEPHANIK project consortium, the East Slovak Space Cluster, the Slovak Space Office, and partner universities and companies.</p>
-
-        <h3 data-edit="cr-h7">Working with us</h3>
-        <p data-edit="cr-p14">Capacity is divided three ways. The facility serves the space programme of IEP SAS first. A share is reserved for joint scientific and technological projects. A further share is available for commercial hire.</p>
-        <p data-edit="cr-p15">If you are developing hardware that needs ISO class 7 assembly, vibration qualification or thermal-vacuum testing — as a research partner or as a customer — write to <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>.</p>
-      </div>
-      <aside class="glance">
-        <h3>Facility at a glance</h3>
-        <dl>
-          <div><dt>Clean space</dt><dd data-edit="cg1">25 m², ISO class 7</dd></div>
-          <div><dt>Local zone</dt><dd data-edit="cg2">ISO class 5, laminar flow box</dd></div>
-          <div><dt>Controlled</dt><dd data-edit="cg3">Temperature, humidity, particle concentration</dd></div>
-          <div><dt>Personnel entry</dt><dd data-edit="cg4">Air shower</dd></div>
-          <div><dt>Material pass-through</dt><dd data-edit="cg5">60 × 60 cm</dd></div>
-          <div><dt>Work</dt><dd data-edit="cg6">Development, testing and integration of fine and critical space electronics, under ESD control</dd></div>
-          <div><dt>Standards</dt><dd data-edit="cg7">Processes to ECSS — European Cooperation for Space Standardization</dd></div>
-          <div><dt>Opened</dt><dd data-edit="cg8">15 May 2026 — the first space cleanroom in Slovakia</dd></div>
-          <div><dt>Location</dt><dd data-edit="cg9">Institute of Experimental Physics SAS, Bulharská 2, Košice</dd></div>
-          <div><dt>Enquiries</dt><dd data-edit="cg10"><a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a></dd></div>
-        </dl>
-        <a class="btn btn--sky" href="#enquire">Enquire about the cleanroom</a>
-      </aside>
-    </div>
+          <h3>Test automation and interfaces</h3>
+          <p>Environmental testing produces long, dull, unrepeatable runs, so the useful part is automation: National Instruments measurement modules cover temperature, voltage, digital inputs and outputs and relays, driving the test rather than watching it.</p>
+          <p>Devices under test connect over the buses spacecraft actually use — SpaceWire, MIL-STD-1553, Ethernet, CAN and RS-485/422 — so a unit can be exercised through its flight interfaces while it sits in the chamber or on the shaker.</p>
+          <h3 id="cr-opening" style=>Opened in May 2026</h3>
+          <p>The cleanroom opened officially on 15 May 2026 as the first space cleanroom in Slovakia, built with support from TIK STEPHANIK — the satellite platform consortium we are part of — and SAV OPEN LABS, both funded by the European Union.</p>
+          <blockquote class="quote"><p>
+            The first scientific apparatus from our department flew into space in 1977. Since then we have contributed to more than 25 space missions. The new space cleanroom, with ISO class 7 air cleanliness, opens the door to taking part in the most demanding ESA projects — and it lets us carry out the critical phases of development and testing here at home.
+          </p><cite>Šimon Mackovjak, Head of the Department of Space Physics, IEP SAS</cite></blockquote>
+          <p>The opening was attended by guests from the Slovak Academy of Sciences, the STEPHANIK project consortium, the East Slovak Space Cluster, the Slovak Space Office, and partner universities and companies.</p>
+          <h3 id="cr-access" style=>Working with us</h3>
+          <p>Capacity is divided three ways. The facility serves the space programme of IEP SAS first. A share is reserved for joint scientific and technological projects. A further share is available for commercial hire.</p>
+          <p>If you are developing hardware that needs ISO class 7 assembly, vibration qualification or thermal-vacuum testing — as a research partner or as a customer — write to <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>.</p>
   </div>
-</section>
+  <aside class="glance">
+  <h3>Facility at a glance</h3>
+  <dl>
+    <div><dt>Clean space</dt><dd>25 m², ISO class 7</dd></div>
+    <div><dt>Local zone</dt><dd>ISO class 5, laminar flow box</dd></div>
+    <div><dt>Controlled</dt><dd>Temperature, humidity, particle concentration</dd></div>
+    <div><dt>Personnel entry</dt><dd>Air shower</dd></div>
+    <div><dt>Material pass-through</dt><dd>60 × 60 cm</dd></div>
+    <div><dt>Work</dt><dd>Development, testing and integration of fine and critical space electronics, under ESD control</dd></div>
+    <div><dt>Standards</dt><dd>Processes to ECSS — European Cooperation for Space Standardization</dd></div>
+    <div><dt>Opened</dt><dd>15 May 2026 — the first space cleanroom in Slovakia</dd></div>
+    <div><dt>Location</dt><dd>Institute of Experimental Physics SAS, Bulharská 2, Košice</dd></div>
+    <div><dt>Enquiries</dt><dd>space-lab@saske.sk</dd></div>
+  </dl>
+  <a class="btn btn--ghost" href="#enquire">Enquire about the cleanroom <span class="arr">→</span></a>
+</aside>
 
-<!-- ===== ENQUIRE ===== -->
-<section id="enquire">
-  <div class="wrap">
-    <div class="enquire">
-      <div>
-        <h2 data-edit="enq-title">Talk to us about access</h2>
-        <p data-edit="enq-body">Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — enquiries about instrument hosting, cleanroom use and joint projects all go to the same place.</p>
-      </div>
-      <a class="btn btn--sky btn--lg" href="contact.html#info" data-edit="enq-cta">Contacts for cooperation →</a>
-    </div>
-  </div>
-</section>
+</div>
+</div></section>
+<section id="enquire" class="band"><div class="wrap">
+<div class="enquire">
+  <div><h2>Talk to us about access</h2><p>Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — instrument hosting at Lomnický štít and serviced or supervised use of the cleanroom are agreed case by case, and enquiries about joint projects go to the same place.</p></div>
+  <a class="btn btn--sky btn--lg" href="contact.html#info">Contacts for cooperation <span class="arr">→</span></a>
+</div>
 
+</div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a>
-        <a href="results.html">Results</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>

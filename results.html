@@ -3,535 +3,611 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Results — SPACE::LAB · Department of Space Physics · Košice</title>
+<title>Results — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="Peer-reviewed publications, funded projects and open datasets from the Department of Space Physics.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Publications, projects, open data and conference contributions of the Department of Space Physics, IEP SAS, Košice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.page-hero h1{max-width:16ch;margin:0 0 20px}
-.page-hero .lede{max-width:62ch}
-.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:36px}
-.filters .lbl{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-right:6px}
-.chip{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;padding:7px 15px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;transition:.15s}
-.chip:hover{border-color:var(--sky-blue);color:var(--text)}
-.chip.on{background:#fff;border-color:#fff;color:var(--bg);font-weight:700}
-/* year groups + publication rows */
-.yeargroup{margin-bottom:52px}
-.yearhead{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:8px}
-.yearhead .y{font-family:var(--font-display);font-weight:900;font-size:30px;letter-spacing:.01em;color:#fff}
-.yearhead .n{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
-.pub{display:grid;grid-template-columns:34px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--border)}
-.pub__i{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);padding-top:4px}
-.pub__t{font-size:16px;font-weight:600;line-height:1.4;margin:0 0 8px;color:#fff}
-.pub__a{font-size:14px;line-height:1.6;color:var(--text-muted);margin:0 0 8px;max-width:92ch}
-.pub__a strong{color:#fff;font-weight:600}
-.pub__m{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.03em;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
-.pub__m em{font-style:italic;color:var(--sky-blue)}
-.pub__m a{color:var(--text-muted);border-bottom:1px solid var(--border);transition:.15s}
-.pub__m a:hover{color:#fff;border-bottom-color:#fff}
-/* projects */
-.prow{border-bottom:1px solid var(--border)}
-.prow__head{display:grid;grid-template-columns:1fr auto auto auto;gap:10px 20px;align-items:center;width:100%;background:none;border:0;color:var(--text);font-family:var(--font-body);text-align:left;padding:18px 0;cursor:pointer;transition:color .15s;list-style:none}
-.prow__head::-webkit-details-marker{display:none}
-.prow__head:hover{color:var(--sky-blue)}
-.prow__ac{font-size:16px;font-weight:700}
-.prow__ac span{display:block;font-weight:400;font-size:13px;color:var(--text-muted);margin-top:3px;max-width:72ch}
-.prow__pg,.prow__yr{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.prow__tog{font-size:18px;color:var(--text-muted);transition:transform .2s}
-.prow[open] .prow__tog{transform:rotate(45deg)}
-.prow__body{padding:2px 0 24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px;max-width:96ch}
-.pf{font-size:14px;color:var(--text-muted);line-height:1.5}
-.pf b{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);opacity:.75;margin-bottom:3px;font-weight:400}
-.pf i{font-style:normal;color:#fff}
-.prow__scope{grid-column:1/-1;font-size:14px;color:var(--text-muted);margin:0;max-width:84ch}
-@media(max-width:760px){.prow__head{grid-template-columns:1fr auto}.prow__body{grid-template-columns:1fr}}
-/* data cta */
-.datacta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding:44px;border:1px solid var(--glass-border);border-radius:var(--radius);background:var(--glass);backdrop-filter:blur(12px)}
-.datacta h3{font-size:26px;margin:0 0 10px}
-.datacta p{margin:0;color:var(--text-muted);max-width:56ch}
-/* conferences */
-.conf{padding:18px 0;border-bottom:1px solid var(--border)}
-.conf h4{font-size:16px;margin:0 0 6px;font-weight:600}
-.conf .meta{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.04em;display:flex;flex-wrap:wrap;gap:6px 14px}
-.note{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.04em;padding-top:18px}
-@media(max-width:640px){.pub{grid-template-columns:1fr;gap:6px}.pub__i{display:none}.proj{grid-template-columns:1fr}.datacta{padding:28px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
-      <a href="results.html" class="active">Results</a>
+      <a href="research.html">Research</a>
+      <a href="results.html" class="active" aria-current="page">Results</a>
+      <a href="infrastructure.html">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
-  <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="research.html">Research</a>
   <a href="results.html" class="active">Results</a>
+  <a href="infrastructure.html">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
-
 <section class="page-hero">
   <div class="page-hero__bg">
-    <img src="assets/img/nebula-blue.png" alt="Blue nebula and starfield" fetchpriority="high">
-    <div class="page-hero__veil"></div>
+    <img src="assets/img/results-paper.jpg" alt="" style="opacity:0.5;object-position:center 30%">
+    <div class="page-hero__veil" style="background:linear-gradient(180deg, rgba(28,32,51,.58), rgba(28,32,51,.88) 74%, var(--bg) 98%), linear-gradient(90deg, var(--bg) 3%, rgba(28,32,51,.8) 46%, rgba(28,32,51,.22) 100%)"></div>
   </div>
   <div class="wrap">
-    <span class="eyebrow" data-edit="rs-eyebrow">Results</span>
-    <h1 class="display" data-edit="rs-title">What our work produces</h1>
-    <p class="lede" data-edit="rs-lede">Peer-reviewed publications, funded projects, open datasets and conference contributions — the public record of the department's research.</p>
+    <span class="eyebrow">Results</span>
+    <h1 class="display">What our work produces</h1>
+    <p class="lede">Peer-reviewed publications, funded projects and open datasets — the public record of the department&rsquo;s research.</p>
   </div>
 </section>
-
-<nav class="subnav" aria-label="Results sections">
+<nav class="subnav" aria-label="Section navigation">
   <div class="wrap">
-    <a href="#publications" data-anchor="publications">Publications</a>
-    <a href="#projects" data-anchor="projects">Projects</a>
-    <a href="#data" data-anchor="data">Data</a>
-    <a href="#conferences" data-anchor="conferences">Conferences</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#data">Data</a>
   </div>
 </nav>
+<section id="publications"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Publications</span>
+  <h2>Peer-reviewed papers</h2>
+  <p class="lede">Published papers with DSP-affiliated co-authors, newest first. Department authors are highlighted; every title links to its DOI.</p>
+</div>
 
-<!-- ===== PUBLICATIONS ===== -->
-<section id="publications">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="pub-eyebrow">Publications</span>
-      <h2 data-edit="pub-title">Peer-reviewed papers</h2>
-      <p class="lede" data-edit="pub-lede" style="margin-top:16px">Published papers with DSP-affiliated co-authors, newest first. Department authors are highlighted; every title links to its DOI.</p>
-    </div>
-
-    <div class="filters" data-filter="pub">
-      <span class="lbl">Year</span>
-      <button class="chip on" data-year="all" type="button">All</button>
-      <button class="chip" data-year="2026" type="button">2026</button>
-      <button class="chip" data-year="2025" type="button">2025</button>
-      <button class="chip" data-year="2024" type="button">2024</button>
-      <button class="chip" data-year="2023" type="button">2023</button>
-      <button class="chip" data-year="2022" type="button">2022</button>
-      <button class="chip" data-year="2021" type="button">2021</button>
-    </div>
-
-    <div class="yeargroup" data-year="2026">
-      <div class="yearhead"><span class="y">2026</span><span class="n">6 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2026-1-authors">Chum, J., Mošna, Z., Base, J., Zedník, J., Schmidt, C., Hannawald, P., Rusz, J., Urbář, J., &amp; <strong>Mackovjak, Š.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2026-1-title">Co-seismic infrasound in the ionosphere over Central Europe from the M8.8 Kamchatka 2025 earthquake observed by Doppler sounding at record heights</h3>
-        <p class="pub__m" data-edit="pub-2026-1-meta"><em>Atmospheric Chemistry and Physics</em><span>26(13), 9559–9569</span><a href="https://doi.org/10.5194/acp-26-9559-2026">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2026-2-authors">Adams, J., Alfaro, J., Allard, D., et al. (POEMMA Collaboration, including <strong>Baláž, J.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Strhárský, I.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2026-2-title">POEMMA-Balloon with Radio: A multi-messenger, multi-detector balloon payload</h3>
-        <p class="pub__m" data-edit="pub-2026-2-meta"><em>Journal of Cosmology and Astroparticle Physics</em><span>2026(07), 001</span><a href="https://doi.org/10.1088/1475-7516/2026/07/001">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2026-3-authors">Wood, A., Mevius, M., Fallows, R. A., et al. (including <strong>Mackovjak, Š.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2026-3-title">Driving the mid-latitude ionosphere from below: A statistical study using LOFAR</h3>
-        <p class="pub__m" data-edit="pub-2026-3-meta"><em>Journal of Space Weather and Space Climate</em><span>In press</span><a href="https://doi.org/10.1051/swsc/2026023">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2026-4-authors">Ploc, O., Sommer, M., Kákona, M., Šlegl, J., Lužová, M., Velyčková, H., Ambrožová, I., Kákona, J., Dvořák, R., Olšovcová, V., Stránský, V., Versaci, R., Horváth, D., <strong>Kubančák, J.</strong>, <strong>Langer, R.</strong>, Trompier, F., &amp; Kodaira, S.</p>
-        <h3 class="pub__t" data-edit="pub-2026-4-title">Experimental verification of the ESADOS heliocentric potential model using airborne measurements from the REFLECT2 flight</h3>
-        <p class="pub__m" data-edit="pub-2026-4-meta"><em>Radiation Effects and Defects in Solids</em><span>181(1–2), 80–91</span><a href="https://doi.org/10.1080/10420150.2026.2647390">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">05</div><div>
-        <p class="pub__a" data-edit="pub-2026-5-authors"><strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, Chum, J., Schmidt, C., Hannawald, P., Wüst, S., Küchelbacher, L., Truhlík, V., Koucká Knížová, P., Urbář, J., <strong>Randuška, L.</strong>, <strong>Štempel, F.</strong>, &amp; <strong>Kubančák, J.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2026-5-title">Dataset of quiet space weather periods for ionospheric studies</h3>
-        <p class="pub__m" data-edit="pub-2026-5-meta"><em>Earth and Space Science</em><span>13(4), e2025EA004537</span><a href="https://doi.org/10.1029/2025EA004537">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">06</div><div>
-        <p class="pub__a" data-edit="pub-2026-6-authors">Butka, P., Sarnovský, M., Kresňáková, V., <strong>Mackovjak, Š.</strong>, &amp; Kalisková, L.</p>
-        <h3 class="pub__t" data-edit="pub-2026-6-title">Solar corona structures detection and segmentation using deep neural networks: A survey</h3>
-        <p class="pub__m" data-edit="pub-2026-6-meta"><em>IEEE Access</em><span>14, 8197–8214</span><a href="https://doi.org/10.1109/ACCESS.2026.3653555">DOI →</a></p>
-      </div></article>
-    </div>
-
-    <div class="yeargroup" data-year="2025">
-      <div class="yearhead"><span class="y">2025</span><span class="n">8 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2025-1-authors">Majirský, A., <strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, Magli, E., Butka, P., &amp; Longépé, N.</p>
-        <h3 class="pub__t" data-edit="pub-2025-1-title">Combining solar imagery and in situ data for prediction of geomagnetic storms</h3>
-        <p class="pub__m" data-edit="pub-2025-1-meta"><em>The Astrophysical Journal</em><span>995(1), 50</span><a href="https://doi.org/10.3847/1538-4357/ae1cc7">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2025-2-authors">Nguyen, M., <strong>Bobík, P.</strong>, &amp; Genči, J.</p>
-        <h3 class="pub__t" data-edit="pub-2025-2-title">Approximation of daily AMS-02 spectra with machine learning methods</h3>
-        <p class="pub__m" data-edit="pub-2025-2-meta"><em>Journal of Geophysical Research: Machine Learning and Computation</em><span>2(4), e2025JH000676</span><a href="https://doi.org/10.1029/2025JH000676">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2025-3-authors">Šlegl, J., Sokol, Z., Pešice, P., <strong>Langer, R.</strong>, <strong>Strhárský, I.</strong>, Popová, J., Kákona, M., Ambrožová, I., &amp; Ploc, O.</p>
-        <h3 class="pub__t" data-edit="pub-2025-3-title">First reported detection of a winter continental gamma-ray glow in Europe</h3>
-        <p class="pub__m" data-edit="pub-2025-3-meta"><em>Atmospheric Chemistry and Physics</em><span>25(15), 8443–8454</span><a href="https://doi.org/10.5194/acp-25-8443-2025">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2025-4-authors"><strong>Mackovjak, Š.</strong>, Martinis, C., Wroten, J., Baumgardner, J., &amp; Mendillo, M.</p>
-        <h3 class="pub__t" data-edit="pub-2025-4-title">Synergy of traditional techniques and convolutional neural networks for classification of cloudless conditions by all-sky imagers</h3>
-        <p class="pub__m" data-edit="pub-2025-4-meta"><em>Publications of the Astronomical Society of the Pacific</em><span>137(4), 045004</span><a href="https://doi.org/10.1088/1538-3873/adca59">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">05</div><div>
-        <p class="pub__a" data-edit="pub-2025-5-authors">Kákona, M., Kákona, J., Dvořák, R., Ambrožová, I., Velychko, O., Lužová, M., Šlegl, J., Sommer, M., Hanousek, V., <strong>Langer, R.</strong>, <strong>Štefánik, S.</strong>, &amp; Ploc, O.</p>
-        <h3 class="pub__t" data-edit="pub-2025-5-title">Measurements with angular sensitive electric field mill in thunderstorms</h3>
-        <p class="pub__m" data-edit="pub-2025-5-meta"><em>Journal of Physics: Conference Series</em><span>2985(1), 012014</span><a href="https://doi.org/10.1088/1742-6596/2985/1/012014">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">06</div><div>
-        <p class="pub__a" data-edit="pub-2025-6-authors">Pierrard, V., Bolsée, D., Winant, A., et al. (including <strong>Langer, R.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2025-6-title">BIOSPHERE measurement campaign from January 2024 to March 2024 and in May 2024: Effects of the solar events on the radiation belts, UV radiation and ozone in the atmosphere</h3>
-        <p class="pub__m" data-edit="pub-2025-6-meta"><em>AIMS Geosciences</em><span>11(1), 117–154</span><a href="https://doi.org/10.3934/geosci.2025007">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">07</div><div>
-        <p class="pub__a" data-edit="pub-2025-7-authors">Majirský, A., <strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, &amp; Amrich, S.</p>
-        <h3 class="pub__t" data-edit="pub-2025-7-title">Extreme space weather events of the past 30 years: Preparation for data from mission Vigil</h3>
-        <p class="pub__m" data-edit="pub-2025-7-meta"><em>Earth and Space Science</em><span>12(2), e2024EA003937</span><a href="https://doi.org/10.1029/2024EA003937">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">08</div><div>
-        <p class="pub__a" data-edit="pub-2025-8-authors">Kisvárdai, I., Štempel, F., Randuška, L., <strong>Mackovjak, Š.</strong>, <strong>Langer, R.</strong>, <strong>Strhárský, I.</strong>, &amp; <strong>Kubančák, J.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2025-8-title">Analysis of 42 years of cosmic ray measurements by the neutron monitor at Lomnický štít Observatory</h3>
-        <p class="pub__m" data-edit="pub-2025-8-meta"><em>Earth and Space Science</em><span>12(1), e2024EA003656</span><a href="https://doi.org/10.1029/2024EA003656">DOI →</a></p>
-      </div></article>
-    </div>
-
-    <div class="yeargroup" data-year="2024">
-      <div class="yearhead"><span class="y">2024</span><span class="n">5 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2024-1-authors">Pachnerová Brabcová, K., Kundrát, P., Krofta, T., Suchý, V., Petrová, M., John, D., Kozlovcev, P., Kotková, K., Fialová, A., <strong>Kubančák, J.</strong>, Válek, J., &amp; Svetlik, I.</p>
-        <h3 class="pub__t" data-edit="pub-2024-1-title">Extensive survey on radiocarbon dating of organic inclusions in medieval mortars in the Czech Republic</h3>
-        <p class="pub__m" data-edit="pub-2024-1-meta"><em>Radiocarbon</em><span>66(6), 1683–1693</span><a href="https://doi.org/10.1017/rdc.2023.56">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2024-2-authors">Karapetyan, T., Chilingarian, A., Hovsepyan, G., Martoyan, H., Sargsyan, B., <strong>Langer, R.</strong>, Chum, J., Nikolova, N., Angelov, H., Haas, D., Knapp, J., Walter, M., Ploc, O., Šlegl, J., Kákona, M., &amp; Ambrožová, I.</p>
-        <h3 class="pub__t" data-edit="pub-2024-2-title">The Forbush decrease observed by the SEVAN particle detector network in the 25th solar activity cycle</h3>
-        <p class="pub__m" data-edit="pub-2024-2-meta"><em>Journal of Atmospheric and Solar-Terrestrial Physics</em><span>262, 106305</span><a href="https://doi.org/10.1016/j.jastp.2024.106305">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2024-3-authors">Chum, J., <strong>Langer, R.</strong>, Kolmašová, I., Lhotka, O., Rusz, J., &amp; <strong>Strhárský, I.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2024-3-title">Solar cycle signatures in lightning activity</h3>
-        <p class="pub__m" data-edit="pub-2024-3-meta"><em>Atmospheric Chemistry and Physics</em><span>24(16), 9119–9130</span><a href="https://doi.org/10.5194/acp-24-9119-2024">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2024-4-authors">Mykhailenko, V., Nguyen, M., Solanik, M., Genči, J., Kolesnyk, Y., &amp; <strong>Bobík, P.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2024-4-title">SDE method for cosmic rays modulation in the heliosphere: statistical error and solution uniqueness</h3>
-        <p class="pub__m" data-edit="pub-2024-4-meta"><em>Computer Physics Communications</em><span>296, 109026</span><a href="https://doi.org/10.1016/j.cpc.2023.109026">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">05</div><div>
-        <p class="pub__a" data-edit="pub-2024-5-authors">Abdellaoui, G., et al. (JEM-EUSO Collaboration, including <strong>Baláž, J.</strong>, <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Pastirčák, B.</strong>, <strong>Putiš, M.</strong>, <strong>Strhárský, I.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2024-5-title">EUSO-SPB1 mission and science</h3>
-        <p class="pub__m" data-edit="pub-2024-5-meta"><em>Astroparticle Physics</em><span>154, 102891</span><a href="https://doi.org/10.1016/j.astropartphys.2023.102891">DOI →</a></p>
-      </div></article>
-    </div>
-
-    <div class="yeargroup" data-year="2023">
-      <div class="yearhead"><span class="y">2023</span><span class="n">4 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2023-1-authors">Abe, S., Adams, J. H., Allard, D., et al. (JEM-EUSO Collaboration, including <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Pastirčák, B.</strong>, <strong>Putiš, M.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2023-1-title">Developments and results in the context of the JEM-EUSO program obtained with the ESAF simulation and analysis framework</h3>
-        <p class="pub__m" data-edit="pub-2023-1-meta"><em>The European Physical Journal C</em><span>83, 1028</span><a href="https://doi.org/10.1140/epjc/s10052-023-12090-w">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2023-2-authors">Solanik, M., <strong>Bobík, P.</strong>, &amp; Genči, J.</p>
-        <h3 class="pub__t" data-edit="pub-2023-2-title">Geliosphere – parallel CPU and GPU based models of cosmic ray modulation in the heliosphere</h3>
-        <p class="pub__m" data-edit="pub-2023-2-meta"><em>Computer Physics Communications</em><span>291, 108847</span><a href="https://doi.org/10.1016/j.cpc.2023.108847">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2023-3-authors">Kundrát, P., Maříková-Kubková, J., Herichová, I., Tomanová, P., Petrová, M., Tecl, J., Kozlovcev, P., Kotková, K., Fialová, A., <strong>Kubančák, J.</strong>, Válek, J., &amp; Svetlik, I.</p>
-        <h3 class="pub__t" data-edit="pub-2023-3-title">Radiocarbon dating of mortar charcoals from romanesque Southern Corridor, Prague Castle</h3>
-        <p class="pub__m" data-edit="pub-2023-3-meta"><em>Journal of Radioanalytical and Nuclear Chemistry</em><span>332(5), 1469–1474</span><a href="https://doi.org/10.1007/s10967-022-08577-7">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2023-4-authors">Garg, D., Patel, S., Reno, M. H., et al. (including <strong>Mackovjak, Š.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2023-4-title">Neutrino propagation in the Earth and emerging charged leptons with nuPyProp</h3>
-        <p class="pub__m" data-edit="pub-2023-4-meta"><em>Journal of Cosmology and Astroparticle Physics</em><span>2023(01), 041</span><a href="https://doi.org/10.1088/1475-7516/2023/01/041">DOI →</a></p>
-      </div></article>
-    </div>
-
-    <div class="yeargroup" data-year="2022">
-      <div class="yearhead"><span class="y">2022</span><span class="n">6 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2022-1-authors">Orsini, S., Milillo, A., Lichtenegger, H., et al. (SERENA instrument team on BepiColombo, including <strong>Baláž, J.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2022-1-title">Inner southern magnetosphere observation of Mercury via SERENA ion sensors in BepiColombo mission</h3>
-        <p class="pub__m" data-edit="pub-2022-1-meta"><em>Nature Communications</em><span>13, 7390</span><a href="https://doi.org/10.1038/s41467-022-34988-x">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2022-2-authors">Šlegl, J., <strong>Langer, R.</strong>, Brunclík, T., Mašek, P., <strong>Strhárský, I.</strong>, Ambrožová, I., Chum, J., &amp; Ploc, O.</p>
-        <h3 class="pub__t" data-edit="pub-2022-2-title">Spectrometry of high-energy photons on high mountain observatory Lomnický štít during thunderstorms</h3>
-        <p class="pub__m" data-edit="pub-2022-2-meta"><em>Radiation Protection Dosimetry</em><span>198(9–11), 623–627</span><a href="https://doi.org/10.1093/rpd/ncac108">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2022-3-authors">Gecášek, D., <strong>Bobík, P.</strong>, Genči, J., Villim, J., &amp; Vaško, M.</p>
-        <h3 class="pub__t" data-edit="pub-2022-3-title">COR system: A tool to evaluate cosmic ray trajectories in the Earth's magnetosphere</h3>
-        <p class="pub__m" data-edit="pub-2022-3-meta"><em>Advances in Space Research</em><span>70(4), 1153–1168</span><a href="https://doi.org/10.1016/j.asr.2022.06.001">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2022-4-authors">Kolmašová, I., Santolík, O., Šlegl, J., Popová, J., Sokol, Z., Zacharov, P., Ploc, O., Diendorfer, G., <strong>Langer, R.</strong>, Lán, R., &amp; <strong>Strhárský, I.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2022-4-title">Continental thunderstorm ground enhancement observed at an exceptionally low altitude</h3>
-        <p class="pub__m" data-edit="pub-2022-4-meta"><em>Atmospheric Chemistry and Physics</em><span>22(12), 7959–7973</span><a href="https://doi.org/10.5194/acp-22-7959-2022">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">05</div><div>
-        <p class="pub__a" data-edit="pub-2022-5-authors">Adams, J. H., Jr., Ahmad, S., Allard, D., et al. (JEM-EUSO Collaboration, including <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Putiš, M.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2022-5-title">A review of the EUSO-Balloon pathfinder for the JEM-EUSO program</h3>
-        <p class="pub__m" data-edit="pub-2022-5-meta"><em>Space Science Reviews</em><span>218, 3</span><a href="https://doi.org/10.1007/s11214-022-00870-x">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">06</div><div>
-        <p class="pub__a" data-edit="pub-2022-6-authors">Mykhailenko, V., &amp; <strong>Bobík, P.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2022-6-title">Statistical error for cosmic rays modulation evaluated by SDE backward in time method for 1D model</h3>
-        <p class="pub__m" data-edit="pub-2022-6-meta"><em>Fluids</em><span>7(2), 46</span><a href="https://doi.org/10.3390/fluids7020046">DOI →</a></p>
-      </div></article>
-    </div>
-
-    <div class="yeargroup" data-year="2021">
-      <div class="yearhead"><span class="y">2021</span><span class="n">9 papers</span></div>
-      <article class="pub"><div class="pub__i">01</div><div>
-        <p class="pub__a" data-edit="pub-2021-1-authors">Amrich, S., <strong>Mackovjak, Š.</strong>, <strong>Strhárský, I.</strong>, <strong>Baláž, J.</strong>, &amp; Hančikovský, M.</p>
-        <h3 class="pub__t" data-edit="pub-2021-1-title">Design and construction of hardware and software for autonomous observations of Transient Luminous Events</h3>
-        <p class="pub__m" data-edit="pub-2021-1-meta"><em>Journal of Instrumentation</em><span>16(12), T12016</span><a href="https://doi.org/10.1088/1748-0221/16/12/t12016">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">02</div><div>
-        <p class="pub__a" data-edit="pub-2021-2-authors">Maslej-Krešňáková, V., Kundrát, A., <strong>Mackovjak, Š.</strong>, Butka, P., Jaščur, S., Kolmašová, I., &amp; Santolík, O.</p>
-        <h3 class="pub__t" data-edit="pub-2021-2-title">Automatic detection of atmospherics and tweek atmospherics in radio spectrograms based on a deep learning approach</h3>
-        <p class="pub__m" data-edit="pub-2021-2-meta"><em>Earth and Space Science</em><span>8(11), e2021EA002007</span><a href="https://doi.org/10.1029/2021EA002007">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">03</div><div>
-        <p class="pub__a" data-edit="pub-2021-3-authors"><strong>Mackovjak, Š.</strong>, Harman, M., Maslej-Krešňáková, V., &amp; Butka, P.</p>
-        <h3 class="pub__t" data-edit="pub-2021-3-title">SCSS-Net: Solar corona structures segmentation by deep learning</h3>
-        <p class="pub__m" data-edit="pub-2021-3-meta"><em>Monthly Notices of the Royal Astronomical Society</em><span>508(3), 3111–3124</span><a href="https://doi.org/10.1093/mnras/stab2536">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">04</div><div>
-        <p class="pub__a" data-edit="pub-2021-4-authors">Adams, J. H., Jr., Allen, L., Bachman, R., et al. (EUSO-SPB1/JEM-EUSO Collaboration, including <strong>Mackovjak, Š.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2021-4-title">Extreme Universe Space Observatory on a Super Pressure Balloon 1 calibration: From the laboratory to the desert</h3>
-        <p class="pub__m" data-edit="pub-2021-4-meta"><em>Experimental Astronomy</em><span>52(1–2), 125–140</span><a href="https://doi.org/10.1007/s10686-020-09689-2">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">05</div><div>
-        <p class="pub__a" data-edit="pub-2021-5-authors">Chum, J., Kollárik, M., Kolmašová, I., <strong>Langer, R.</strong>, Rusz, J., Saxonbergová, D., &amp; <strong>Strhárský, I.</strong></p>
-        <h3 class="pub__t" data-edit="pub-2021-5-title">Influence of solar wind on secondary cosmic rays and atmospheric electricity</h3>
-        <p class="pub__m" data-edit="pub-2021-5-meta"><em>Frontiers in Earth Science</em><span>9, 671801</span><a href="https://doi.org/10.3389/feart.2021.671801">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">06</div><div>
-        <p class="pub__a" data-edit="pub-2021-6-authors">Olinto, A. V., Krizmanic, J., Adams, J. H., et al. (POEMMA Collaboration, including <strong>Mackovjak, Š.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2021-6-title">The POEMMA (Probe of Extreme Multi-Messenger Astrophysics) observatory</h3>
-        <p class="pub__m" data-edit="pub-2021-6-meta"><em>Journal of Cosmology and Astroparticle Physics</em><span>2021(06), 007</span><a href="https://doi.org/10.1088/1475-7516/2021/06/007">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">07</div><div>
-        <p class="pub__a" data-edit="pub-2021-7-authors"><strong>Mackovjak, Š.</strong>, Varga, M., Hrivňak, S., Palkoci, O., &amp; Didebulidze, G. G.</p>
-        <h3 class="pub__t" data-edit="pub-2021-7-title">Data-driven modeling of atomic oxygen airglow over a period of three solar cycles</h3>
-        <p class="pub__m" data-edit="pub-2021-7-meta"><em>Journal of Geophysical Research: Space Physics</em><span>126(3), e2020JA028991</span><a href="https://doi.org/10.1029/2020JA028991">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">08</div><div>
-        <p class="pub__a" data-edit="pub-2021-8-authors"><strong>Bobík, P.</strong>, <strong>Putiš, M.</strong>, Kolesnyk, Y. L., &amp; Shakhov, B. A.</p>
-        <h3 class="pub__t" data-edit="pub-2021-8-title">Estimation of the modulation level of cosmic rays at high energies</h3>
-        <p class="pub__m" data-edit="pub-2021-8-meta"><em>Monthly Notices of the Royal Astronomical Society</em><span>503(3), 3386–3393</span><a href="https://doi.org/10.1093/mnras/stab597">DOI →</a></p>
-      </div></article>
-      <article class="pub"><div class="pub__i">09</div><div>
-        <p class="pub__a" data-edit="pub-2021-9-authors">Orsini, S., Livi, S. A., Lichtenegger, H., et al. (SERENA instrument team on BepiColombo, including <strong>Baláž, J.</strong>)</p>
-        <h3 class="pub__t" data-edit="pub-2021-9-title">SERENA: Particle instrument suite for determining the Sun-Mercury interaction from BepiColombo</h3>
-        <p class="pub__m" data-edit="pub-2021-9-meta"><em>Space Science Reviews</em><span>217(1), 11</span><a href="https://doi.org/10.1007/s11214-020-00787-3">DOI →</a></p>
-      </div></article>
-    </div>
+<div class="filters" data-filters="pub-list"><span class="lbl">Year</span><button type="button" class="chip on" data-filter="all">All</button><button type="button" class="chip" data-filter="2026">2026</button><button type="button" class="chip" data-filter="2025">2025</button><button type="button" class="chip" data-filter="2024">2024</button><button type="button" class="chip" data-filter="2023">2023</button><button type="button" class="chip" data-filter="2022">2022</button><button type="button" class="chip" data-filter="2021">2021</button></div>
+<div id="pub-list">
+  <div data-group="2026" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2026</span><span class="c">6 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Co-seismic infrasound in the ionosphere over Central Europe from the M8.8 Kamchatka 2025 earthquake observed by Doppler sounding at record heights</p>
+      <p class="pub__a">Chum, J., Mošna, Z., Base, J., Zedník, J., Schmidt, C., Hannawald, P., Rusz, J., Urbář, J., &amp; <strong>Mackovjak, Š.</strong></p>
+      <p class="pub__m"><em>Atmospheric Chemistry and Physics</em><span>26(13), 9559–9569</span><a href="https://doi.org/10.5194/acp-26-9559-2026" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">POEMMA-Balloon with Radio: A multi-messenger, multi-detector balloon payload</p>
+      <p class="pub__a">Adams, J., Alfaro, J., Allard, D., et al. (POEMMA Collaboration, including <strong>Baláž, J.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Strhárský, I.</strong>)</p>
+      <p class="pub__m"><em>Journal of Cosmology and Astroparticle Physics</em><span>2026(07), 001</span><a href="https://doi.org/10.1088/1475-7516/2026/07/001" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">Driving the mid-latitude ionosphere from below: A statistical study using LOFAR</p>
+      <p class="pub__a">Wood, A., Mevius, M., Fallows, R. A., et al. (including <strong>Mackovjak, Š.</strong>)</p>
+      <p class="pub__m"><em>Journal of Space Weather and Space Climate</em><span>In press</span><a href="https://doi.org/10.1051/swsc/2026023" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">Experimental verification of the ESADOS heliocentric potential model using airborne measurements from the REFLECT2 flight</p>
+      <p class="pub__a">Ploc, O., Sommer, M., Kákona, M., Šlegl, J., Lužová, M., Velyčková, H., Ambrožová, I., Kákona, J., Dvořák, R., Olšovcová, V., Stránský, V., Versaci, R., Horváth, D., <strong>Kubančák, J.</strong>, <strong>Langer, R.</strong>, Trompier, F., &amp; Kodaira, S.</p>
+      <p class="pub__m"><em>Radiation Effects and Defects in Solids</em><span>181(1–2), 80–91</span><a href="https://doi.org/10.1080/10420150.2026.2647390" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">05</div><div>
+      <p class="pub__t">Dataset of quiet space weather periods for ionospheric studies</p>
+      <p class="pub__a"><strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, Chum, J., Schmidt, C., Hannawald, P., Wüst, S., Küchelbacher, L., Truhlík, V., Koucká Knížová, P., Urbář, J., <strong>Randuška, L.</strong>, <strong>Štempel, F.</strong>, &amp; <strong>Kubančák, J.</strong></p>
+      <p class="pub__m"><em>Earth and Space Science</em><span>13(4), e2025EA004537</span><a href="https://doi.org/10.1029/2025EA004537" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">06</div><div>
+      <p class="pub__t">Solar corona structures detection and segmentation using deep neural networks: A survey</p>
+      <p class="pub__a">Butka, P., Sarnovský, M., Kresňáková, V., <strong>Mackovjak, Š.</strong>, &amp; Kalisková, L.</p>
+      <p class="pub__m"><em>IEEE Access</em><span>14, 8197–8214</span><a href="https://doi.org/10.1109/ACCESS.2026.3653555" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
   </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
-<section class="band" id="projects">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="prj-eyebrow">Projects</span>
-      <h2 data-edit="prj-title">Funded research</h2>
-      <p class="lede" data-edit="prj-lede" style="margin-top:16px">Awarded contracts grouped by funding source, newest first. Expand a project for its full record.</p>
-    </div>
-
-    <div class="filters" data-filter="proj">
-      <span class="lbl">Funding</span>
-      <button class="chip on" data-fund="all" type="button">All</button>
-      <button class="chip" data-fund="ESA" type="button">ESA</button>
-      <button class="chip" data-fund="EU" type="button">EU</button>
-      <button class="chip" data-fund="VEGA" type="button">VEGA</button>
-      <button class="chip" data-fund="Others" type="button">Others</button>
-    </div>
-
-    <div class="yeargroup" data-fund="ESA">
-      <div class="yearhead"><span class="y">ESA</span><span class="n">European Space Agency · 13 awarded contracts since 2016</span></div>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa1-ac">SWE TOOLKIT<span data-edit="esa1-title">S2-SW-06D: Solar and Heliospheric Weather Toolkit Development</span></span><span class="prow__pg" data-edit="esa1-pg">S2P</span><span class="prow__yr" data-edit="esa1-yrs">2026–2028</span><span class="badge badge--active"><span class="dot"></span><span data-edit="esa1-status">Kick-off</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa1-f0">R&D activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa1-f1">Sub-contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa1-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa1-f3">—</i></p><p class="pf"><b>Partners</b><i data-edit="esa1-f4">Royal Observatory of Belgium · University of Genoa · ONERA · Augura Space · Mullard Space Science Laboratory · Technical University of Košice · Global Singularity</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa2-ac">ESADOS<span data-edit="esa2-title">ESA Support for Aircrew Dosimetry Services</span></span><span class="prow__pg" data-edit="esa2-pg">RPA · SK RPA 2</span><span class="prow__yr" data-edit="esa2-yrs">2025–2026</span><span class="badge badge--active"><span class="dot"></span><span data-edit="esa2-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa2-f0">Preparatory activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa2-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa2-f2">J. Kubančák</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa2-f3">—</i></p><p class="pf"><b>Partners</b><i data-edit="esa2-f4">Nuclear Physics Institute of the Czech Academy of Sciences</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa3-ac">SCSS-Net<span data-edit="esa3-title">Solar Corona Structures Segmentation algorithm by deep neural networks</span></span><span class="prow__pg" data-edit="esa3-pg">RPA · SK RPA 1</span><span class="prow__yr" data-edit="esa3-yrs">2024–2026</span><span class="badge badge--done" data-edit="esa3-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa3-f0">Research activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa3-f1">Sub-contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa3-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa3-f3">4000143601/24/NL/MH/mp</i></p><p class="pf"><b>Partners</b><i data-edit="esa3-f4">Technical University of Košice · Royal Observatory of Belgium</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa4-ac">QUID-REGIS<span data-edit="esa4-title">Quiet Ionospheric Disturbances — REsearch based on Ground-based mesospheric and Ionospheric data with Swarm data</span></span><span class="prow__pg" data-edit="esa4-pg">FutureEO</span><span class="prow__yr" data-edit="esa4-yrs">2024–2026</span><span class="badge badge--done" data-edit="esa4-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa4-f0">Space science</i></p><p class="pf"><b>Our role</b><i data-edit="esa4-f1">Sub-contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa4-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa4-f3">4000143632/24/I-EB</i></p><p class="pf"><b>Partners</b><i data-edit="esa4-f4">DLR — German Aerospace Center · Institute of Atmospheric Physics, Czech Academy of Sciences</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa5-ac">Vigil-ML<span data-edit="esa5-title">Study toward enhancing reliability and timeliness of Vigil mission predictions through Machine Learning</span></span><span class="prow__pg" data-edit="esa5-pg">RPA · SK RPA 1</span><span class="prow__yr" data-edit="esa5-yrs">2023–2025</span><span class="badge badge--done" data-edit="esa5-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa5-f0">Space science</i></p><p class="pf"><b>Our role</b><i data-edit="esa5-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa5-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa5-f3">4000142780/23/NL/MH/mp</i></p><p class="pf"><b>Partners</b><i data-edit="esa5-f4">Politecnico di Torino</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa6-ac">SK-S2P-Edu<span data-edit="esa6-title">Proposal for Slovak universities curriculum adaptation toward S2P market</span></span><span class="prow__pg" data-edit="esa6-pg">PECS · SK PECS 7</span><span class="prow__yr" data-edit="esa6-yrs">2023–2024</span><span class="badge badge--done" data-edit="esa6-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa6-f0">Educational activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa6-f1">Sub-contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa6-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa6-f3">4000136672/21/NL/SC</i></p><p class="pf"><b>Partners</b><i data-edit="esa6-f4">Technical University of Košice · Comenius University Bratislava</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa7-ac">ASPIS<span data-edit="esa7-title">Feasibility study of data-driven Autonomous Service for Prediction of Ionospheric Scintillations</span></span><span class="prow__pg" data-edit="esa7-pg">PECS · SK PECS 6</span><span class="prow__yr" data-edit="esa7-yrs">2022–2023</span><span class="badge badge--done" data-edit="esa7-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa7-f0">Research activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa7-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa7-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa7-f3">4000137046/22/NL/SC</i></p><p class="pf"><b>Partners</b><i data-edit="esa7-f4">Technical University of Košice · GlobalLogic Slovakia</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa8-ac">SK-S2P<span data-edit="esa8-title">Slovakia National Space Safety Programme (S2P) Study</span></span><span class="prow__pg" data-edit="esa8-pg">Top-down</span><span class="prow__yr" data-edit="esa8-yrs">2021–2022</span><span class="badge badge--done" data-edit="esa8-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa8-f0">Preparatory activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa8-f1">Sub-contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa8-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa8-f3">4000136251/21/D/AP</i></p><p class="pf"><b>Partners</b><i data-edit="esa8-f4">Astros Solutions · Comenius University Bratislava · Astronomical Institute, Slovak Academy of Sciences</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa9-ac">SIREN<span data-edit="esa9-title">SIREN Space Ionizing Radiation Experts Nursery</span></span><span class="prow__pg" data-edit="esa9-pg">PECS · SK PECS 5</span><span class="prow__yr" data-edit="esa9-yrs">2020–2022</span><span class="badge badge--done" data-edit="esa9-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa9-f0">Educational activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa9-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa9-f2">J. Kubančák</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa9-f3">—</i></p><p class="pf"><b>Partners</b><i data-edit="esa9-f4">—</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa11-ac">SPACE::LAB<span data-edit="esa11-title">Place to attract, educate and involve young generation in space science and engineering</span></span><span class="prow__pg" data-edit="esa11-pg">PECS · SK PECS 3</span><span class="prow__yr" data-edit="esa11-yrs">2018–2020</span><span class="badge badge--done" data-edit="esa11-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa11-f0">Educational activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa11-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa11-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa11-f3">4000125987/18/NL/SC</i></p><p class="pf"><b>Partners</b><i data-edit="esa11-f4">—</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa12-ac">JUICE<span data-edit="esa12-title">Slovak contribution to ESA-JUICE mission: Development of the Anti-Coincidence Module (ACM) for the Particle Environment Package (PEP)</span></span><span class="prow__pg" data-edit="esa12-pg">PECS · SK PECS 3</span><span class="prow__yr" data-edit="esa12-yrs">2018–2021</span><span class="badge badge--done" data-edit="esa12-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa12-f0">Flight hardware</i></p><p class="pf"><b>Our role</b><i data-edit="esa12-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa12-f2">J. Baláž</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa12-f3">—</i></p><p class="pf"><b>Partners</b><i data-edit="esa12-f4">—</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa10-ac">AMON-net<span data-edit="esa10-title">Follow-up of feasibility study to observe ionospheric disturbances by airglow monitoring network</span></span><span class="prow__pg" data-edit="esa10-pg">PECS · SK PECS 2</span><span class="prow__yr" data-edit="esa10-yrs">2018–2024</span><span class="badge badge--done" data-edit="esa10-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa10-f0">R&D activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa10-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa10-f2">Š. Mackovjak</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa10-f3">4000125330/18/NL/SC</i></p><p class="pf"><b>Partners</b><i data-edit="esa10-f4">—</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="esa13-ac">One-pixel<span data-edit="esa13-title">Feasibility study to observe ionospheric disturbances by one pixel UV detector</span></span><span class="prow__pg" data-edit="esa13-pg">PECS · SK PECS 1</span><span class="prow__yr" data-edit="esa13-yrs">2016–2018</span><span class="badge badge--done" data-edit="esa13-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Activity type</b><i data-edit="esa13-f0">Preparatory activity</i></p><p class="pf"><b>Our role</b><i data-edit="esa13-f1">Prime contractor</i></p><p class="pf"><b>Principal investigator</b><i data-edit="esa13-f2">P. Bobík</i></p><p class="pf"><b>Contract No.</b><i data-edit="esa13-f3">4000117740/16/NL/NDe</i></p><p class="pf"><b>Partners</b><i data-edit="esa13-f4">—</i></p></div></details>
-    </div>
-
-    <div class="yeargroup" data-fund="EU">
-      <div class="yearhead"><span class="y">EU</span><span class="n">European Union · nationally administered instruments</span></div>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="eu2-ac">OPENLABS SAV<span data-edit="eu2-title">Rozvoj konceptu otvorenej výskumnej infraštruktúry SAV pre aplikovaný výskum v podmienkach SR</span></span><span class="prow__pg" data-edit="eu2-pg">Programme Slovakia 2021–2027 · ERDF</span><span class="prow__yr" data-edit="eu2-yrs">2026–2029</span><span class="badge badge--active"><span class="dot"></span><span data-edit="eu2-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Instrument</b><i data-edit="eu2-f0">Programme Slovakia 2021–2027 (European Regional Development Fund)</i></p><p class="pf"><b>Project No. / ITMS code</b><i data-edit="eu2-f1">To be confirmed</i></p><p class="pf"><b>Our role</b><i data-edit="eu2-f2">To be confirmed</i></p><p class="pf"><b>Principal investigator</b><i data-edit="eu2-f3">To be confirmed</i></p><p class="pf"><b>Partners</b><i data-edit="eu2-f4">To be confirmed</i></p><p class="pf"><b>Duration</b><i data-edit="eu2-f5">To be confirmed</i></p><p class="prow__scope" data-edit="eu2-scope">Open-access research infrastructure — a dedicated space at Lomnický štít where partner institutions and companies can install and operate their own instruments, with site, infrastructure and operational support provided by the department.</p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="eu1-ac">STEPHANIK<span data-edit="eu1-title">Slovak Technical Ecosphere Platform</span></span><span class="prow__pg" data-edit="eu1-pg">Recovery &amp; Resilience Plan · TIK</span><span class="prow__yr" data-edit="eu1-yrs">to 2027</span><span class="badge badge--active"><span class="dot"></span><span data-edit="eu1-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Instrument</b><i data-edit="eu1-f0">Recovery and Resilience Plan of the Slovak Republic (NextGenerationEU), Transformation and Innovation Consortium (TIK) scheme</i></p><p class="pf"><b>Activity type</b><i data-edit="eu1-f1">Technology development and capacity building</i></p><p class="pf"><b>Our role</b><i data-edit="eu1-f2">Consortium member</i></p><p class="pf"><b>Grant</b><i data-edit="eu1-f3">approx. €16 million</i></p><p class="pf"><b>Principal investigator</b><i data-edit="eu1-f4">To be confirmed</i></p><p class="pf"><b>Website</b><i data-edit="eu1-f5">stephanik.eu</i></p><p class="prow__scope" data-edit="eu1-scope">An industry–academia consortium building Slovakia's first fully domestically developed modular satellite — a platform of more than 150 kg, compatible with Europe's future responsive space systems. Alongside the flight hardware, the project establishes shared research facilities and cleanrooms in three Slovak cities and trains 100+ specialists in space technology. Satellite launch is targeted for 2029.</p></div></details>
-    </div>
-
-    <div class="yeargroup" data-fund="VEGA">
-      <div class="yearhead"><span class="y">VEGA</span><span class="n">Scientific Grant Agency of MŠVVaŠ SR and SAS · to be added</span></div>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="vega1-ac">[ Add VEGA grant ]<span data-edit="vega1-title">Full project title</span></span><span class="prow__pg" data-edit="vega1-pg">VEGA · 2/0xxx/yy</span><span class="prow__yr" data-edit="vega1-yrs">YYYY–YYYY</span><span class="badge badge--active"><span class="dot"></span><span data-edit="vega1-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Grant No.</b><i data-edit="vega1-f0">2/0xxx/yy</i></p><p class="pf"><b>Our role</b><i data-edit="vega1-f1">Lead workplace / Co-investigating workplace</i></p><p class="pf"><b>Principal investigator</b><i data-edit="vega1-f2">Initial + surname</i></p><p class="pf"><b>Co-investigating institutions</b><i data-edit="vega1-f3">—</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="vega2-ac">[ Add VEGA grant ]<span data-edit="vega2-title">Full project title</span></span><span class="prow__pg" data-edit="vega2-pg">VEGA · 2/0xxx/yy</span><span class="prow__yr" data-edit="vega2-yrs">YYYY–YYYY</span><span class="badge badge--done" data-edit="vega2-status">Completed</span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Grant No.</b><i data-edit="vega2-f0">2/0xxx/yy</i></p><p class="pf"><b>Our role</b><i data-edit="vega2-f1">Lead workplace / Co-investigating workplace</i></p><p class="pf"><b>Principal investigator</b><i data-edit="vega2-f2">Initial + surname</i></p><p class="pf"><b>Co-investigating institutions</b><i data-edit="vega2-f3">—</i></p></div></details>
-    </div>
-
-    <div class="yeargroup" data-fund="Others">
-      <div class="yearhead"><span class="y">Others</span><span class="n">APVV · SAS schemes · bilateral and contract research · to be added</span></div>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="oth1-ac">[ Add APVV project ]<span data-edit="oth1-title">Full project title</span></span><span class="prow__pg" data-edit="oth1-pg">APVV</span><span class="prow__yr" data-edit="oth1-yrs">YYYY–YYYY</span><span class="badge badge--active"><span class="dot"></span><span data-edit="oth1-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Agency</b><i data-edit="oth1-f0">APVV — Slovak Research and Development Agency</i></p><p class="pf"><b>Project No.</b><i data-edit="oth1-f1">APVV-xx-xxxx</i></p><p class="pf"><b>Our role</b><i data-edit="oth1-f2">Applicant / Co-applicant</i></p><p class="pf"><b>Principal investigator</b><i data-edit="oth1-f3">Initial + surname</i></p></div></details>
-      <details class="prow"><summary class="prow__head"><span class="prow__ac" data-edit="oth2-ac">[ Add other project ]<span data-edit="oth2-title">Full project title</span></span><span class="prow__pg" data-edit="oth2-pg">SAS · Bilateral · Industry</span><span class="prow__yr" data-edit="oth2-yrs">YYYY–YYYY</span><span class="badge badge--active"><span class="dot"></span><span data-edit="oth2-status">Ongoing</span></span><span class="prow__tog" aria-hidden="true">+</span></summary><div class="prow__body"><p class="pf"><b>Agency / programme</b><i data-edit="oth2-f0">SAS internal scheme, bilateral agreement, or contract research</i></p><p class="pf"><b>Project No.</b><i data-edit="oth2-f1">—</i></p><p class="pf"><b>Our role</b><i data-edit="oth2-f2">—</i></p><p class="pf"><b>Principal investigator</b><i data-edit="oth2-f3">Initial + surname</i></p></div></details>
-    </div>
-
-    <p class="note" data-edit="prj-note">VEGA and other-agency entries are placeholders — replace with the department's grant register.</p>
+  <div data-group="2025" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2025</span><span class="c">8 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Combining solar imagery and in situ data for prediction of geomagnetic storms</p>
+      <p class="pub__a">Majirský, A., <strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, Magli, E., Butka, P., &amp; Longépé, N.</p>
+      <p class="pub__m"><em>The Astrophysical Journal</em><span>995(1), 50</span><a href="https://doi.org/10.3847/1538-4357/ae1cc7" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">Approximation of daily AMS-02 spectra with machine learning methods</p>
+      <p class="pub__a">Nguyen, M., <strong>Bobík, P.</strong>, &amp; Genči, J.</p>
+      <p class="pub__m"><em>Journal of Geophysical Research: Machine Learning and Computation</em><span>2(4), e2025JH000676</span><a href="https://doi.org/10.1029/2025JH000676" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">First reported detection of a winter continental gamma-ray glow in Europe</p>
+      <p class="pub__a">Šlegl, J., Sokol, Z., Pešice, P., <strong>Langer, R.</strong>, <strong>Strhárský, I.</strong>, Popová, J., Kákona, M., Ambrožová, I., &amp; Ploc, O.</p>
+      <p class="pub__m"><em>Atmospheric Chemistry and Physics</em><span>25(15), 8443–8454</span><a href="https://doi.org/10.5194/acp-25-8443-2025" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">Synergy of traditional techniques and convolutional neural networks for classification of cloudless conditions by all-sky imagers</p>
+      <p class="pub__a"><strong>Mackovjak, Š.</strong>, Martinis, C., Wroten, J., Baumgardner, J., &amp; Mendillo, M.</p>
+      <p class="pub__m"><em>Publications of the Astronomical Society of the Pacific</em><span>137(4), 045004</span><a href="https://doi.org/10.1088/1538-3873/adca59" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">05</div><div>
+      <p class="pub__t">Measurements with angular sensitive electric field mill in thunderstorms</p>
+      <p class="pub__a">Kákona, M., Kákona, J., Dvořák, R., Ambrožová, I., Velychko, O., Lužová, M., Šlegl, J., Sommer, M., Hanousek, V., <strong>Langer, R.</strong>, <strong>Štefánik, S.</strong>, &amp; Ploc, O.</p>
+      <p class="pub__m"><em>Journal of Physics: Conference Series</em><span>2985(1), 012014</span><a href="https://doi.org/10.1088/1742-6596/2985/1/012014" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">06</div><div>
+      <p class="pub__t">BIOSPHERE measurement campaign from January 2024 to March 2024 and in May 2024: Effects of the solar events on the radiation belts, UV radiation and ozone in the atmosphere</p>
+      <p class="pub__a">Pierrard, V., Bolsée, D., Winant, A., et al. (including <strong>Langer, R.</strong>)</p>
+      <p class="pub__m"><em>AIMS Geosciences</em><span>11(1), 117–154</span><a href="https://doi.org/10.3934/geosci.2025007" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">07</div><div>
+      <p class="pub__t">Extreme space weather events of the past 30 years: Preparation for data from mission Vigil</p>
+      <p class="pub__a">Majirský, A., <strong>Mackovjak, Š.</strong>, <strong>Kostárová, S.</strong>, &amp; Amrich, S.</p>
+      <p class="pub__m"><em>Earth and Space Science</em><span>12(2), e2024EA003937</span><a href="https://doi.org/10.1029/2024EA003937" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">08</div><div>
+      <p class="pub__t">Analysis of 42 years of cosmic ray measurements by the neutron monitor at Lomnický štít Observatory</p>
+      <p class="pub__a">Kisvárdai, I., Štempel, F., Randuška, L., <strong>Mackovjak, Š.</strong>, <strong>Langer, R.</strong>, <strong>Strhárský, I.</strong>, &amp; <strong>Kubančák, J.</strong></p>
+      <p class="pub__m"><em>Earth and Space Science</em><span>12(1), e2024EA003656</span><a href="https://doi.org/10.1029/2024EA003656" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
   </div>
-</section>
-
-<!-- ===== DATA ===== -->
-<section id="data">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="dat-eyebrow">Data</span>
-      <h2 data-edit="dat-title">Our data is open</h2>
-    </div>
-    <div class="datacta">
-      <div>
-        <h3 data-edit="dat-h">Explore our data portal</h3>
-        <p data-edit="dat-body">Continuous neutron monitor measurements from Lomnický štít and our data products — freely available to the research community.</p>
-      </div>
-      <a class="btn btn--sky btn--lg" href="#" data-edit="dat-cta">Open the data portal <span class="arr">→</span></a>
-    </div>
-    <div class="grid grid-3" style="margin-top:32px"></div>
+  <div data-group="2024" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2024</span><span class="c">5 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Extensive survey on radiocarbon dating of organic inclusions in medieval mortars in the Czech Republic</p>
+      <p class="pub__a">Pachnerová Brabcová, K., Kundrát, P., Krofta, T., Suchý, V., Petrová, M., John, D., Kozlovcev, P., Kotková, K., Fialová, A., <strong>Kubančák, J.</strong>, Válek, J., &amp; Svetlik, I.</p>
+      <p class="pub__m"><em>Radiocarbon</em><span>66(6), 1683–1693</span><a href="https://doi.org/10.1017/rdc.2023.56" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">The Forbush decrease observed by the SEVAN particle detector network in the 25th solar activity cycle</p>
+      <p class="pub__a">Karapetyan, T., Chilingarian, A., Hovsepyan, G., Martoyan, H., Sargsyan, B., <strong>Langer, R.</strong>, Chum, J., Nikolova, N., Angelov, H., Haas, D., Knapp, J., Walter, M., Ploc, O., Šlegl, J., Kákona, M., &amp; Ambrožová, I.</p>
+      <p class="pub__m"><em>Journal of Atmospheric and Solar-Terrestrial Physics</em><span>262, 106305</span><a href="https://doi.org/10.1016/j.jastp.2024.106305" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">Solar cycle signatures in lightning activity</p>
+      <p class="pub__a">Chum, J., <strong>Langer, R.</strong>, Kolmašová, I., Lhotka, O., Rusz, J., &amp; <strong>Strhárský, I.</strong></p>
+      <p class="pub__m"><em>Atmospheric Chemistry and Physics</em><span>24(16), 9119–9130</span><a href="https://doi.org/10.5194/acp-24-9119-2024" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">SDE method for cosmic rays modulation in the heliosphere: statistical error and solution uniqueness</p>
+      <p class="pub__a">Mykhailenko, V., Nguyen, M., Solanik, M., Genči, J., Kolesnyk, Y., &amp; <strong>Bobík, P.</strong></p>
+      <p class="pub__m"><em>Computer Physics Communications</em><span>296, 109026</span><a href="https://doi.org/10.1016/j.cpc.2023.109026" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">05</div><div>
+      <p class="pub__t">EUSO-SPB1 mission and science</p>
+      <p class="pub__a">Abdellaoui, G., et al. (JEM-EUSO Collaboration, including <strong>Baláž, J.</strong>, <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Pastirčák, B.</strong>, <strong>Putiš, M.</strong>, <strong>Strhárský, I.</strong>)</p>
+      <p class="pub__m"><em>Astroparticle Physics</em><span>154, 102891</span><a href="https://doi.org/10.1016/j.astropartphys.2023.102891" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
   </div>
-</section>
-
-<!-- ===== CONFERENCES ===== -->
-<section class="band" id="conferences">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="cnf-eyebrow">Conferences</span>
-      <h2 data-edit="cnf-title">Presented results</h2>
-      <p class="lede" data-edit="cnf-lede" style="margin-top:16px">Talks and posters given by department members, newest first. Placeholder entries — replace with the conference register.</p>
-    </div>
-
-    <div class="filters" data-filter="conf">
-      <span class="lbl">Year</span>
-      <button class="chip on" data-cyear="all" type="button">All</button>
-      <button class="chip" data-cyear="2026" type="button">2026</button>
-      <button class="chip" data-cyear="2025" type="button">2025</button>
-      <button class="chip" data-cyear="2024" type="button">2024</button>
-    </div>
-
-    <div class="yeargroup" data-cyear="2026">
-      <div class="yearhead"><span class="y">2026</span><span class="n">Contributions</span></div>
-      <article class="conf"><h4 data-edit="c26-1-t">[ Add presentation title ]</h4><p class="meta"><span data-edit="c26-1-conf">Conference name</span><span data-edit="c26-1-loc">Location</span><span data-edit="c26-1-type">Talk / Poster</span><span data-edit="c26-1-auth">Authors</span></p></article>
-      <article class="conf"><h4 data-edit="c26-2-t">[ Add presentation title ]</h4><p class="meta"><span data-edit="c26-2-conf">Conference name</span><span data-edit="c26-2-loc">Location</span><span data-edit="c26-2-type">Talk / Poster</span><span data-edit="c26-2-auth">Authors</span></p></article>
-    </div>
-    <div class="yeargroup" data-cyear="2025">
-      <div class="yearhead"><span class="y">2025</span><span class="n">Contributions</span></div>
-      <article class="conf"><h4 data-edit="c25-1-t">[ Add presentation title ]</h4><p class="meta"><span data-edit="c25-1-conf">Conference name</span><span data-edit="c25-1-loc">Location</span><span data-edit="c25-1-type">Talk / Poster</span><span data-edit="c25-1-auth">Authors</span></p></article>
-      <article class="conf"><h4 data-edit="c25-2-t">[ Add presentation title ]</h4><p class="meta"><span data-edit="c25-2-conf">Conference name</span><span data-edit="c25-2-loc">Location</span><span data-edit="c25-2-type">Talk / Poster</span><span data-edit="c25-2-auth">Authors</span></p></article>
-    </div>
-    <div class="yeargroup" data-cyear="2024">
-      <div class="yearhead"><span class="y">2024</span><span class="n">Contributions</span></div>
-      <article class="conf"><h4 data-edit="c24-1-t">[ Add presentation title ]</h4><p class="meta"><span data-edit="c24-1-conf">Conference name</span><span data-edit="c24-1-loc">Location</span><span data-edit="c24-1-type">Talk / Poster</span><span data-edit="c24-1-auth">Authors</span></p></article>
-    </div>
-    <p class="note" data-edit="cnf-note">Duplicate a row for each contribution; add a new year block as needed.</p>
+  <div data-group="2023" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2023</span><span class="c">4 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Developments and results in the context of the JEM-EUSO program obtained with the ESAF simulation and analysis framework</p>
+      <p class="pub__a">Abe, S., Adams, J. H., Allard, D., et al. (JEM-EUSO Collaboration, including <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Pastirčák, B.</strong>, <strong>Putiš, M.</strong>)</p>
+      <p class="pub__m"><em>The European Physical Journal C</em><span>83, 1028</span><a href="https://doi.org/10.1140/epjc/s10052-023-12090-w" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">Geliosphere – parallel CPU and GPU based models of cosmic ray modulation in the heliosphere</p>
+      <p class="pub__a">Solanik, M., <strong>Bobík, P.</strong>, &amp; Genči, J.</p>
+      <p class="pub__m"><em>Computer Physics Communications</em><span>291, 108847</span><a href="https://doi.org/10.1016/j.cpc.2023.108847" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">Radiocarbon dating of mortar charcoals from romanesque Southern Corridor, Prague Castle</p>
+      <p class="pub__a">Kundrát, P., Maříková-Kubková, J., Herichová, I., Tomanová, P., Petrová, M., Tecl, J., Kozlovcev, P., Kotková, K., Fialová, A., <strong>Kubančák, J.</strong>, Válek, J., &amp; Svetlik, I.</p>
+      <p class="pub__m"><em>Journal of Radioanalytical and Nuclear Chemistry</em><span>332(5), 1469–1474</span><a href="https://doi.org/10.1007/s10967-022-08577-7" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">Neutrino propagation in the Earth and emerging charged leptons with nuPyProp</p>
+      <p class="pub__a">Garg, D., Patel, S., Reno, M. H., et al. (including <strong>Mackovjak, Š.</strong>)</p>
+      <p class="pub__m"><em>Journal of Cosmology and Astroparticle Physics</em><span>2023(01), 041</span><a href="https://doi.org/10.1088/1475-7516/2023/01/041" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
   </div>
-</section>
+  <div data-group="2022" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2022</span><span class="c">6 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Inner southern magnetosphere observation of Mercury via SERENA ion sensors in BepiColombo mission</p>
+      <p class="pub__a">Orsini, S., Milillo, A., Lichtenegger, H., et al. (SERENA instrument team on BepiColombo, including <strong>Baláž, J.</strong>)</p>
+      <p class="pub__m"><em>Nature Communications</em><span>13, 7390</span><a href="https://doi.org/10.1038/s41467-022-34988-x" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">Spectrometry of high-energy photons on high mountain observatory Lomnický štít during thunderstorms</p>
+      <p class="pub__a">Šlegl, J., <strong>Langer, R.</strong>, Brunclík, T., Mašek, P., <strong>Strhárský, I.</strong>, Ambrožová, I., Chum, J., &amp; Ploc, O.</p>
+      <p class="pub__m"><em>Radiation Protection Dosimetry</em><span>198(9–11), 623–627</span><a href="https://doi.org/10.1093/rpd/ncac108" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">COR system: A tool to evaluate cosmic ray trajectories in the Earth's magnetosphere</p>
+      <p class="pub__a">Gecášek, D., <strong>Bobík, P.</strong>, Genči, J., Villim, J., &amp; Vaško, M.</p>
+      <p class="pub__m"><em>Advances in Space Research</em><span>70(4), 1153–1168</span><a href="https://doi.org/10.1016/j.asr.2022.06.001" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">Continental thunderstorm ground enhancement observed at an exceptionally low altitude</p>
+      <p class="pub__a">Kolmašová, I., Santolík, O., Šlegl, J., Popová, J., Sokol, Z., Zacharov, P., Ploc, O., Diendorfer, G., <strong>Langer, R.</strong>, Lán, R., &amp; <strong>Strhárský, I.</strong></p>
+      <p class="pub__m"><em>Atmospheric Chemistry and Physics</em><span>22(12), 7959–7973</span><a href="https://doi.org/10.5194/acp-22-7959-2022" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">05</div><div>
+      <p class="pub__t">A review of the EUSO-Balloon pathfinder for the JEM-EUSO program</p>
+      <p class="pub__a">Adams, J. H., Jr., Ahmad, S., Allard, D., et al. (JEM-EUSO Collaboration, including <strong>Bobík, P.</strong>, <strong>Mackovjak, Š.</strong>, <strong>Putiš, M.</strong>)</p>
+      <p class="pub__m"><em>Space Science Reviews</em><span>218, 3</span><a href="https://doi.org/10.1007/s11214-022-00870-x" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">06</div><div>
+      <p class="pub__t">Statistical error for cosmic rays modulation evaluated by SDE backward in time method for 1D model</p>
+      <p class="pub__a">Mykhailenko, V., &amp; <strong>Bobík, P.</strong></p>
+      <p class="pub__m"><em>Fluids</em><span>7(2), 46</span><a href="https://doi.org/10.3390/fluids7020046" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+  </div>
+  <div data-group="2021" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">2021</span><span class="c">9 papers</span></div>
+    <article class="pub"><div class="pub__i">01</div><div>
+      <p class="pub__t">Design and construction of hardware and software for autonomous observations of Transient Luminous Events</p>
+      <p class="pub__a">Amrich, S., <strong>Mackovjak, Š.</strong>, <strong>Strhárský, I.</strong>, <strong>Baláž, J.</strong>, &amp; Hančikovský, M.</p>
+      <p class="pub__m"><em>Journal of Instrumentation</em><span>16(12), T12016</span><a href="https://doi.org/10.1088/1748-0221/16/12/t12016" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">02</div><div>
+      <p class="pub__t">Automatic detection of atmospherics and tweek atmospherics in radio spectrograms based on a deep learning approach</p>
+      <p class="pub__a">Maslej-Krešňáková, V., Kundrát, A., <strong>Mackovjak, Š.</strong>, Butka, P., Jaščur, S., Kolmašová, I., &amp; Santolík, O.</p>
+      <p class="pub__m"><em>Earth and Space Science</em><span>8(11), e2021EA002007</span><a href="https://doi.org/10.1029/2021EA002007" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">03</div><div>
+      <p class="pub__t">SCSS-Net: Solar corona structures segmentation by deep learning</p>
+      <p class="pub__a"><strong>Mackovjak, Š.</strong>, Harman, M., Maslej-Krešňáková, V., &amp; Butka, P.</p>
+      <p class="pub__m"><em>Monthly Notices of the Royal Astronomical Society</em><span>508(3), 3111–3124</span><a href="https://doi.org/10.1093/mnras/stab2536" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">04</div><div>
+      <p class="pub__t">Extreme Universe Space Observatory on a Super Pressure Balloon 1 calibration: From the laboratory to the desert</p>
+      <p class="pub__a">Adams, J. H., Jr., Allen, L., Bachman, R., et al. (EUSO-SPB1/JEM-EUSO Collaboration, including <strong>Mackovjak, Š.</strong>)</p>
+      <p class="pub__m"><em>Experimental Astronomy</em><span>52(1–2), 125–140</span><a href="https://doi.org/10.1007/s10686-020-09689-2" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">05</div><div>
+      <p class="pub__t">Influence of solar wind on secondary cosmic rays and atmospheric electricity</p>
+      <p class="pub__a">Chum, J., Kollárik, M., Kolmašová, I., <strong>Langer, R.</strong>, Rusz, J., Saxonbergová, D., &amp; <strong>Strhárský, I.</strong></p>
+      <p class="pub__m"><em>Frontiers in Earth Science</em><span>9, 671801</span><a href="https://doi.org/10.3389/feart.2021.671801" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">06</div><div>
+      <p class="pub__t">The POEMMA (Probe of Extreme Multi-Messenger Astrophysics) observatory</p>
+      <p class="pub__a">Olinto, A. V., Krizmanic, J., Adams, J. H., et al. (POEMMA Collaboration, including <strong>Mackovjak, Š.</strong>)</p>
+      <p class="pub__m"><em>Journal of Cosmology and Astroparticle Physics</em><span>2021(06), 007</span><a href="https://doi.org/10.1088/1475-7516/2021/06/007" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">07</div><div>
+      <p class="pub__t">Data-driven modeling of atomic oxygen airglow over a period of three solar cycles</p>
+      <p class="pub__a"><strong>Mackovjak, Š.</strong>, Varga, M., Hrivňak, S., Palkoci, O., &amp; Didebulidze, G. G.</p>
+      <p class="pub__m"><em>Journal of Geophysical Research: Space Physics</em><span>126(3), e2020JA028991</span><a href="https://doi.org/10.1029/2020JA028991" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">08</div><div>
+      <p class="pub__t">Estimation of the modulation level of cosmic rays at high energies</p>
+      <p class="pub__a"><strong>Bobík, P.</strong>, <strong>Putiš, M.</strong>, Kolesnyk, Y. L., &amp; Shakhov, B. A.</p>
+      <p class="pub__m"><em>Monthly Notices of the Royal Astronomical Society</em><span>503(3), 3386–3393</span><a href="https://doi.org/10.1093/mnras/stab597" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+    <article class="pub"><div class="pub__i">09</div><div>
+      <p class="pub__t">SERENA: Particle instrument suite for determining the Sun-Mercury interaction from BepiColombo</p>
+      <p class="pub__a">Orsini, S., Livi, S. A., Lichtenegger, H., et al. (SERENA instrument team on BepiColombo, including <strong>Baláž, J.</strong>)</p>
+      <p class="pub__m"><em>Space Science Reviews</em><span>217(1), 11</span><a href="https://doi.org/10.1007/s11214-020-00787-3" target="_blank" rel="noopener">DOI →</a></p>
+    </div></article>
+  </div>
+</div>
+</div></section>
+<section id="projects" class="band"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Projects</span>
+  <h2>Funded research</h2>
+  <p class="lede">Awarded contracts and grants with DSP as prime contractor, partner or co-investigator, newest first. Grouped by funding source; expand a project for its full record.</p>
+</div>
 
+<div class="filters" data-filters="proj-list"><span class="lbl">Funding</span><button type="button" class="chip on" data-filter="all">All</button><button type="button" class="chip" data-filter="ESA">ESA</button><button type="button" class="chip" data-filter="EU">EU</button><button type="button" class="chip" data-filter="VEGA">VEGA</button><button type="button" class="chip" data-filter="Others">Others</button></div>
+<div id="proj-list">
+  <div data-group="ESA" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">ESA</span><span class="c">European Space Agency · 13 awarded contracts since 2016</span></div>
+<details class="drow"><summary><span class="nm"><b>SWE TOOLKIT</b><small>S2-SW-06D: Solar and Heliospheric Weather Toolkit Development</small></span><span class="mt">S2P</span><span class="mt">2026–2028</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>R&amp;D activity</i></p>
+    <p><b>Our role</b><i>Sub-contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>—</i></p>
+    <p><b>Partners</b><i>Royal Observatory of Belgium · University of Genoa · ONERA · Augura Space · Mullard Space Science Laboratory · Technical University of Košice · Global Singularity</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>ESADOS</b><small>ESA Support for Aircrew Dosimetry Services</small></span><span class="mt">RPA · SK RPA 2</span><span class="mt">2025–2026</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Preparatory activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>J. Kubančák</i></p>
+    <p><b>Contract No.</b><i>—</i></p>
+    <p><b>Partners</b><i>Nuclear Physics Institute of the Czech Academy of Sciences</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>SCSS-Net</b><small>Solar Corona Structures Segmentation algorithm by deep neural networks</small></span><span class="mt">RPA · SK RPA 1</span><span class="mt">2024–2026</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Research activity</i></p>
+    <p><b>Our role</b><i>Sub-contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000143601/24/NL/MH/mp</i></p>
+    <p><b>Partners</b><i>Technical University of Košice · Royal Observatory of Belgium</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>QUID-REGIS</b><small>Quiet Ionospheric Disturbances — REsearch based on Ground-based mesospheric and Ionospheric data with Swarm data</small></span><span class="mt">FutureEO</span><span class="mt">2024–2026</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Space science</i></p>
+    <p><b>Our role</b><i>Sub-contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000143632/24/I-EB</i></p>
+    <p><b>Partners</b><i>DLR — German Aerospace Center · Institute of Atmospheric Physics, Czech Academy of Sciences</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>Vigil-ML</b><small>Study toward enhancing reliability and timeliness of Vigil mission predictions through Machine Learning</small></span><span class="mt">RPA · SK RPA 1</span><span class="mt">2023–2025</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Space science</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000142780/23/NL/MH/mp</i></p>
+    <p><b>Partners</b><i>Politecnico di Torino</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>SK-S2P-Edu</b><small>Proposal for Slovak universities curriculum adaptation toward S2P market</small></span><span class="mt">PECS · SK PECS 7</span><span class="mt">2023–2024</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Educational activity</i></p>
+    <p><b>Our role</b><i>Sub-contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000136672/21/NL/SC</i></p>
+    <p><b>Partners</b><i>Technical University of Košice · Comenius University Bratislava</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>ASPIS</b><small>Feasibility study of data-driven Autonomous Service for Prediction of Ionospheric Scintillations</small></span><span class="mt">PECS · SK PECS 6</span><span class="mt">2022–2023</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Research activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000137046/22/NL/SC</i></p>
+    <p><b>Partners</b><i>Technical University of Košice · GlobalLogic Slovakia</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>SK-S2P</b><small>Slovakia National Space Safety Programme (S2P) Study</small></span><span class="mt">Top-down</span><span class="mt">2021–2022</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Preparatory activity</i></p>
+    <p><b>Our role</b><i>Sub-contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000136251/21/D/AP</i></p>
+    <p><b>Partners</b><i>Astros Solutions · Comenius University Bratislava · Astronomical Institute, Slovak Academy of Sciences</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>SIREN</b><small>SIREN Space Ionizing Radiation Experts Nursery</small></span><span class="mt">PECS · SK PECS 5</span><span class="mt">2020–2022</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Educational activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>J. Kubančák</i></p>
+    <p><b>Contract No.</b><i>—</i></p>
+    <p><b>Partners</b><i>—</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>SPACE::LAB</b><small>Place to attract, educate and involve young generation in space science and engineering</small></span><span class="mt">PECS · SK PECS 3</span><span class="mt">2018–2020</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Educational activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000125987/18/NL/SC</i></p>
+    <p><b>Partners</b><i>—</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>JUICE</b><small>Slovak contribution to ESA-JUICE mission: Development of the Anti-Coincidence Module (ACM) for the Particle Environment Package (PEP)</small></span><span class="mt">PECS · SK PECS 3</span><span class="mt">2018–2021</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Flight hardware</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>J. Baláž</i></p>
+    <p><b>Contract No.</b><i>—</i></p>
+    <p><b>Partners</b><i>—</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>AMON-net</b><small>Follow-up of feasibility study to observe ionospheric disturbances by airglow monitoring network</small></span><span class="mt">PECS · SK PECS 2</span><span class="mt">2018–2024</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>R&amp;D activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Contract No.</b><i>4000125330/18/NL/SC</i></p>
+    <p><b>Partners</b><i>—</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>One-pixel</b><small>Feasibility study to observe ionospheric disturbances by one pixel UV detector</small></span><span class="mt">PECS · SK PECS 1</span><span class="mt">2016–2018</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Activity type</b><i>Preparatory activity</i></p>
+    <p><b>Our role</b><i>Prime contractor</i></p>
+    <p><b>Principal investigator</b><i>P. Bobík</i></p>
+    <p><b>Contract No.</b><i>4000117740/16/NL/NDe</i></p>
+    <p><b>Partners</b><i>—</i></p>
+
+  </div>
+</div></details>
+
+  </div>
+  <div data-group="EU" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">EU</span><span class="c">European Union · nationally administered instruments</span></div>
+<details class="drow"><summary><span class="nm"><b>OPENLABS SAV</b><small>Rozvoj konceptu otvorenej výskumnej infraštruktúry SAV pre aplikovaný výskum v podmienkach SR</small></span><span class="mt">Programme Slovakia 2021–2027 · ERDF</span><span class="mt">2026–2029</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Instrument</b><i>Programme Slovakia 2021–2027 (European Regional Development Fund)</i></p>
+    <p><b>Project No. / ITMS code</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>To be confirmed</i></p>
+    <p><b>Principal investigator</b><i>To be confirmed</i></p>
+    <p><b>Partners</b><i>To be confirmed</i></p>
+    <p><b>Duration</b><i>To be confirmed</i></p>
+    <p class="full">Open-access research infrastructure — a dedicated space at Lomnický štít where partner institutions and companies can install and operate their own instruments, with site, infrastructure and operational support provided by the department.</p>
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>STEPHANIK</b><small>Slovak Technical Ecosphere Platform</small></span><span class="mt">Recovery &amp; Resilience Plan · TIK</span><span class="mt">to 2027</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Instrument</b><i>Recovery and Resilience Plan of the Slovak Republic (NextGenerationEU), Transformation and Innovation Consortium (TIK) scheme</i></p>
+    <p><b>Activity type</b><i>Technology development and capacity building</i></p>
+    <p><b>Our role</b><i>Consortium member</i></p>
+    <p><b>Grant</b><i>approx. €16 million</i></p>
+    <p><b>Principal investigator</b><i>To be confirmed</i></p>
+    <p><b>Website</b><i>stephanik.eu</i></p>
+    <p class="full">An industry–academia consortium building Slovakia's first fully domestically developed modular satellite — a platform of more than 150 kg, compatible with Europe's future responsive space systems. Alongside the flight hardware, the project establishes shared research facilities and cleanrooms in three Slovak cities and trains 100+ specialists in space technology. Satellite launch is targeted for 2029.</p>
+  </div>
+</div></details>
+
+  </div>
+  <div data-group="VEGA" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">VEGA</span><span class="c">Scientific Grant Agency of MŠVVaŠ SR and SAS · 9 DSP-led grants, 2010–2027</span></div>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Study of high-energy cosmic-ray particles from space and their interaction with the Earth's atmosphere using neutrino telescopes</small></span><span class="mt">B. Pastirčák</span><span class="mt">2025–2027</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Interdisciplinary applications of cosmic rays observation and research in the laboratory of the Institute of Experimental Physics SAS at the Lomnický štít observatory</small></span><span class="mt">J. Kubančák</span><span class="mt">2022–2024</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Cosmic rays in the heliosphere with the termination shock and the heliosheath</small></span><span class="mt">P. Bobík</span><span class="mt">2020–2022</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0155/18</b><small>Solar energetic particles from solar flares — multi-point observations from the Sun to Lomnický štít</small></span><span class="mt">Š. Mackovjak</span><span class="mt">2018–2021</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>2/0155/18</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Analysis of EUSO-SPB, Mini-EUSO and ground UV detector experiment measurements</small></span><span class="mt">P. Bobík</span><span class="mt">2017–2019</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Satellite detectors for space physics research</small></span><span class="mt">J. Baláž</span><span class="mt">2016–2018</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Cosmic rays modulation in the heliosphere</small></span><span class="mt">P. Bobík</span><span class="mt">2013–2015</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Development of space energetic particle detectors for scientific satellites and support of the space technology infrastructure at the Institute of Experimental Physics SAS</small></span><span class="mt">J. Baláž</span><span class="mt">2013–2015</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>2/0xxx/yy</b><small>Spectrometry of space energetic particles on board scientific spacecraft</small></span><span class="mt">J. Baláž</span><span class="mt">2010–2012</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Grant No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>Lead workplace</i></p>
+
+  </div>
+</div></details>
+
+  </div>
+  <div data-group="Others" style="margin-bottom:52px">
+    <div class="ghead"><span class="y">Others</span><span class="c">ONR · bilateral mobility · SAS MVTS</span></div>
+<details class="drow"><summary><span class="nm"><b>ONR</b><small>The role of cosmic rays in cloud formation</small></span><span class="mt">US Office of Naval Research</span><span class="mt">2025–2027</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Project No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>To be confirmed</i></p>
+    <p><b>Principal investigator</b><i>P. Bobík</i></p>
+    <p><b>Partners</b><i>To be confirmed</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>Mobility SK–CZ</b><small>Study of dynamics in the interface region between space and the Earth's atmosphere</small></span><span class="mt">Bilateral scheme</span><span class="mt">2023–2024</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Project No.</b><i>CAS-SAS-2022-07</i></p>
+    <p><b>Our role</b><i>Slovak partner</i></p>
+    <p><b>Principal investigator</b><i>Š. Mackovjak</i></p>
+    <p><b>Partners</b><i>Institute of Atmospheric Physics, Czech Academy of Sciences</i></p>
+
+  </div>
+</div></details>
+<details class="drow"><summary><span class="nm"><b>MVTS JEM-EUSO</b><small>Extreme Universe Space Observatory onboard the Japanese Experiment Module</small></span><span class="mt">SAS · MVTS</span><span class="mt">2010–2021</span><span class="pm" aria-hidden="true">+</span></summary><div class="drow__body">
+<div class="dfields">
+    <p><b>Project No.</b><i>To be confirmed</i></p>
+    <p><b>Our role</b><i>To be confirmed</i></p>
+    <p><b>Principal investigator</b><i>P. Bobík</i></p>
+    <p><b>Partners</b><i>JEM-EUSO international collaboration</i></p>
+
+  </div>
+</div></details>
+
+  </div>
+</div>
+</div></section>
+<section id="data"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Data</span>
+  <h2>Our data is open</h2>
+  
+</div>
+<div class="enquire">
+  <div><h2>Explore our data portal</h2><p>Continuous neutron monitor measurements from Lomnický štít and our data products — freely available to the research community.</p></div>
+  <a class="btn btn--solar btn--lg" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Open the data portal <span class="arr">→</span></a>
+</div>
+</div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
-        <a href="public.html">For the Public</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="#" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
-<script>
-(function(){
-  function wire(barSel,attr,groupSel){
-    var bar=document.querySelector(barSel);if(!bar)return;
-    bar.addEventListener('click',function(e){
-      var b=e.target.closest('.chip');if(!b)return;
-      var v=b.getAttribute(attr);
-      bar.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on')});
-      b.classList.add('on');
-      document.querySelectorAll(groupSel).forEach(function(g){
-        g.style.display=(v==='all'||g.getAttribute(attr)===v)?'':'none';
-      });
-    });
-  }
-  wire('[data-filter="pub"]','data-year','#publications .yeargroup[data-year]');
-  wire('[data-filter="proj"]','data-fund','#projects .yeargroup[data-fund]');
-  wire('[data-filter="conf"]','data-cyear','#conferences .yeargroup[data-cyear]');
-})();
-</script>
 </body>
 </html>

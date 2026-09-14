@@ -1,92 +1,71 @@
 # space.saske.sk — Department of Space Physics, IEP SAS
 
-Website of the **Department of Space Physics**, Institute of Experimental Physics,
-Slovak Academy of Sciences, Košice — public brand **SPACE::LAB**.
+Website of the **Department of Space Physics** (SPACE::LAB), Institute of Experimental
+Physics, Slovak Academy of Sciences, Košice.
 
-Static site: plain HTML, one stylesheet, two small scripts. No build step, no
-framework, no dependencies. Open `index.html` in a browser, or serve the folder
-with any static file server.
+Static HTML, CSS and one small vanilla JavaScript file. No build step, no framework,
+no dependencies. Copy the contents of this folder to the repository root and push.
 
-```
-python3 -m http.server 8000    # then visit http://localhost:8000
-```
+## Deploying
 
-## Pages
+Copy everything here to the repository root, replacing the previous version, and push.
+GitHub Pages serves it at <https://space-lab-sk.github.io/>.
 
-| File | Contents |
-|---|---|
-| `index.html` | Home — hero, three pillars, partners, public teaser |
-| `about.html` | Mission, history timeline, team, PhD students & cooperators |
-| `research.html` | Space science, space missions (28 entries), Lomnický štít, services & products |
-| `infrastructure.html` | Hub for the two partner-facing facilities |
-| `facility-cleanroom.html` | Space cleanroom — specifications, equipment, access |
-| `facility-lomnicky.html` | Space Physics Laboratory at Lomnický štít |
-| `results.html` | Publications, projects by funding source, data, conferences |
-| `public.html` | Media coverage, education, SPACE::TALK, theses, open positions |
-| `contact.html` | Addresses, contacts for cooperation, travel, social networks |
-| `mission-juice.html` | Mission detail — ACM for JUICE PEP/JDC |
-| `mission-bepicolombo.html` | Mission detail — PICAM electronics-box structure |
+**Check for a `CNAME` file** in the repository root before you overwrite it. If the
+domain `space.saske.sk` is served from this repository, `CNAME` carries that mapping
+and deleting it takes the custom domain down.
+
+To preview locally, just open `index.html` in a browser — it works straight from disk.
+
+## Every old URL still works
+
+All eleven page filenames from the previous version are unchanged, so links already
+shared in papers, ESA reports and emails keep resolving:
+
+`index.html` · `about.html` · `research.html` · `results.html` · `infrastructure.html` ·
+`public.html` · `contact.html` · `facility-cleanroom.html` · `facility-lomnicky.html` ·
+`mission-juice.html` · `mission-bepicolombo.html`
+
+Four pages are new: `theses.html`, `spacetalk.html`, `summer-school.html`, `media.html`.
 
 ## Structure
 
-```
-css/site.css   design tokens, shared components, shared page scaffolding
-js/site.js     nav, mobile menu, starfield, language toggle, scroll-spy
-js/edit.js     inline content editing (see below)
-assets/logos/  SPACE::LAB wordmark, dark and light variants
-assets/img/    photography, grouped per subject
-```
+| Path | What it is |
+|---|---|
+| `*.html` | one file per page, 15 in total |
+| `css/site.css` | the original stylesheet, unchanged |
+| `css/redesign.css` | additions for the 2026 redesign, layered on top |
+| `js/site.js` | nav, mobile menu, sub-nav scroll-spy, filter chips, hero starfield |
+| `assets/` | logos, icons, photographs |
 
-`css/site.css` holds everything used on more than one page, including the
-sub-page scaffolding (`.page-hero`, `.subnav`, `.glance`, `.spec`, `.fac`,
-`.mbody` …). Each page's own `<style>` block contains **only** its deltas —
-a hero width, a panel offset. Add shared patterns to `site.css`, not to a page.
+`css/site.css` is deliberately untouched, so the two files can be diffed and eventually
+merged. Nothing in `redesign.css` depends on load order beyond coming second.
 
-## Inline editing
+## What the JavaScript does
 
-Every editable string carries a `data-edit="key"` attribute. The "Edit content"
-button (bottom right) turns the page into a live editor; changes are stored in
-the visitor's own `localStorage` and never leave the browser. Use "Export JSON"
-in the edit panel to hand edited copy back to a developer.
+`js/site.js` is 150 lines of vanilla JS and the site is fully readable without it:
 
-This is a copy-review tool, not a CMS — edits are per-browser.
+- translucent nav bar once the page scrolls
+- mobile menu toggle below 1000px
+- sub-nav smooth scrolling and scroll-spy underline
+- year and decade filter chips on Results and the media archive
+- "Show all 28 missions" expander on Research
+- the drifting starfield on the home hero (disabled under `prefers-reduced-motion`)
 
-## Language
+Mission and project disclosure rows use native `<details>`, so they open with
+JavaScript off. Filter chips degrade to showing every group.
 
-The site is English. The SK/EN toggle in the header is present but not yet
-wired; Slovak translations are pending.
+## Outstanding content
 
-## Deployment (GitHub Pages)
+- Staff research-focus lines read "Research focus" as a placeholder for all but one person.
+- Eight VEGA grant numbers are "To be confirmed".
+- The `200+` peer-reviewed publications figure on the home page is an unverified placeholder.
+- The Košice cathedral photograph on the Contact page is credited to Košice Region
+  Tourism and needs written permission before launch.
+- Slovak translation is not done; the SK/EN switch in the header is decorative.
 
-This folder is the repository root — push its contents, not the folder itself.
+## Images
 
-```bash
-cd space-lab-website
-git init
-git add .
-git commit -m "Initial commit — SPACE::LAB website"
-git branch -M main
-git remote add origin https://github.com/space-lab-sk/<repo>.git
-git push -u origin main
-```
-
-Then in the repository: **Settings ▸ Pages ▸ Build and deployment**, source
-"Deploy from a branch", branch `main`, folder `/ (root)`. The site appears at
-`https://space-lab-sk.github.io/<repo>/` within a minute or two.
-
-All paths are relative, so the site works from any subdirectory. `.nojekyll`
-is included so GitHub serves the files as-is. For a custom domain
-(`space.saske.sk`), add a `CNAME` file containing the hostname and point a DNS
-CNAME record at `space-lab-sk.github.io`.
-
-`Space Missions Content Brief.md` is kept in the project workspace, not in
-this repository.
-
-## Content notes
-
-- Mission and facility copy is reviewed and approved; figure credits are
-  carried in each caption's `.cred` line.
-- Placeholders reading `[ Add … ]` mark rows awaiting content (VEGA and APVV
-  projects, conference contributions).
-- Photographs are 500–650 kB JPEGs. Generating WebP versions at 1600 px and
-  800 px is a worthwhile pre-launch optimisation.
+Photographs are capped at 1800px wide, JPEG quality 0.82 — about 5 MB in total. For the
+live site, consider re-exporting from the originals as WebP with 800px variants and
+`srcset`.

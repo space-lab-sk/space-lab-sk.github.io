@@ -3,171 +3,143 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lomnický štít — Space Physics Laboratory · SPACE::LAB</title>
+<title>Lomnický štít — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="The Space Physics Laboratory at 2634 m — a neutron monitor running continuously since 1981, open to partner instruments.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Our high-mountain laboratory at 2634 m: continuous cosmic ray measurement since 1981, and open access for partner instruments under OPENLABS SAV.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.page-hero__bg img{opacity:.5}
-.page-hero__veil{background:linear-gradient(180deg,rgba(28,32,51,.62),var(--bg) 94%),linear-gradient(90deg,var(--bg) 10%,rgba(28,32,51,.2) 80%)}
-.spec{margin:6px 0 8px}
-.spec th{width:38%;padding-right:20px}
-.glance{top:calc(var(--nav-h) + 84px)}
-.glance dl{margin:0 0 22px}
-@media(max-width:1000px){.fac{gap:36px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="research.html">Research</a>
-      <a href="infrastructure.html" class="active">Infrastructure</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html" class="active" aria-current="page">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
   <a href="research.html">Research</a>
-  <a href="infrastructure.html" class="active">Infrastructure</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html" class="active">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
 <section class="page-hero">
   <div class="page-hero__bg">
-    <img src="assets/img/nebula-blue.png" alt="" fetchpriority="high">
-    <div class="page-hero__veil"></div>
+    <img src="assets/img/lomnicky-startrails.jpg" alt="" style="opacity:0.78;object-position:center 55%">
+    <div class="page-hero__veil" style="background:linear-gradient(180deg, rgba(28,32,51,.36), rgba(28,32,51,.82) 74%, var(--bg) 99%), linear-gradient(90deg, var(--bg) 2%, rgba(28,32,51,.7) 46%, rgba(28,32,51,.12) 100%)"></div>
   </div>
   <div class="wrap">
-    <p class="crumb"><a href="infrastructure.html">Infrastructure</a><span>·</span><span>Facility</span></p>
-    <span class="eyebrow" data-edit="lomp-eyebrow">Space Physics Laboratory · Lomnický štít</span>
-    <h1 class="display" data-edit="lomp-title">Lomnický štít</h1>
-    <p class="lede" data-edit="lomp-lede">At 2634 m, our high-mountain laboratory has run a neutron monitor continuously since 1981 — more than four decades of cosmic ray measurements, now alongside a SEVAN particle monitor and high-energy photon observations during thunderstorms.</p>
+    <span class="eyebrow">Space Physics Laboratory · Lomnický štít</span>
+    <h1 class="display">Lomnický štít</h1>
+    <p class="lede">At 2634 m, our high-mountain laboratory has run a neutron monitor continuously since 1981 — more than four decades of cosmic ray measurements, now alongside a SEVAN particle monitor and high-energy photon observations during thunderstorms.</p>
   </div>
 </section>
-<!-- ===== LOMNICKÝ ŠTÍT ===== -->
-<section id="lomnicky">
-  <div class="wrap">
-        <div class="fac">
-      <div class="fac__body">
-        <img class="shot" src="assets/img/pillar-data.jpg" alt="The Space Physics Laboratory at Lomnický štít above a sea of clouds at sunrise" loading="lazy" width="1200" height="700">
-        <p class="shotcap" data-edit="lom-cap">The laboratory sits on the summit of Lomnický štít in the High Tatras, reached year-round by cable car.<span class="cred">Department of Space Physics, IEP SAS</span></p>
-        <p class="lead" data-edit="lom-p1">Our laboratory has recorded the secondary particles produced when cosmic rays strike the atmosphere without interruption for decades. Thin air, a stable rock platform and a maintained year-round presence make it one of the most valuable observing sites in Europe — and a place where an instrument can run for years rather than a campaign.</p>
-        <h3 data-edit="lom-h1">What the site offers</h3>
-        <ul class="ulist">
-          <li data-edit="lom-u1"><b>Altitude and geomagnetic position</b> — 2634 m a.s.l. in the High Tatras, a location with a well-characterised atmospheric and geomagnetic cut-off history.</li>
-          <li data-edit="lom-u2"><b>Continuous operation</b> — the station is staffed and maintained through the year; instruments run 24/7 rather than in campaigns.</li>
-          <li data-edit="lom-u3"><b>Serviced infrastructure</b> — mains power, network connectivity, heated instrument space and environmental monitoring.</li>
-          <li data-edit="lom-u4"><b>Access and logistics</b> — the summit is reached by cable car; we handle transport, installation support and routine on-site attendance for hosted instruments.</li>
-          <li data-edit="lom-u5"><b>A reference dataset</b> — anything installed here sits alongside one of the longest unbroken cosmic-ray records on Earth, which is itself a calibration resource.</li>
-        </ul>
-        <h3 data-edit="lom-h2">Instruments in operation</h3>
-        <p data-edit="lom-p2">The neutron monitor is the anchor instrument, feeding the global network used to study solar modulation, Forbush decreases and ground-level enhancements. It is supported by additional particle detectors and environmental sensors, all maintained and upgraded in-house by our engineering team.</p>
-        <p data-edit="lom-p3">Space physics measurements have been made on this peak since the first laboratory was built here in 1957, and the neutron monitor has been running since 1981. The scientific programme behind those measurements is described on the Research page.</p>
-        <h3 data-edit="lom-h3">Open access under OPENLABS SAV</h3>
-        <p data-edit="lom-p4">As part of the OPENLABS SAV project we are building a dedicated open-access space here where partner institutions and companies can install and operate their own instruments. You bring the instrument; we provide the site and everything around it — protected instrument space, mains power and network connectivity for continuous operation and remote monitoring, environmental conditions recorded alongside your measurements, and transport, installation support and routine attendance by our staff.</p>
-        <p data-edit="lom-p5">It suits research groups needing a long-duration high-altitude platform, and companies validating sensors or space-qualified components under real conditions. Access is agreed individually — get in touch early, since site preparation and installation windows are limited by the season.</p>
-        <p><a class="card__more" href="research.html#lomnicky">The science at Lomnický štít →</a></p>
-      </div>
-      <aside class="glance">
-        <h3>Site at a glance</h3>
-        <dl>
-          <div><dt>Altitude</dt><dd data-edit="lg1">2634 m a.s.l. · High Tatras, Slovakia</dd></div>
-          <div><dt>Established</dt><dd data-edit="lg2">Laboratory 1957 · neutron monitor 1981</dd></div>
-          <div><dt>Operation</dt><dd data-edit="lg3">Continuous, 24/7, year-round staffed</dd></div>
-          <div><dt>Access</dt><dd data-edit="lg4">Cable car; installation and service support provided</dd></div>
-          <div><dt>Provided</dt><dd data-edit="lg5">Power, network, heated instrument space, environmental monitoring</dd></div>
-          <div><dt>Open access</dt><dd data-edit="lg6">Partner instruments hosted under OPENLABS SAV, 2026–2029 (Programme Slovakia 2021–2027 · ERDF)</dd></div>
-        </dl>
-        <a class="btn btn--sky" href="#enquire">Enquire about hosting</a>
-      </aside>
-    </div>
+<section id="lomnicky"><div class="wrap">
+<div class="crumb"><a href="infrastructure.html">Infrastructure</a><span>·</span><span>Facility</span></div>
+<div class="reading">
+  <div class="reading__col prose">
+<figure class="" style="margin-top:0"><img src="assets/img/pillar-data.jpg" alt="The Space Physics Laboratory at Lomnický štít above a sea of clouds at sunrise" loading="lazy"><figcaption>The laboratory sits on the summit of Lomnický štít in the High Tatras, reached year-round by cable car.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+          <p class="lead">Our laboratory has recorded the secondary particles produced when cosmic rays strike the atmosphere without interruption for decades. Thin air, a stable rock platform and a maintained year-round presence make it one of the most valuable observing sites in Europe — and a place where an instrument can run for years rather than a campaign.</p>
+          <h3>What the site offers</h3>
+          <ul class="ulist"><li><b>Altitude and geomagnetic position</b> — 2634 m a.s.l. in the High Tatras, a location with a well-characterised atmospheric and geomagnetic cut-off history.</li><li><b>Continuous operation</b> — the station is staffed and maintained through the year; instruments run 24/7 rather than in campaigns.</li><li><b>Serviced infrastructure</b> — mains power, network connectivity, heated instrument space and environmental monitoring.</li><li><b>Access and logistics</b> — the summit is reached by cable car; we handle transport, installation support and routine on-site attendance for hosted instruments.</li><li><b>A reference dataset</b> — anything installed here sits alongside one of the longest unbroken cosmic-ray records on Earth, which is itself a calibration resource.</li></ul>
+          <h3>Instruments in operation</h3>
+          <p>The neutron monitor is the anchor instrument, feeding the global network used to study solar modulation, Forbush decreases and ground-level enhancements. It is supported by additional particle detectors and environmental sensors, all maintained and upgraded in-house by our engineering team.</p>
+          <p>Space physics measurements have been made on this peak since the first laboratory was built here in 1957, and the neutron monitor has been running since 1981. The scientific programme behind those measurements is described on the Research page.</p>
+          <h3>Open access under OPENLABS SAV</h3>
+          <p>As part of the OPENLABS SAV project we are building a dedicated open-access space here where partner institutions and companies can install and operate their own instruments. You bring the instrument; we provide the site and everything around it — protected instrument space, mains power and network connectivity for continuous operation and remote monitoring, environmental conditions recorded alongside your measurements, and transport, installation support and routine attendance by our staff.</p>
+          <p>It suits research groups needing a long-duration high-altitude platform, and companies validating sensors or space-qualified components under real conditions. Access is agreed individually — get in touch early, since site preparation and installation windows are limited by the season.</p>
+          <p>
+            <a href="research.html#missions">The science at Lomnický štít →</a>
+          </p>
+          <p>This page is a framework in the source site: the approved standfirst, the full instrument list (neutron monitor, SEVAN, thunderstorm high-energy photon observations), stated access terms and two photographs are still outstanding.</p>
   </div>
-</section>
+  <aside class="glance">
+  <h3>Site at a glance</h3>
+  <dl>
+    <div><dt>Altitude</dt><dd>2634 m a.s.l. · High Tatras, Slovakia</dd></div>
+    <div><dt>Established</dt><dd>Laboratory 1957 · neutron monitor 1981</dd></div>
+    <div><dt>Operation</dt><dd>Continuous, 24/7, year-round staffed</dd></div>
+    <div><dt>Access</dt><dd>Cable car; installation and service support provided</dd></div>
+    <div><dt>Provided</dt><dd>Power, network, heated instrument space, environmental monitoring</dd></div>
+    <div><dt>Open access</dt><dd>Partner instruments hosted under OPENLABS SAV, 2026–2029 (Programme Slovakia 2021–2027 · ERDF)</dd></div>
+  </dl>
+  <a class="btn btn--ghost" href="#enquire">Enquire about hosting <span class="arr">→</span></a>
+</aside>
 
-<!-- ===== ENQUIRE ===== -->
-<section id="enquire">
-  <div class="wrap">
-    <div class="enquire">
-      <div>
-        <h2 data-edit="enq-title">Talk to us about access</h2>
-        <p data-edit="enq-body">Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — enquiries about instrument hosting, cleanroom use and joint projects all go to the same place.</p>
-      </div>
-      <a class="btn btn--sky btn--lg" href="contact.html#info" data-edit="enq-cta">Contacts for cooperation →</a>
-    </div>
-  </div>
-</section>
+</div>
+</div></section>
+<section id="enquire" class="band"><div class="wrap">
+<div class="enquire">
+  <div><h2>Talk to us about access</h2><p>Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — instrument hosting at Lomnický štít and serviced or supervised use of the cleanroom are agreed case by case, and enquiries about joint projects go to the same place.</p></div>
+  <a class="btn btn--sky btn--lg" href="contact.html#info">Contacts for cooperation <span class="arr">→</span></a>
+</div>
 
+</div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a>
-        <a href="results.html">Results</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>

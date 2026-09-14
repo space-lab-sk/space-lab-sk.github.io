@@ -3,226 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JUICE — Jupiter Icy Moons Explorer · SPACE::LAB</title>
+<title>JUICE — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="The Anti-Coincidence Module we built for ESA's JUICE mission — design, verification and first proof in flight.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Our Anti-Coincidence Module for PEP/JDC aboard ESA's Jupiter Icy Moons Explorer — design, verification in Košice, and first proof through Earth's radiation belt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.crumb{margin-bottom:26px}
-.glance{padding:26px 26px 22px}
-figure.narrow{max-width:660px}
-@media(max-width:1000px){.marticle .wrap{gap:44px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
-  <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="research.html" class="active">Research</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
-
 <section class="mhero">
-  <div class="mhero__bg">
-    <img src="assets/img/juice/juice-01-spacecraft.jpg" alt="" fetchpriority="high">
-    <div class="mhero__veil"></div>
-  </div>
+  <div class="mhero__bg"><img src="assets/img/juice/juice-01-spacecraft.jpg" alt="" style="opacity:.5"><div class="mhero__veil"></div></div>
   <div class="wrap">
-    <p class="crumb"><a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a><span>·</span><a href="research.html#missions">Space Missions</a></p>
-    <span class="eyebrow" data-edit="j-eyebrow">ESA · Active · Cruise</span>
-    <h1 class="display" data-edit="j-title">JUICE — Jupiter Icy Moons Explorer</h1>
-    <p class="standfirst" data-edit="j-standfirst">Jupiter's inner magnetosphere is full of electrons energetic enough to pass straight through an instrument's shielding and register as signal that was never there. For ESA's Jupiter Icy Moons Explorer we built the module that recognises them.</p>
+    <div class="crumb"><a href="research.html">Research</a><span>·</span><a href="research.html#missions">Space Missions</a><span>·</span><span>JUICE</span></div>
+    <span class="eyebrow">ESA · Active · Cruise</span>
+    <h1 class="display">JUICE — Jupiter Icy Moons Explorer</h1>
+    <p class="standfirst">Jupiter&rsquo;s inner magnetosphere is full of electrons energetic enough to pass straight through an instrument&rsquo;s shielding and register as signal that was never there. For ESA&rsquo;s Jupiter Icy Moons Explorer we built the module that recognises them.</p>
   </div>
 </section>
+<section><div class="wrap"><div class="marticle">
+  <article class="prose">
+<h2>The mission</h2>
+            <p class="lead">JUICE is ESA's large-class mission to Jupiter and its three ocean-bearing icy moons — Ganymede, Callisto and Europa — and to Jupiter's magnetosphere as a coupled system, the archetype for gas giants. It launched on an Ariane 5 from Kourou on 14 April 2023 and reaches Jupiter in 2031 after a cruise built from multiple gravity assists, ending in orbit around Ganymede: the only moon known to generate its own magnetic field.</p>
+            <p>At 5 AU the sunlight is weak, and the spacecraft is shaped by that fact. Its solar array covers about 85 m² and spans roughly 27 m tip to tip; the spacecraft masses 5963 kg fuelled and 2420 kg dry, and carries ten instruments. That mass and power envelope is not a footnote — it is the constraint that decides how much radiation shielding an instrument can afford.</p>
+            <p>Ganymede is a primary target because its intrinsic field meets Jupiter's. JUICE studies how that interaction modulates surface sputtering and exosphere formation, and how induced magnetic signatures constrain the depth and conductivity of the subsurface ocean. The payload is deliberately cross-linked: particle measurements constrain plasma sources and radiation, the magnetometer and radio-wave instruments constrain fields and wave–particle coupling, and remote sensing constrains surfaces and interiors. Separating a moon's intrinsic properties from external forcing requires all three at once.</p>
+            <figure class="" style="max-width:670px"><img src="assets/img/juice/juice-01-spacecraft.jpg" alt="Artist's impression of the JUICE spacecraft with large solar arrays approaching Jupiter, with four Galilean moons around it." loading="lazy"><figcaption>JUICE approaching Jupiter and the Galilean moons — Io, Europa, Ganymede and Callisto. Artist's impression.<span class="cred">ESA</span></figcaption></figure>
+            <h2>The instrument we work on</h2>
+            <p>The Particle Environment Package is the mission's plasma and particle suite. It measures charged-particle distributions from below 0.001 eV to above 1 MeV with full angular coverage, resolves exospheric composition at a resolving power above 1000, and feeds models of surface weathering, exosphere generation and energetic particle transport around Jupiter and its moons.</p>
+            <p>Within PEP, the Jovian plasma Dynamics and Composition analyser (JDC) measures the low- and intermediate-energy ions and electrons needed to quantify boundary crossings, plasma sources and sinks, and surface–exosphere interaction. Those are exactly the measurements that Jupiter's radiation belts threaten. Penetrating electrons deposit energy inside the sensor and appear as counts that distort low-energy distributions. Shielding attenuates the flux, but suppressing energetic electrons outright would cost more mass and geometry than any spacecraft can carry — and the shielding itself generates bremsstrahlung that reaches the detector. The remaining penetrators have to be recognised rather than blocked.</p>
+            <figure class="" style="max-width:670px"><img src="assets/img/juice/juice-06-pep-jdc.jpg" alt="A technician in cleanroom clothing points to the PEP/JDC sensor with its red aperture cover, mounted on the JUICE spacecraft." loading="lazy"><figcaption>PEP/JDC mounted on JUICE, aperture cover in place. ACM sits inside it, on the sensor axis.<span class="cred">IRF Kiruna</span></figcaption></figure>
+            <h2>Our contribution: the Anti-Coincidence Module</h2>
+            <p>We developed, verified and delivered the Anti-Coincidence Module for PEP/JDC, in collaboration with the Swedish Institute of Space Physics and the wider PEP consortium, under an ESA PECS project dedicated to the module. Ján Baláž designed it and led it through concept, verification and delivery.</p>
+            <p>ACM is not a standalone instrument. It detects penetrating radiation events and produces a fast discriminator output that lets JDC tag the measurements likely to have been corrupted by radiation-belt electrons. Its requirements are those of a timing-clean, low-latency veto source: stable discriminator behaviour across temperature, reproducible and commandable thresholds, and electrical and mechanical interfaces well enough defined that the ACM signal can be correlated with candidate science events and with independent radiation monitors during system-level tests.</p>
+            <p>We delivered three units built from space-qualified components — an engineering model, a flight model and a flight spare. All were calibrated and environmentally tested in Košice and delivered to IRF Kiruna for integration into the PEP/JDC system now flying on JUICE.</p>
+            <figure class=""><img src="assets/img/juice/juice-02-balaz.jpg" alt="Ján Baláž seated at a desk with monitors showing Jupiter and a CAD model of the instrument." loading="lazy"><figcaption>Ján Baláž, who designed ACM, in his office in Košice during an interview on the JUICE mission.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+            <h2>How it works</h2>
+            <p>ACM pairs a silicon solid-state detector, mounted along the axis of the JDC sensor, with a dedicated analogue processing unit that amplifies, shapes and discriminates the detector signal to generate the anti-coincidence flag.</p>
+            <table class="spec"><tbody><tr><th>Detector</th><td>Custom silicon SSD, 300 mm² active area, 300 µm sensitive thickness</td></tr><tr><th>Bias</th><td>130 V</td></tr><tr><th>Manufacturer</th><td>Canberra Belgium Ltd., coaxial interface to the electronics</td></tr><tr><th>Front-end chain</th><td>A250F charge-sensitive amplifier → A275FN shaping amplifier → RHR801K1 fast discriminator</td></tr><tr><th>Threshold</th><td>Commandable from the JDC computer, 54–320 keV</td></tr><tr><th>Deliverables</th><td>Engineering model, flight model, flight spare</td></tr></tbody></table>
+            <p>The physics is direct. Energy loss in silicon produces one electron–hole pair per 3.6 eV, so the charge pulse scales with deposited energy: 90 keV yields about 2.5 × 10⁴ pairs, a pulse of roughly 4 fC. That sits comfortably above the front-end noise floor, which is why a threshold anywhere in the 50–300 keV range can be set robustly while leaving margin for tuning in flight. Setting it is a trade: high enough to reject electronic noise and low-energy secondaries, low enough to catch the penetrating component, and never so aggressive that veto dead-time eats real events.</p>
+            <figure class="plate"><img src="assets/img/juice/juice-05-block-diagram.jpg" alt="Block diagram of the Anti-Coincidence Module showing the silicon detector, charge-sensitive preamplifier, shaping amplifier, discriminator, threshold control and power distribution." loading="lazy"><figcaption>The ACM signal chain: energy deposited in the silicon detector becomes a charge pulse, is amplified and shaped, and crosses a commandable threshold to produce the veto flag JDC uses to tag contaminated measurements.<span class="cred">Ing. Ján Baláž, PhD., Department of Space Physics, IEP SAS</span></figcaption></figure>
+            <h2>Verification</h2>
+            <p>We calibrated the detector response and discriminator behaviour in our laboratories in Košice using mono-energetic electrons from ¹⁰⁹Cd and gamma radiation from ²⁴¹Am, establishing traceable pre-flight performance references. Environmental verification included thermal-vacuum testing in the SPACEVAC chamber at IEP SAS — the same chamber that now stands in our <a href="facility-cleanroom.html">space cleanroom</a> — after which the units went to IRF Kiruna for integration and system-level acceptance in the PEP/JDC chain.</p>
+            <p>Ground testing quantifies trigger efficiency, timing jitter and the correlation between ACM pulses and science-event candidates. What it cannot supply is a real trapped-particle spectrum.</p>
+            <figure class=""><img src="assets/img/juice/juice-04-spacevac.jpg" alt="Ján Baláž wiring an instrument on the open copper baseplate of a thermal-vacuum chamber in a laboratory." loading="lazy"><figcaption>Preparing the ACM thermal-vacuum test in the SPACEVAC chamber at IEP SAS in Košice.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+            <h2>First proof in flight</h2>
+            <p>PEP was commissioned in cruise in June 2023 and operates nominally. The test that mattered for ACM came with JUICE's Moon–Earth gravity assist of 20 August 2024, which carried the spacecraft through Earth's outer Van Allen belt — an environment rich in exactly the energetic trapped electrons ACM exists to recognise.</p>
+            <p>It performed its intended function. Through the belt transits ACM reliably registered penetrating energetic electrons and their secondary products deep inside the PEP instrument volume, and cross-calibration against JUICE's own Radiation Environment Monitor (RADEM, covering electrons 0.3–40 MeV and protons 5–250 MeV) confirmed the correspondence. ACM ran at a single 90 keV threshold during the flyby; a scan across the full commandable 54–320 keV range is planned for a future Earth flyby, to refine the calibration against different radiation spectra.</p>
+            <p class="pullquote">This is a systems verification rather than a component test. It validates the whole chain — detector signal, analogue shaping and discrimination, instrument timing context, and comparison against an independent monitor — in a real radiation belt rather than a laboratory irradiation.</p>
+            <figure class=""><a href="assets/img/juice/juice-03-acm-radem.jpg" target="_blank" rel="noopener"><img src="assets/img/juice/juice-03-acm-radem.jpg" alt="Three-panel figure: JUICE's trajectory through Earth's electron radiation belt, a photograph of the ACM unit, and count-rate curves from ACM and RADEM showing two matching peaks." loading="lazy"></a><figcaption>ACM and RADEM through Earth's outer radiation belt, 20 August 2024. The double peak of the belt crossing appears in both instruments; ACM ran at a 90 keV threshold. Inset: the ACM unit — detector head, coaxial interface and analogue front end.<span class="cred">Department of Space Physics, IEP SAS · click to enlarge</span></figcaption></figure>
+            <h2>Why it matters for the science</h2>
+            <p>ACM earns its place in the downstream data. By tagging the intervals likely to contain radiation hits, JDC preserves the true low-energy plasma distributions that PEP was built to resolve: magnetosphere–moon coupling, boundary crossings, and the time-variable acceleration processes at Ganymede and in Jupiter's magnetosphere. Modelling also shows that spacecraft charging can distort JDC's effective field of view for ions in Jovian and Ganymede conditions, which makes clean tagging of contamination events valuable for data screening and uncertainty management.</p>
+            <p>Early cruise and flyby data mainly support calibration and performance reporting. The primary scientific literature follows once JUICE enters the Jupiter system and sustained PEP operations produce statistically rich datasets under radiation conditions far stronger than anything the cruise has offered.</p>
+            <h2>Data and access</h2>
+            <p>JUICE data are archived in ESA's Planetary Science Archive, the long-term repository for ESA Solar System mission products. The JUICE archive runs as an operational archive: data can be ingested early while pipelines, calibration tables and documentation mature through commissioning and cruise, so product versions and updates are tracked explicitly.</p>
+            <p>That traceability matters for anything ACM touches. Particle and field datasets follow PDS4 metadata conventions, so instrument mode, threshold values, timing windows and veto semantics travel with the data — which is what lets a user years from now reproduce a screening step or compare products across epochs.</p>
+            <p><a class="card__more" href="https://psa.esa.int/" target="_blank" rel="noopener">ESA Planetary Science Archive →</a></p>
+            <div>
+              <h2>People</h2>
+              <p><strong>Ing. Ján Baláž, PhD.</strong> — ACM design, verification and delivery.</p>
+            </div>
+            
+<div class="backlink"><a href="research.html#missions">← All space missions</a></div>
+  </article>
+  <aside class="glance">
+  <h3>Mission at a glance</h3>
+  <dl>
+    <div><dt>Agency</dt><dd>ESA</dd></div>
+    <div><dt>Status</dt><dd>Active · Cruise</dd></div>
+    <div><dt>Launch</dt><dd>14 April 2023, Ariane 5, Kourou</dd></div>
+    <div><dt>Arrival</dt><dd>Jupiter 2031 · Ganymede orbit</dd></div>
+    <div><dt>Instrument</dt><dd>PEP / JDC — Anti-Coincidence Module</dd></div>
+    <div><dt>Our role</dt><dd>ACM design, verification and delivery</dd></div>
+    <div><dt>Partners</dt><dd>IRF Kiruna · PEP consortium</dd></div>
+  </dl>
+  <a class="btn btn--ghost" href="contact.html#info">Work with us <span class="arr">→</span></a>
+</aside>
 
-<div class="marticle">
-  <div class="wrap">
-    <article class="mbody">
-
-      <h2 data-edit="j-h1">The mission</h2>
-      <p class="lead" data-edit="j-p1">JUICE is ESA's large-class mission to Jupiter and its three ocean-bearing icy moons — Ganymede, Callisto and Europa — and to Jupiter's magnetosphere as a coupled system, the archetype for gas giants. It launched on an Ariane 5 from Kourou on 14 April 2023 and reaches Jupiter in 2031 after a cruise built from multiple gravity assists, ending in orbit around Ganymede: the only moon known to generate its own magnetic field.</p>
-      <p data-edit="j-p2">At 5 AU the sunlight is weak, and the spacecraft is shaped by that fact. Its solar array covers about 85 m² and spans roughly 27 m tip to tip; the spacecraft masses 5963 kg fuelled and 2420 kg dry, and carries ten instruments. That mass and power envelope is not a footnote — it is the constraint that decides how much radiation shielding an instrument can afford.</p>
-      <p data-edit="j-p3">Ganymede is a primary target because its intrinsic field meets Jupiter's. JUICE studies how that interaction modulates surface sputtering and exosphere formation, and how induced magnetic signatures constrain the depth and conductivity of the subsurface ocean. The payload is deliberately cross-linked: particle measurements constrain plasma sources and radiation, the magnetometer and radio-wave instruments constrain fields and wave–particle coupling, and remote sensing constrains surfaces and interiors. Separating a moon's intrinsic properties from external forcing requires all three at once.</p>
-
-      <figure class="narrow">
-        <img src="assets/img/juice/juice-01-spacecraft.jpg" alt="Artist's impression of the JUICE spacecraft with large solar arrays approaching Jupiter, with four Galilean moons around it." loading="lazy" width="900" height="889">
-        <figcaption data-edit="j-fig1">JUICE approaching Jupiter and the Galilean moons — Io, Europa, Ganymede and Callisto. Artist's impression.<span class="cred">ESA</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h2">The instrument we work on</h2>
-      <p data-edit="j-p4">The Particle Environment Package is the mission's plasma and particle suite. It measures charged-particle distributions from below 0.001 eV to above 1 MeV with full angular coverage, resolves exospheric composition at a resolving power above 1000, and feeds models of surface weathering, exosphere generation and energetic particle transport around Jupiter and its moons.</p>
-      <p data-edit="j-p5">Within PEP, the Jovian plasma Dynamics and Composition analyser (JDC) measures the low- and intermediate-energy ions and electrons needed to quantify boundary crossings, plasma sources and sinks, and surface–exosphere interaction. Those are exactly the measurements that Jupiter's radiation belts threaten. Penetrating electrons deposit energy inside the sensor and appear as counts that distort low-energy distributions. Shielding attenuates the flux, but suppressing energetic electrons outright would cost more mass and geometry than any spacecraft can carry — and the shielding itself generates bremsstrahlung that reaches the detector. The remaining penetrators have to be recognised rather than blocked.</p>
-
-      <figure class="narrow">
-        <img src="assets/img/juice/juice-06-pep-jdc.jpg" alt="A technician in cleanroom clothing points to the PEP/JDC sensor with its red aperture cover, mounted on the JUICE spacecraft." loading="lazy" width="764" height="427">
-        <figcaption data-edit="j-fig6">PEP/JDC mounted on JUICE, aperture cover in place. ACM sits inside it, on the sensor axis.<span class="cred">IRF Kiruna</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h3">Our contribution: the Anti-Coincidence Module</h2>
-      <p data-edit="j-p6">We developed, verified and delivered the Anti-Coincidence Module for PEP/JDC, in collaboration with the Swedish Institute of Space Physics and the wider PEP consortium, under an ESA PECS project dedicated to the module. Ján Baláž designed it and led it through concept, verification and delivery.</p>
-      <p data-edit="j-p7">ACM is not a standalone instrument. It detects penetrating radiation events and produces a fast discriminator output that lets JDC tag the measurements likely to have been corrupted by radiation-belt electrons. Its requirements are those of a timing-clean, low-latency veto source: stable discriminator behaviour across temperature, reproducible and commandable thresholds, and electrical and mechanical interfaces well enough defined that the ACM signal can be correlated with candidate science events and with independent radiation monitors during system-level tests.</p>
-      <p data-edit="j-p8">We delivered three units built from space-qualified components — an engineering model, a flight model and a flight spare. All were calibrated and environmentally tested in Košice and delivered to IRF Kiruna for integration into the PEP/JDC system now flying on JUICE.</p>
-
-      <figure>
-        <img src="assets/img/juice/juice-02-balaz.jpg" alt="Ján Baláž seated at a desk with monitors showing Jupiter and a CAD model of the instrument." loading="lazy" width="1200" height="850">
-        <figcaption data-edit="j-fig2">Ján Baláž, who designed ACM, in his office in Košice during an interview on the JUICE mission.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h4">How it works</h2>
-      <p data-edit="j-p9">ACM pairs a silicon solid-state detector, mounted along the axis of the JDC sensor, with a dedicated analogue processing unit that amplifies, shapes and discriminates the detector signal to generate the anti-coincidence flag.</p>
-      <table class="spec">
-        <tbody>
-          <tr><th>Detector</th><td data-edit="j-s1">Custom silicon SSD, 300 mm² active area, 300 µm sensitive thickness</td></tr>
-          <tr><th>Bias</th><td data-edit="j-s2">130 V</td></tr>
-          <tr><th>Manufacturer</th><td data-edit="j-s3">Canberra Belgium Ltd., coaxial interface to the electronics</td></tr>
-          <tr><th>Front-end chain</th><td data-edit="j-s4">A250F charge-sensitive amplifier → A275FN shaping amplifier → RHR801K1 fast discriminator</td></tr>
-          <tr><th>Threshold</th><td data-edit="j-s5">Commandable from the JDC computer, 54–320 keV</td></tr>
-          <tr><th>Deliverables</th><td data-edit="j-s6">Engineering model, flight model, flight spare</td></tr>
-        </tbody>
-      </table>
-      <p data-edit="j-p10">The physics is direct. Energy loss in silicon produces one electron–hole pair per 3.6 eV, so the charge pulse scales with deposited energy: 90 keV yields about 2.5 × 10⁴ pairs, a pulse of roughly 4 fC. That sits comfortably above the front-end noise floor, which is why a threshold anywhere in the 50–300 keV range can be set robustly while leaving margin for tuning in flight. Setting it is a trade: high enough to reject electronic noise and low-energy secondaries, low enough to catch the penetrating component, and never so aggressive that veto dead-time eats real events.</p>
-
-      <figure class="diagram">
-        <img src="assets/img/juice/juice-05-block-diagram.jpg" alt="Block diagram of the Anti-Coincidence Module showing the silicon detector, charge-sensitive preamplifier, shaping amplifier, discriminator, threshold control and power distribution." loading="lazy" width="1413" height="795">
-        <figcaption data-edit="j-fig5">The ACM signal chain: energy deposited in the silicon detector becomes a charge pulse, is amplified and shaped, and crosses a commandable threshold to produce the veto flag JDC uses to tag contaminated measurements.<span class="cred">Ing. Ján Baláž, PhD., Department of Space Physics, IEP SAS</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h5">Verification</h2>
-      <p data-edit="j-p11">We calibrated the detector response and discriminator behaviour in our laboratories in Košice using mono-energetic electrons from ¹⁰⁹Cd and gamma radiation from ²⁴¹Am, establishing traceable pre-flight performance references. Environmental verification included thermal-vacuum testing in the SPACEVAC chamber at IEP SAS — the same chamber that now stands in our <a href="facility-cleanroom.html">space cleanroom</a> — after which the units went to IRF Kiruna for integration and system-level acceptance in the PEP/JDC chain.</p>
-      <p data-edit="j-p12">Ground testing quantifies trigger efficiency, timing jitter and the correlation between ACM pulses and science-event candidates. What it cannot supply is a real trapped-particle spectrum.</p>
-
-      <figure>
-        <img src="assets/img/juice/juice-04-spacevac.jpg" alt="Ján Baláž wiring an instrument on the open copper baseplate of a thermal-vacuum chamber in a laboratory." loading="lazy" width="1194" height="811">
-        <figcaption data-edit="j-fig4">Preparing the ACM thermal-vacuum test in the SPACEVAC chamber at IEP SAS in Košice.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h6">First proof in flight</h2>
-      <p data-edit="j-p13">PEP was commissioned in cruise in June 2023 and operates nominally. The test that mattered for ACM came with JUICE's Moon–Earth gravity assist of 20 August 2024, which carried the spacecraft through Earth's outer Van Allen belt — an environment rich in exactly the energetic trapped electrons ACM exists to recognise.</p>
-      <p data-edit="j-p14">It performed its intended function. Through the belt transits ACM reliably registered penetrating energetic electrons and their secondary products deep inside the PEP instrument volume, and cross-calibration against JUICE's own Radiation Environment Monitor (RADEM, covering electrons 0.3–40 MeV and protons 5–250 MeV) confirmed the correspondence. ACM ran at a single 90 keV threshold during the flyby; a scan across the full commandable 54–320 keV range is planned for a future Earth flyby, to refine the calibration against different radiation spectra.</p>
-      <p class="pullquote" data-edit="j-quote">This is a systems verification rather than a component test. It validates the whole chain — detector signal, analogue shaping and discrimination, instrument timing context, and comparison against an independent monitor — in a real radiation belt rather than a laboratory irradiation.</p>
-
-      <figure>
-        <a class="zoom" href="assets/img/juice/juice-03-acm-radem.jpg" target="_blank" rel="noopener">
-          <img src="assets/img/juice/juice-03-acm-radem.jpg" alt="Three-panel figure: JUICE's trajectory through Earth's electron radiation belt, a photograph of the ACM unit, and count-rate curves from ACM and RADEM showing two matching peaks." loading="lazy" width="1200" height="728">
-        </a>
-        <figcaption data-edit="j-fig3">ACM and RADEM through Earth's outer radiation belt, 20 August 2024. The double peak of the belt crossing appears in both instruments; ACM ran at a 90 keV threshold. Inset: the ACM unit — detector head, coaxial interface and analogue front end.<span class="cred">Department of Space Physics, IEP SAS · click to enlarge</span></figcaption>
-      </figure>
-
-      <h2 data-edit="j-h7">Why it matters for the science</h2>
-      <p data-edit="j-p15">ACM earns its place in the downstream data. By tagging the intervals likely to contain radiation hits, JDC preserves the true low-energy plasma distributions that PEP was built to resolve: magnetosphere–moon coupling, boundary crossings, and the time-variable acceleration processes at Ganymede and in Jupiter's magnetosphere. Modelling also shows that spacecraft charging can distort JDC's effective field of view for ions in Jovian and Ganymede conditions, which makes clean tagging of contamination events valuable for data screening and uncertainty management.</p>
-      <p data-edit="j-p16">Early cruise and flyby data mainly support calibration and performance reporting. The primary scientific literature follows once JUICE enters the Jupiter system and sustained PEP operations produce statistically rich datasets under radiation conditions far stronger than anything the cruise has offered.</p>
-
-      <h2 data-edit="j-h8">Data and access</h2>
-      <p data-edit="j-p17">JUICE data are archived in ESA's Planetary Science Archive, the long-term repository for ESA Solar System mission products. The JUICE archive runs as an operational archive: data can be ingested early while pipelines, calibration tables and documentation mature through commissioning and cruise, so product versions and updates are tracked explicitly.</p>
-      <p data-edit="j-p18">That traceability matters for anything ACM touches. Particle and field datasets follow PDS4 metadata conventions, so instrument mode, threshold values, timing windows and veto semantics travel with the data — which is what lets a user years from now reproduce a screening step or compare products across epochs.</p>
-      <p><a class="card__more" href="https://psa.esa.int/" target="_blank" rel="noopener" data-edit="j-psa">ESA Planetary Science Archive →</a></p>
-
-      <div class="people">
-        <h2 style="margin-top:0" data-edit="j-h9">People</h2>
-        <p data-edit="j-people"><strong>Ing. Ján Baláž, PhD.</strong> — ACM design, verification and delivery.</p>
-      </div>
-
-      <div class="backlink">
-        <a class="card__more" href="research.html#missions">← All space missions</a>
-      </div>
-
-    </article>
-
-    <aside class="glance">
-      <h3>Mission at a glance</h3>
-      <dl>
-        <div><dt>Agency</dt><dd data-edit="j-g1">ESA (large-class mission)</dd></div>
-        <div><dt>Launch</dt><dd data-edit="j-g2">14 April 2023 · Ariane 5 · Kourou, French Guiana</dd></div>
-        <div><dt>Jupiter arrival</dt><dd data-edit="j-g3">2031, after an interplanetary cruise with multiple gravity assists</dd></div>
-        <div><dt>Final orbit</dt><dd data-edit="j-g4">Ganymede</dd></div>
-        <div><dt>Spacecraft</dt><dd data-edit="j-g5">5963 kg at launch · 2420 kg dry · ten instruments</dd></div>
-        <div><dt>Solar array</dt><dd data-edit="j-g6">about 85 m², roughly 27 m tip-to-tip</dd></div>
-        <div><dt>Our instrument</dt><dd data-edit="j-g7">Anti-Coincidence Module (ACM) for PEP / JDC</dd></div>
-        <div><dt>Our partner</dt><dd data-edit="j-g8">Swedish Institute of Space Physics (IRF), Kiruna</dd></div>
-        <div><dt>Funding</dt><dd data-edit="j-g9">ESA PECS — Plan for European Cooperating States</dd></div>
-        <div><dt>Status</dt><dd data-edit="j-g10">Active · Cruise</dd></div>
-      </dl>
-    </aside>
-  </div>
-</div>
-
+</div></div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
-        <a href="results.html">Results</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>

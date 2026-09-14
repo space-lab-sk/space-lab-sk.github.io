@@ -3,241 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BepiColombo — Mercury Planetary Orbiter · SPACE::LAB</title>
+<title>BepiColombo — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="The PICAM electronics-box structure we designed, verified and built for the SERENA suite on BepiColombo.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="The ultra-light structure we designed, verified and built for SERENA's PICAM ion mass spectrometer aboard ESA and JAXA's BepiColombo mission to Mercury.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<style>
-.crumb{margin-bottom:26px}
-.glance{padding:26px 26px 22px}
-figure.narrow{max-width:680px}
-@media(max-width:1000px){.marticle .wrap{gap:44px}}
-</style>
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
-  <a href="research.html" class="active">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="research.html" class="active">Research</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
-
 <section class="mhero">
-  <div class="mhero__bg">
-    <img src="assets/img/bepi/bepi-01-orbiter-mercury.jpg" alt="" fetchpriority="high">
-    <div class="mhero__veil"></div>
-  </div>
+  <div class="mhero__bg"><img src="assets/img/bepi/bepi-01-orbiter-mercury.jpg" alt="" style="opacity:.5"><div class="mhero__veil"></div></div>
   <div class="wrap">
-    <p class="crumb"><a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a><span>·</span><a href="research.html#missions">Space Missions</a></p>
-    <span class="eyebrow" data-edit="b-eyebrow">ESA · JAXA · Active · Arrival</span>
-    <h1 class="display" data-edit="b-title">BepiColombo — Mercury Planetary Orbiter</h1>
-    <p class="standfirst" data-edit="b-standfirst">Mercury sits in a solar flux of 14 kW/m² and swings between 100 K and 700 K across its surface. Getting a sensitive ion spectrometer there intact, and keeping its optics in alignment through launch, eight years of cruise and Mercury orbit, is a structural problem. That structure is ours.</p>
+    <div class="crumb"><a href="research.html">Research</a><span>·</span><a href="research.html#missions">Space Missions</a><span>·</span><span>BepiColombo</span></div>
+    <span class="eyebrow">ESA · JAXA · Active · Arrival</span>
+    <h1 class="display">BepiColombo — Mercury Planetary Orbiter</h1>
+    <p class="standfirst">Mercury sits in a solar flux of 14 kW/m² and swings between 100 K and 700 K across its surface. Getting a sensitive ion spectrometer there intact, and keeping its optics in alignment through launch, eight years of cruise and Mercury orbit, is a structural problem. That structure is ours.</p>
   </div>
 </section>
+<section><div class="wrap"><div class="marticle">
+  <article class="prose">
+<h2>The mission</h2>
+            <p class="lead">BepiColombo is the joint ESA–JAXA mission to Mercury and Europe's first. It launched from Kourou on an Ariane 5 on 20 October 2018 as a composite spacecraft: ESA's Mercury Transfer Module supplying cruise power and propulsion, ESA's Mercury Planetary Orbiter carrying eleven instruments for mapping, geodesy, composition and local-environment measurements, and JAXA's Mercury Magnetospheric Orbiter, Mio, dedicated to fields, plasma, particles and dust. MPO and Mio will eventually work in different polar orbits, measuring the planet and its plasma system at the same time.</p>
+            <p>Reaching Mercury means losing heliocentric orbital energy, not gaining it — so the cruise took eight years, solar-electric propulsion and nine gravity assists: one at Earth, two at Venus and six at Mercury. The last Mercury flyby was on 8 January 2025, the final thrust arc ended on 15 June 2026, and the transfer module was released on 3 September 2026. Orbit insertion follows on 21 November 2026, Mio separates on 9–10 December, MPO reaches its final orbit on 10 March 2027 and the science phase opens on 6 April 2027.</p>
+            <p>Mercury earns that effort. It is the smallest planet, carries an unusually large metallic core, turns in a 3:2 spin–orbit resonance and moves on an eccentric orbit between roughly 0.31 and 0.47 AU. Its surface runs from about 100 K on the night side to about 700 K at the hottest, under a solar flux near perihelion of about 14 kW/m². It is simultaneously a record of how the inner Solar System formed and one of the most punishing destinations an instrument designer can be given.</p>
+            <figure class=""><img src="assets/img/bepi/bepi-01-orbiter-mercury.jpg" alt="Artist's impression of the Mercury Planetary Orbiter above Mercury with blue ion thruster plumes, labels marking the PICAM and MIPA sensors." loading="lazy"><figcaption>PICAM and MIPA on the Mercury Planetary Orbiter, with the ion thrusters that carried BepiColombo through eight years of cruise. Artist's impression.<span class="cred">ESA; annotated in the internal presentation of IEP SAS</span></figcaption></figure>
+            <p>The mission treats Mercury as a coupled system: deep interior, surface mineralogy, tenuous exosphere, intrinsic magnetic field and compact magnetosphere, all driven continuously by solar radiation, the solar wind, micrometeoroid impacts and precipitating energetic particles. Material knocked off the surface becomes neutral or ionised, joins the exosphere and magnetosphere, and sometimes escapes. Measuring the composition, energy and direction of those ions is the direct route from a surface process to the Sun–Mercury interaction that caused it.</p>
+            <h2>The instrument we work on</h2>
+            <p>On MPO that investigation belongs to SERENA — Search for Exospheric Refilling and Emitted Natural Abundances — a suite of four sensors: ELENA for energetic neutral atoms, STROFIO for neutral-particle mass spectrometry, MIPA for ion precipitation, and PICAM, the Planetary Ion CAMera, for three-dimensional ion distributions and mass analysis. PICAM is where our hardware is.</p>
+            <p>PICAM is an all-sky charged-particle camera and ion mass spectrometer for the three-dimensional velocity distribution and mass spectrum of positive ions. It masses about 2.45 kg in an envelope of roughly 20 × 24 × 19 cm, and its instantaneous field of view is close to a full hemisphere — 2π steradians — which is how it achieves broad angular coverage without a mechanical scanner.</p>
+            <table class="spec"><tbody><tr><th>Energy range</th><td>Several eV to about 3 keV, up to 32 scan steps</td></tr><tr><th>Mass range</th><td>Up to about 132 amu, corresponding to xenon</td></tr><tr><th>Mass resolving power</th><td>Better than about 50 — enough to separate sodium from magnesium ions in suitable modes</td></tr><tr><th>Angular sampling</th><td>Up to 60 angular pixels</td></tr><tr><th>Detector</th><td>Microchannel plate, position-sensitive</td></tr><tr><th>Mass · envelope</th><td>2.45 kg · about 20 × 24 × 19 cm</td></tr></tbody></table>
+            <p>Ions enter through an annular aperture. Electrostatic mirrors and shaped electrodes steer particles arriving from different directions through the optical system, an electrostatic analyser selects them by energy per charge, and a gated time-of-flight section modulates the beam before it reaches the microchannel-plate detector. The detector position preserves the arrival direction; the flight time between gate and detector signal gives the mass. PICAM therefore records not just that an ion arrived, but where from, how energetic it was, and — within its resolution — which species it most likely was.</p>
+            <p>Every one of those measurements is a geometry measurement. The ion optics only mean what they are calibrated to mean if the electrodes, analyser and detector stay where they were put.</p>
+            <figure class="plate"><a href="assets/img/bepi/bepi-04-ion-optics.jpg" target="_blank" rel="noopener"><img src="assets/img/bepi/bepi-04-ion-optics.jpg" alt="Annotated cross-section drawing of the PICAM ion-optical system showing entrance mirrors, gate, second mirror, electrostatic analyser and microchannel-plate detector, with red ion trajectories." loading="lazy"></a><figcaption>Inside PICAM: ions enter through the annular aperture, are steered by electrostatic mirrors, selected by energy per charge in the analyser, gated for time of flight, and land on a position-sensitive microchannel-plate detector. The red paths are representative ion trajectories.<span class="cred">Orsini et al. (2021), Space Science Reviews 217, 11 / IEP SAS · click to enlarge</span></figcaption></figure>
+            <h2>Our contribution: the PICAM electronics-box structure</h2>
+            <p>We designed, structurally verified, manufactured and delivered the ultra-light mechanical structure and precision parts of PICAM's electronics box, including the mechanically demanding interface that supports the sensor system. This is a defined part of the instrument, not the whole of PICAM and not the SERENA suite: the work was carried out inside an international collaboration led by the Space Research Institute of the Austrian Academy of Sciences (IWF/ÖAW) in Graz, where PICAM was integrated, together with Space Technology Ireland.</p>
+            <p>The box is not an enclosure. It holds the low- and high-voltage supplies, the coordinate and time-of-flight electronics and the instrument controller that talks to the SERENA System Control Unit — and at the same time it provides stable geometry for that electronics, carries structural loads, and forms the mechanical connection between a relatively heavy sensor assembly and the spacecraft instrument platform.</p>
+            <p>Our work ran as three connected engineering tasks: three-dimensional mechanical design, strength verification by finite-element analysis, and delivery of manufactured precision parts. The analyses asked how a deliberately low-mass box and its interfaces would answer the vibration and acceleration loads of launch, and the target was sufficient stiffness and load margin without a gram of unnecessary mass — a trade that matters more, not less, when the destination is Mercury.</p>
+            <figure class=""><img src="assets/img/bepi/bepi-02-design-fea.jpg" alt="Two panels side by side: a colour-coded CAD model of the PICAM electronics box, and a finite-element analysis of the same structure shown as a colour field." loading="lazy"><figcaption>The PICAM electronics box: mechanical design and its finite-element verification. The two panels are the workflow — geometry proposed, then answered against launch loads, then optimised for stiffness at minimum mass.<span class="cred">Ing. Ján Baláž, PhD., Department of Space Physics, IEP SAS</span></figcaption></figure>
+            <p>The design-to-hardware cycle ran six times, across the six electronics-box models recorded in our archive as STM, PM, EM, QM, FM and FS, supporting the structural, development, engineering, qualification and flight stages of the instrument programme in turn. All six box structures were produced in our laboratory at IEP SAS with industrial partners, and the unit identified as the Flight Spare is the one flying on BepiColombo.</p>
+            <figure class=""><a href="assets/img/bepi/bepi-03-six-models.jpg" target="_blank" rel="noopener"><img src="assets/img/bepi/bepi-03-six-models.jpg" alt="Six PICAM electronics-box units in a grid on a black background, with different surface finishes, each showing a ribbed circular sensor interface." loading="lazy"></a><figcaption>All six PICAM electronics-box models built at IEP SAS — STM, PM, EM, QM, FM and FS — across the structural, development, engineering, qualification and flight stages. The Flight Spare is the unit flying on BepiColombo.<span class="cred">Department of Space Physics, IEP SAS · click to enlarge</span></figcaption></figure>
+            <figure class="" style="max-width:670px"><img src="assets/img/bepi/bepi-05-picam-on-mpo.jpg" alt="Render of the PICAM sensor with white thermal insulation and an open aperture mounted beneath the Mercury Planetary Orbiter's instrument deck." loading="lazy"><figcaption>PICAM on the Mercury Planetary Orbiter. The open aperture gives the sensor access to ion populations during suitable cruise attitudes and, after arrival, in Mercury's environment.<span class="cred">ESA</span></figcaption></figure>
+            <div>
+              <h2>People</h2>
+              <p><strong>Ing. Ján Baláž, PhD.</strong> — PICAM electronics-box structure: design, finite-element verification and delivery.</p>
+            </div>
+            
+<div class="backlink"><a href="research.html#missions">← All space missions</a></div>
+  </article>
+  <aside class="glance">
+  <h3>Mission at a glance</h3>
+  <dl>
+    <div><dt>Agency</dt><dd>ESA · JAXA</dd></div>
+    <div><dt>Status</dt><dd>Active · Arrival</dd></div>
+    <div><dt>Launch</dt><dd>20 October 2018, Ariane 5, Kourou</dd></div>
+    <div><dt>Orbit insertion</dt><dd>21 November 2026</dd></div>
+    <div><dt>Science phase</dt><dd>From 6 April 2027</dd></div>
+    <div><dt>Instrument</dt><dd>SERENA / PICAM — electronics-box structure</dd></div>
+    <div><dt>Partners</dt><dd>IWF/ÖAW Graz · Space Technology Ireland</dd></div>
+  </dl>
+  <a class="btn btn--ghost" href="contact.html#info">Work with us <span class="arr">→</span></a>
+</aside>
 
-<div class="marticle">
-  <div class="wrap">
-    <article class="mbody">
-
-      <h2 data-edit="b-h1">The mission</h2>
-      <p class="lead" data-edit="b-p1">BepiColombo is the joint ESA–JAXA mission to Mercury and Europe's first. It launched from Kourou on an Ariane 5 on 20 October 2018 as a composite spacecraft: ESA's Mercury Transfer Module supplying cruise power and propulsion, ESA's Mercury Planetary Orbiter carrying eleven instruments for mapping, geodesy, composition and local-environment measurements, and JAXA's Mercury Magnetospheric Orbiter, Mio, dedicated to fields, plasma, particles and dust. MPO and Mio will eventually work in different polar orbits, measuring the planet and its plasma system at the same time.</p>
-      <p data-edit="b-p2">Reaching Mercury means losing heliocentric orbital energy, not gaining it — so the cruise took eight years, solar-electric propulsion and nine gravity assists: one at Earth, two at Venus and six at Mercury. The last Mercury flyby was on 8 January 2025, the final thrust arc ended on 15 June 2026, and the transfer module was released on 3 September 2026. Orbit insertion follows on 21 November 2026, Mio separates on 9–10 December, MPO reaches its final orbit on 10 March 2027 and the science phase opens on 6 April 2027.</p>
-      <p data-edit="b-p3">Mercury earns that effort. It is the smallest planet, carries an unusually large metallic core, turns in a 3:2 spin–orbit resonance and moves on an eccentric orbit between roughly 0.31 and 0.47 AU. Its surface runs from about 100 K on the night side to about 700 K at the hottest, under a solar flux near perihelion of about 14 kW/m². It is simultaneously a record of how the inner Solar System formed and one of the most punishing destinations an instrument designer can be given.</p>
-
-      <figure>
-        <img src="assets/img/bepi/bepi-01-orbiter-mercury.jpg" alt="Artist's impression of the Mercury Planetary Orbiter above Mercury with blue ion thruster plumes, labels marking the PICAM and MIPA sensors." loading="lazy" width="1000" height="640">
-        <figcaption data-edit="b-fig1">PICAM and MIPA on the Mercury Planetary Orbiter, with the ion thrusters that carried BepiColombo through eight years of cruise. Artist's impression.<span class="cred">ESA; annotated in the internal presentation of IEP SAS</span></figcaption>
-      </figure>
-
-      <p data-edit="b-p4">The mission treats Mercury as a coupled system: deep interior, surface mineralogy, tenuous exosphere, intrinsic magnetic field and compact magnetosphere, all driven continuously by solar radiation, the solar wind, micrometeoroid impacts and precipitating energetic particles. Material knocked off the surface becomes neutral or ionised, joins the exosphere and magnetosphere, and sometimes escapes. Measuring the composition, energy and direction of those ions is the direct route from a surface process to the Sun–Mercury interaction that caused it.</p>
-
-      <h2 data-edit="b-h2">The instrument we work on</h2>
-      <p data-edit="b-p5">On MPO that investigation belongs to SERENA — Search for Exospheric Refilling and Emitted Natural Abundances — a suite of four sensors: ELENA for energetic neutral atoms, STROFIO for neutral-particle mass spectrometry, MIPA for ion precipitation, and PICAM, the Planetary Ion CAMera, for three-dimensional ion distributions and mass analysis. PICAM is where our hardware is.</p>
-      <p data-edit="b-p6">PICAM is an all-sky charged-particle camera and ion mass spectrometer for the three-dimensional velocity distribution and mass spectrum of positive ions. It masses about 2.45 kg in an envelope of roughly 20 × 24 × 19 cm, and its instantaneous field of view is close to a full hemisphere — 2π steradians — which is how it achieves broad angular coverage without a mechanical scanner.</p>
-      <table class="spec">
-        <tbody>
-          <tr><th>Energy range</th><td data-edit="b-s1">Several eV to about 3 keV, up to 32 scan steps</td></tr>
-          <tr><th>Mass range</th><td data-edit="b-s2">Up to about 132 amu, corresponding to xenon</td></tr>
-          <tr><th>Mass resolving power</th><td data-edit="b-s3">Better than about 50 — enough to separate sodium from magnesium ions in suitable modes</td></tr>
-          <tr><th>Angular sampling</th><td data-edit="b-s4">Up to 60 angular pixels</td></tr>
-          <tr><th>Detector</th><td data-edit="b-s5">Microchannel plate, position-sensitive</td></tr>
-          <tr><th>Mass · envelope</th><td data-edit="b-s6">2.45 kg · about 20 × 24 × 19 cm</td></tr>
-        </tbody>
-      </table>
-      <p data-edit="b-p7">Ions enter through an annular aperture. Electrostatic mirrors and shaped electrodes steer particles arriving from different directions through the optical system, an electrostatic analyser selects them by energy per charge, and a gated time-of-flight section modulates the beam before it reaches the microchannel-plate detector. The detector position preserves the arrival direction; the flight time between gate and detector signal gives the mass. PICAM therefore records not just that an ion arrived, but where from, how energetic it was, and — within its resolution — which species it most likely was.</p>
-      <p data-edit="b-p8">Every one of those measurements is a geometry measurement. The ion optics only mean what they are calibrated to mean if the electrodes, analyser and detector stay where they were put.</p>
-
-      <figure class="plate">
-        <a class="zoom" href="assets/img/bepi/bepi-04-ion-optics.jpg" target="_blank" rel="noopener">
-          <img src="assets/img/bepi/bepi-04-ion-optics.jpg" alt="Annotated cross-section drawing of the PICAM ion-optical system showing entrance mirrors, gate, second mirror, electrostatic analyser and microchannel-plate detector, with red ion trajectories." loading="lazy" width="1170" height="740">
-        </a>
-        <figcaption data-edit="b-fig4">Inside PICAM: ions enter through the annular aperture, are steered by electrostatic mirrors, selected by energy per charge in the analyser, gated for time of flight, and land on a position-sensitive microchannel-plate detector. The red paths are representative ion trajectories.<span class="cred">Orsini et al. (2021), Space Science Reviews 217, 11 / IEP SAS · click to enlarge</span></figcaption>
-      </figure>
-
-      <h2 data-edit="b-h3">Our contribution: the PICAM electronics-box structure</h2>
-      <p data-edit="b-p9">We designed, structurally verified, manufactured and delivered the ultra-light mechanical structure and precision parts of PICAM's electronics box, including the mechanically demanding interface that supports the sensor system. This is a defined part of the instrument, not the whole of PICAM and not the SERENA suite: the work was carried out inside an international collaboration led by the Space Research Institute of the Austrian Academy of Sciences (IWF/ÖAW) in Graz, where PICAM was integrated, together with Space Technology Ireland.</p>
-      <p data-edit="b-p10">The box is not an enclosure. It holds the low- and high-voltage supplies, the coordinate and time-of-flight electronics and the instrument controller that talks to the SERENA System Control Unit — and at the same time it provides stable geometry for that electronics, carries structural loads, and forms the mechanical connection between a relatively heavy sensor assembly and the spacecraft instrument platform.</p>
-      <p data-edit="b-p11">Our work ran as three connected engineering tasks: three-dimensional mechanical design, strength verification by finite-element analysis, and delivery of manufactured precision parts. The analyses asked how a deliberately low-mass box and its interfaces would answer the vibration and acceleration loads of launch, and the target was sufficient stiffness and load margin without a gram of unnecessary mass — a trade that matters more, not less, when the destination is Mercury.</p>
-
-      <figure>
-        <img src="assets/img/bepi/bepi-02-design-fea.jpg" alt="Two panels side by side: a colour-coded CAD model of the PICAM electronics box, and a finite-element analysis of the same structure shown as a colour field." loading="lazy" width="1000" height="640">
-        <figcaption data-edit="b-fig2">The PICAM electronics box: mechanical design and its finite-element verification. The two panels are the workflow — geometry proposed, then answered against launch loads, then optimised for stiffness at minimum mass.<span class="cred">Ing. Ján Baláž, PhD., Department of Space Physics, IEP SAS</span></figcaption>
-      </figure>
-
-      <p data-edit="b-p12">The design-to-hardware cycle ran six times, across the six electronics-box models recorded in our archive as STM, PM, EM, QM, FM and FS, supporting the structural, development, engineering, qualification and flight stages of the instrument programme in turn. All six box structures were produced in our laboratory at IEP SAS with industrial partners, and the unit identified as the Flight Spare is the one flying on BepiColombo.</p>
-
-      <figure>
-        <a class="zoom" href="assets/img/bepi/bepi-03-six-models.jpg" target="_blank" rel="noopener">
-          <img src="assets/img/bepi/bepi-03-six-models.jpg" alt="Six PICAM electronics-box units in a grid on a black background, with different surface finishes, each showing a ribbed circular sensor interface." loading="lazy" width="1000" height="640">
-        </a>
-        <figcaption data-edit="b-fig3">All six PICAM electronics-box models built at IEP SAS — STM, PM, EM, QM, FM and FS — across the structural, development, engineering, qualification and flight stages. The Flight Spare is the unit flying on BepiColombo.<span class="cred">Department of Space Physics, IEP SAS · click to enlarge</span></figcaption>
-      </figure>
-
-      <figure class="narrow">
-        <img src="assets/img/bepi/bepi-05-picam-on-mpo.jpg" alt="Render of the PICAM sensor with white thermal insulation and an open aperture mounted beneath the Mercury Planetary Orbiter's instrument deck." loading="lazy" width="1000" height="585">
-        <figcaption data-edit="b-fig5">PICAM on the Mercury Planetary Orbiter. The open aperture gives the sensor access to ion populations during suitable cruise attitudes and, after arrival, in Mercury's environment.<span class="cred">ESA</span></figcaption>
-      </figure>
-
-      <p class="pullquote" data-edit="b-quote">It is a compact contribution, and a mission-critical one. Its value is in preserving the alignment, mechanical integrity and electrical accommodation PICAM needs to return interpretable ion measurements — after launch, through eight years of cruise, and in Mercury orbit.</p>
-      <p data-edit="b-p13">Mechanical stability is not the only condition for good science; spacecraft potential, a restricted field of view in the stacked cruise configuration, low counting statistics and ions from spacecraft outgassing all shape an ion spectrogram, and are handled through operating modes, calibration and joint analysis with other instruments. But it is the foundation those calibrations stand on.</p>
-
-      <h2 data-edit="b-h4">Results in flight</h2>
-      <p data-edit="b-p14">PICAM was one of the SERENA sensors with a clear enough field of view to operate while MPO, Mio, the sunshield and the transfer module were still stacked. It returned useful measurements at Earth, at Venus and during the Mercury flybys — not the full capability planned for the separated orbiter, but end-to-end proof of the flight hardware and real science before orbit insertion.</p>
-      <p data-edit="b-p15">The first Mercury flyby, on 1 October 2021, was the clearest early demonstration. PICAM and MIPA sampled the southern magnetospheric environment down to about 199 km altitude and identified the solar wind, the magnetosheath, a low-latitude boundary layer and inner-magnetosphere populations. Inside the nightside magnetosphere the sensors found protons from several hundred eV to a few keV, consistent with a partial ring-current-like population. On the way out, the magnetopause and bow-shock crossings sat closer to Mercury than the average boundary locations derived from MESSENGER — a strongly compressed and eroded magnetosphere under the solar-wind conditions of the day. The measurements reached a southern low-altitude region no previous mission had sampled the same way.</p>
-
-      <figure>
-        <a class="zoom" href="assets/img/bepi/bepi-06-flyby-spectrograms.jpg" target="_blank" rel="noopener">
-          <img src="assets/img/bepi/bepi-06-flyby-spectrograms.jpg" alt="Two stacked energy-time ion spectrograms from PICAM and MIPA during the first Mercury flyby, with labelled transitions between magnetosheath, boundary layer, magnetosphere and solar wind." loading="lazy" width="670" height="510">
-        </a>
-        <figcaption data-edit="b-fig6">PICAM (top) and MIPA (bottom) ion spectrograms from the first Mercury flyby, 1 October 2021 — the passage through the magnetosheath, low-latitude boundary layer, inner magnetosphere and back out to the solar wind.<span class="cred">Orsini et al., Nature Communications 13, 7390 (2022), CC BY 4.0 · click to enlarge</span></figcaption>
-      </figure>
-
-      <p data-edit="b-p16">Those results were published in <em>Nature Communications</em>, with Ján Baláž among the co-authors — which links our hardware directly to the mission's first peer-reviewed Mercury science. A companion PICAM and MPO-MAG study showed that intermittent ion enhancements above 1 keV upstream of Mercury went with an interplanetary magnetic flux rope, so PICAM contributes to heliophysics and multi-spacecraft work as well.</p>
-      <p data-edit="b-p17">The cruise also exposed a calibration problem worth stating plainly: BepiColombo's ion spectrometers detect ions produced by the spacecraft's own outgassing. Characterising that component is necessary so it is not mistaken for solar-wind or Mercury-origin plasma. The analysis did not invalidate the measurements — it established the physical and instrumental basis for separating the contamination and improving later products.</p>
-      <p data-edit="b-p18">During the sixth and final Mercury flyby on 8 January 2025, PICAM again operated as BepiColombo crossed the nightside magnetosphere and the northern polar region, capturing diverse particle populations in rarely accessible regions and shaping the operating procedures for orbital science. SERENA was still operating nominally in February 2026.</p>
-      <p data-edit="b-p19">The main scientific return is still ahead. Once MPO is separated and in its low polar orbit, PICAM gains the geometry and the repeated coverage needed to map ion sources, composition, energy and direction through changing solar-wind and magnetospheric conditions.</p>
-      <p><a class="card__more" href="https://doi.org/10.1038/s41467-022-34988-x" target="_blank" rel="noopener" data-edit="b-paper">Read the paper — Orsini et al., Nature Communications 13, 7390 (2022) →</a></p>
-
-      <h2 data-edit="b-h5">Data and access</h2>
-      <p data-edit="b-p20">BepiColombo science and engineering products are preserved and disseminated through ESA's Planetary Science Archive, following the Planetary Data System standard with the labels, calibration information and documentation reproducible use requires. It is an operational archive: products and documentation keep evolving as the mission moves from cruise into orbital science.</p>
-      <p data-edit="b-p21">The public repository holds a dedicated BepiColombo-MPO SERENA bundle — raw, partially processed and calibrated collections, browse products, calibration files and instrument documentation — including PICAM science and housekeeping products from cruise and flyby operations. Take the most recent product version, and read the SERENA Data User Guide and the science-performance documentation before quantitative analysis.</p>
-      <p data-edit="b-p22">Observation geometry comes separately, through the BepiColombo SPICE kernel archive: spacecraft and planetary ephemerides, spacecraft and instrument orientation, mounting alignments and time conversion. Those kernels are what let you reconstruct PICAM's field of view, relate detector look directions to Mercury and the solar wind, and compare PICAM against other MPO and Mio instruments. The archive is cumulative and updated through the mission.</p>
-      <p data-edit="b-p23">A PICAM dataset is therefore only reusable with its processing level and version, operating mode, calibration status and the matching SPICE geometry. Together with the published cruise and flyby papers — particularly for intervals affected by stacked-spacecraft viewing, changing spacecraft potential or outgassing — that is the traceable path from a structure built in Košice to reproducible Mercury and heliophysics results.</p>
-      <ul class="linklist">
-        <li><a href="https://psa.esa.int/" target="_blank" rel="noopener">ESA Planetary Science Archive →</a></li>
-        <li><a href="https://archives.esac.esa.int/psa/repo/esa/psa/bc_mpo_serena/" target="_blank" rel="noopener">BepiColombo MPO SERENA PDS4 repository →</a></li>
-        <li><a href="https://spiftp.esac.esa.int/data/SPICE/BEPICOLOMBO/misc/BEPICOLOMBO.html" target="_blank" rel="noopener">BepiColombo SPICE kernel dataset →</a></li>
-      </ul>
-
-      <div class="people">
-        <h2 style="margin-top:0" data-edit="b-h6">People</h2>
-        <p data-edit="b-people"><strong>Ing. Ján Baláž, PhD.</strong> — PICAM electronics-box mechanical design, structural verification and delivery; co-author, Orsini et al. (2022).</p>
-      </div>
-
-      <div class="backlink">
-        <a class="card__more" href="research.html#missions">← All space missions</a>
-      </div>
-
-    </article>
-
-    <aside class="glance">
-      <h3>Mission at a glance</h3>
-      <dl>
-        <div><dt>Agencies</dt><dd data-edit="b-g1">ESA · JAXA — Europe's first mission to Mercury</dd></div>
-        <div><dt>Launch</dt><dd data-edit="b-g2">20 October 2018 · Ariane 5 · Kourou, French Guiana</dd></div>
-        <div><dt>Cruise</dt><dd data-edit="b-g3">Eight years, solar-electric propulsion and nine gravity assists — one Earth, two Venus, six Mercury</dd></div>
-        <div><dt>Final Mercury flyby</dt><dd data-edit="b-g4">8 January 2025</dd></div>
-        <div><dt>Cruise ended</dt><dd data-edit="b-g5">15 June 2026, final solar-electric thrust arc</dd></div>
-        <div><dt>Transfer module released</dt><dd data-edit="b-g6">3 September 2026</dd></div>
-        <div><dt>Mercury orbit insertion</dt><dd data-edit="b-g7">21 November 2026</dd></div>
-        <div><dt>Mio released</dt><dd data-edit="b-g8">9–10 December 2026</dd></div>
-        <div><dt>MPO in final orbit</dt><dd data-edit="b-g9">10 March 2027</dd></div>
-        <div><dt>Science phase begins</dt><dd data-edit="b-g10">6 April 2027</dd></div>
-        <div><dt>Our instrument</dt><dd data-edit="b-g11">Mechanical structure of the SERENA / PICAM electronics box, on the Mercury Planetary Orbiter</dd></div>
-        <div><dt>Our partners</dt><dd data-edit="b-g12">IWF/ÖAW Graz (PICAM lead and integration) · Space Technology Ireland</dd></div>
-        <div><dt>Status</dt><dd data-edit="b-g13">Active · Arrival</dd></div>
-      </dl>
-    </aside>
-  </div>
-</div>
-
+</div></div></section>
 </main>
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-          <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
-        <a href="results.html">Results</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="https://www.instagram.com/space.lab.sk" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.facebook.com/spacelabsk" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="https://www.meetup.com/SPACE-TALK" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>

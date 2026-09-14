@@ -3,223 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SPACE::LAB — Department of Space Physics · IEP SAS · Košice</title>
+<title>Home — SPACE::LAB · Department of Space Physics, IEP SAS</title>
+<meta name="description" content="Department of Space Physics, Institute of Experimental Physics, Slovak Academy of Sciences — space science, spaceborne instruments and 50 years of cosmic ray measurements at Lomnický štít.">
 <link rel="icon" type="image/png" href="assets/logos/space-lab-light.png">
-<meta name="description" content="Department of Space Physics, Institute of Experimental Physics, Slovak Academy of Sciences — cosmic rays, space weather and airglow research in Košice, Slovakia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
-
-<!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-      <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-    </a>
+    <a class="logo" href="index.html" aria-label="SPACE::LAB home"><img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="35"></a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="about.html">About Us</a>
-      <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+      <a href="research.html">Research</a>
       <a href="results.html">Results</a>
+      <a href="infrastructure.html">Infrastructure</a>
       <a href="public.html">For the Public</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Language">
-        <button class="on" type="button">SK</button><span>|</span><button type="button">EN</button>
-      </div>
+      <div class="lang" aria-label="Language"><button type="button" class="on">SK</button><span>|</span><button type="button">EN</button></div>
       <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
     </div>
-    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
-<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu">
   <a href="index.html" class="active">Home</a>
   <a href="about.html">About Us</a>
-  <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
+  <a href="research.html">Research</a>
   <a href="results.html">Results</a>
+  <a href="infrastructure.html">Infrastructure</a>
   <a href="public.html">For the Public</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--solar" href="https://proxima.globalsingularity.ai/" target="_blank" rel="noopener">Data Portal</a>
 </div>
-
 <main>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="top">
-  <div class="hero__bg">
-    <img class="hero__img" src="assets/img/hero-sun.png" alt="A glowing planetary limb against a starfield" fetchpriority="high">
-  </div>
-  <canvas class="hero__starfield" id="starfield" aria-hidden="true"></canvas>
+<section class="hero">
+  <div class="hero__bg"><img class="hero__img" src="assets/img/hero-sun.jpg" alt=""></div>
+  <canvas class="hero__starfield" aria-hidden="true"></canvas>
   <div class="hero__veil"></div>
-  <div class="wrap">
-    <div class="hero__inner">
-      <span class="eyebrow" data-edit="hero-eyebrow">Department of Space Physics · Košice</span>
-      <h1 class="display" data-edit="hero-title">Excellent Scientific Lab<br>at European Level</h1>
-      <p class="sub" data-edit="hero-sub">Department of Space Physics · Institute of Experimental Physics · Slovak Academy of Sciences · Košice, Slovakia</p>
-      <div class="hero__cta">
-        <a class="btn btn--sky btn--lg" href="research.html#science" data-edit="hero-cta1">Explore Our Research <span class="arr">→</span></a>
-        <a class="btn btn--ghost-solar btn--lg" href="contact.html" data-edit="hero-cta2">Work With Us</a>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat__val" data-edit="hero-stat1-val">25+</div>
-          <div class="stat__label" data-edit="hero-stat1-label">Scientific instruments delivered for space missions</div>
-        </div>
-        <div class="stat">
-          <div class="stat__val" data-edit="hero-stat2-val">50+</div>
-          <div class="stat__label" data-edit="hero-stat2-label">Years of measurements at Lomnický štít</div>
-        </div>
-        <div class="stat">
-          <div class="stat__val" data-edit="hero-stat3-val">2634 m</div>
-          <div class="stat__label" data-edit="hero-stat3-label">Laboratory altitude, High Tatras, Slovakia</div>
-        </div>
-      </div>
+  <div class="wrap"><div class="hero__inner">
+    <span class="eyebrow">From a 2634-meter summit to deep space</span>
+    <h1 class="display">Understanding<br>the physics of space</h1>
+    <p class="sub">Department of Space Physics · Institute of Experimental Physics · Slovak Academy of Sciences · Košice, Slovakia</p>
+    <div class="hero__cta">
+      <a class="btn btn--sky btn--lg" href="research.html">Explore Our Research <span class="arr">→</span></a>
+      <a class="btn btn--ghost-solar btn--lg" href="contact.html">Work With Us</a>
     </div>
-  </div>
-  <a class="scroll-ind" href="#pillars" aria-label="Scroll down">
-    <span>Scroll</span><span class="arr">↓</span>
-  </a>
+    <div class="stats">
+      <div class="stat"><div class="stat__val">25+</div><div class="stat__label">Scientific instruments delivered for space missions</div></div>
+      <div class="stat"><div class="stat__val">50+</div><div class="stat__label">Years of space physics<br>research in Košice</div></div>
+      <div class="stat"><div class="stat__val">200+</div><div class="stat__label">Peer-reviewed scientific publications</div></div>
+    </div>
+  </div></div>
+  <span class="scroll-ind" aria-hidden="true"><span>Scroll</span><span>↓</span></span>
 </section>
-
-<!-- ===== THREE PILLARS ===== -->
-<section id="pillars">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="pillars-eyebrow">What We Do</span>
-      <h2 data-edit="pillars-title">Three pillars of our work</h2>
-    </div>
-    <div class="grid grid-3">
-      <article class="pillar">
-        <a class="pillar__circle" href="research.html#science" aria-label="Space Science on the Research page"><img src="assets/img/pillar-science.jpg" alt="Space weather — solar wind interacting with Earth's magnetosphere" style="object-position:60% center" loading="lazy"></a>
-        <h3 data-edit="pillar3-title">SPACE Science</h3>
-        <p data-edit="pillar3-body">Exploring phenomena invisible to the human eye with state-of-the-art technologies, including machine learning, in close cooperation with ESA.</p>
-      </article>
-      <article class="pillar">
-        <a class="pillar__circle" href="research.html#missions" aria-label="Space Missions on the Research page"><img src="assets/img/pillar-missions.jpg" alt="PEP/ACM instrument for JUICE mission" style="object-position:40% 50%" loading="lazy"></a>
-        <h3 data-edit="pillar1-title">Space Missions</h3>
-        <p data-edit="pillar1-body">Delivery of 25+ scientific instruments for space missions — from Rosetta and BepiColombo to ESA's JUICE.</p>
-      </article>
-      <article class="pillar">
-        <a class="pillar__circle" href="research.html#lomnicky" aria-label="Lomnický štít on the Research page"><img src="assets/img/pillar-data.jpg" alt="Space Physics Laboratory at Lomnický štít, 2634 m" style="object-position:center 40%" loading="lazy"></a>
-        <h3 data-edit="pillar2-title">Unique Data</h3>
-        <p data-edit="pillar2-body">More than 50 years of continuous cosmic ray measurements at Lomnický štít — one of the longest records on Earth.</p>
-      </article>
-    </div>
+<section id="pillars"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">What We Do</span>
+  <h2>Three pillars of our work</h2>
+  
+</div>
+<div class="grid grid-3">
+  <article class="pillar">
+    <a class="pillar__circle" href="research.html#science" aria-label="Space Science"><img src="assets/img/pillar-science.jpg" alt="" style="object-position:60% center" loading="lazy"></a>
+    <h3>Space Science</h3>
+    <p>Exploring phenomena invisible to the human eye with state-of-the-art technologies, including machine learning, in close cooperation with ESA.</p>
+  </article>
+  <article class="pillar">
+    <a class="pillar__circle" href="research.html#missions" aria-label="Space Missions"><img src="assets/img/pillar-missions.jpg" alt="" style="object-position:40% 50%" loading="lazy"></a>
+    <h3>Space Missions</h3>
+    <p>Delivery of 25+ scientific instruments for space missions, including Double Star, Rosetta, BepiColombo, and JUICE.</p>
+  </article>
+  <article class="pillar">
+    <a class="pillar__circle" href="research.html#lomnicky" aria-label="Unique Data"><img src="assets/img/pillar-data.jpg" alt="" style="object-position:center 40%" loading="lazy"></a>
+    <h3>Unique Data</h3>
+    <p>More than 50 years of continuous cosmic ray measurements at Lomnický štít — one of the longest records on Earth.</p>
+  </article>
+</div>
+</div></section>
+<section class="band"><div class="wrap">
+<div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">Our Partners</span>
+  <h2>Working with leading institutions across Europe and beyond</h2>
+  
+</div>
+<div class="partners">
+  <a class="ptile" href="https://www.esa.int/" target="_blank" rel="noopener"><b>ESA</b><span class="badge badge--plate">European Space Agency</span><span class="note">13 awarded contracts since 2016</span></a>
+  <a class="ptile" href="https://www.dlr.de/en/research-and-transfer/space/institutes-and-facilities" target="_blank" rel="noopener"><b>DLR — German Aerospace Center</b><span class="badge badge--plate">Germany</span><span class="note">QUID-REGIS · ionospheric disturbances</span></a>
+  <a class="ptile" href="https://www.bu.edu/csp/" target="_blank" rel="noopener"><b>Boston University</b><span class="badge badge--plate">United States</span><span class="note">All-sky imaging · airglow</span></a>
+  <a class="ptile" href="https://www.ufa.cas.cz/en/homepage-en/" target="_blank" rel="noopener"><b>Czech Academy of Sciences</b><span class="badge badge--plate">Czechia</span><span class="note">QUID-REGIS · Doppler sounding</span></a>
+  <a class="ptile" href="https://uui.fei.tuke.sk/sk" target="_blank" rel="noopener"><b>Technical University of Košice</b><span class="badge badge--plate">Slovakia</span><span class="note">SCSS-Net · ASPIS · S2P education</span></a>
+  <a class="ptile" href="https://fmph.uniba.sk/daa/" target="_blank" rel="noopener"><b>Comenius University Bratislava</b><span class="badge badge--plate">Slovakia</span><span class="note">SK-S2P · curriculum for the S2P market</span></a>
+  <a class="ptile" href="https://www.astro.oma.be/en/" target="_blank" rel="noopener"><b>Royal Observatory of Belgium</b><span class="badge badge--plate">Belgium</span><span class="note">SCSS-Net · SWE Toolkit</span></a>
+  <a class="ptile" href="https://www.irf.se/en/" target="_blank" rel="noopener"><b>IRF — Swedish Institute of Space Physics</b><span class="badge badge--plate">Sweden</span><span class="note">JUICE PEP/JDC · ACM integration</span></a>
+  <a class="ptile" href="https://ipl.polito.it/" target="_blank" rel="noopener"><b>Politecnico di Torino</b><span class="badge badge--plate">Italy</span><span class="note">Vigil-ML · machine learning for Vigil</span></a>
+</div>
+</div></section>
+<section id="public"><div class="wrap">
+<div class="split">
+  <div><div class="sec-head">
+  <hr class="rule">
+  <span class="eyebrow">For the Public</span>
+  <h2>World-class space research is closer than you think</h2>
+  <p class="lede">Join our community in Košice. Come to the SPACE::TALK meetup, attend our summer school, or join the research project.</p>
+</div>
+</div>
+  <div class="teasers">
+    <a class="teaser" href="spacetalk.html"><div><h4>SPACE::TALK</h4><p>Public meetup five times a year — Thursday evenings at Bulharská 2, Košice.</p></div><span class="arr">→</span></a>
+    <a class="teaser" href="summer-school.html"><div><h4>SPACE::LAB Summer School</h4><p>A three-day summer school on space data, machine learning and on-board AI.</p></div><span class="arr">→</span></a>
+    <a class="teaser" href="public.html#positions"><div><h4>Topics of PhD thesis and research projects</h4><p>Opportunities for research at our Department.</p></div><span class="arr">→</span></a>
   </div>
-</section>
-
-<!-- ===== PARTNERS ===== -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head">
-      <hr class="rule">
-      <span class="eyebrow" data-edit="partners-eyebrow">Our Partners</span>
-      <h2 data-edit="partners-title">Working with leading institutions across Europe and beyond</h2>
-    </div>
-    <div class="partners">
-      <a class="partner" href="https://www.esa.int/" target="_blank" rel="noopener" data-edit="partner1">ESA<small>European Space Agency</small></a>
-      <a class="partner" href="https://www.dlr.de/en/research-and-transfer/space/institutes-and-facilities" target="_blank" rel="noopener" data-edit="partner2">DLR - German Aerospace Center<small>GERMANY</small></a>
-      <a class="partner" href="https://www.bu.edu/csp/" target="_blank" rel="noopener" data-edit="partner4">Boston University<small>United States</small></a>
-      <a class="partner" href="https://www.ufa.cas.cz/en/homepage-en/" target="_blank" rel="noopener" data-edit="partner5">Czech Academy of Sciences<small>Czechia</small></a>
-      <a class="partner" href="https://uui.fei.tuke.sk/sk" target="_blank" rel="noopener" data-edit="partner3">Technical University of Košice<small>Slovakia</small></a>
-      <a class="partner" href="https://fmph.uniba.sk/daa/" target="_blank" rel="noopener" data-edit="partner7">Comenius University Bratislava<small>Slovakia</small></a>
-      <a class="partner" href="https://www.astro.oma.be/en/" target="_blank" rel="noopener" data-edit="partner9">Royal Observatory of Belgium<small>Belgium</small></a>
-      <a class="partner" href="https://www.irf.se/en/" target="_blank" rel="noopener" data-edit="partner6">IRF - Swedish Institute of Space Physics<small>SWEDEN</small></a>
-      <a class="partner" href="https://ipl.polito.it/" target="_blank" rel="noopener" data-edit="partner8">Politechnico di Torino<small>Italy</small></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PUBLIC TEASER ===== -->
-<section id="public">
-  <div class="wrap">
-    <div class="split">
-      <div>
-        <hr class="rule">
-        <span class="eyebrow" data-edit="public-eyebrow">For the Public</span>
-        <h2 data-edit="public-title">World-class space research is closer than you think</h2>
-        <p class="lede" data-edit="public-body">Join our community in Košice. Come to the SPACE::TALK meetup, attend our summer school, or join the research project.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a class="teaser-card" href="#">
-          <div>
-            <h4 data-edit="teaser1-title">SPACE::TALK</h4>
-            <p data-edit="teaser1-body">Monthly public meetup — first Thursday of the month, Bulharská 2, Košice.</p>
-          </div>
-          <span class="arr">→</span>
-        </a>
-        <a class="teaser-card" href="#">
-          <div>
-            <h4 data-edit="teaser2-title">SPACE::LAB Summer School</h4>
-            <p data-edit="teaser2-body">An annual 3-day summer school on Space &amp; IT — lectures and hands-on sessions.</p>
-          </div>
-          <span class="arr">→</span>
-        </a>
-        <a class="teaser-card" href="#">
-          <div>
-            <h4 data-edit="teaser3-title">Topics of PhD thesis and research projects</h4>
-            <p data-edit="teaser3-body">Opportunities for research at our Department.</p>
-          </div>
-          <span class="arr">→</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
+</div>
+</div></section>
 </main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="index.html" aria-label="SPACE::LAB home">
-          <img class="logo-dark" src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-      <img class="logo-light" src="assets/logos/space-lab-light.png" alt="SPACE::LAB — Department of Space Physics" width="202" height="30">
-        </a>
-        <p data-edit="footer-about">Department of Space Physics,<br>Institute of Experimental Physics, Slovak Academy of Sciences.</p>
+        <span class="logo"><img src="assets/logos/space-lab-ondark.png" alt="SPACE::LAB" width="202" height="39"></span>
+        <p>Department of Space Physics,<br>Institute of Experimental Physics,<br>Slovak Academy of Sciences.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="about.html">About Us</a>
-        <a href="research.html">Research</a><a href="infrastructure.html">Infrastructure</a>
-        <a href="results.html">Results</a>
-        <a href="public.html">For the Public</a>
+        <div class="linklist">
+          <a href="about.html">About Us</a>
+          <a href="research.html">Research</a>
+          <a href="results.html">Results</a>
+          <a href="infrastructure.html">Infrastructure</a>
+          <a href="public.html">For the Public</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
-        <a href="mailto:space-lab@saske.sk" class="mono">space-lab@saske.sk</a>
-        <a href="contact.html" class="mono">Bulharská 2, Košice</a>
-        <a href="https://space.saske.sk/" class="mono">space.saske.sk</a>
-        <a href="https://github.com/space-lab-sk" class="mono">github.com/space-lab-sk</a>
+        <div class="linklist mono">
+          <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>
+          <a href="https://maps.app.goo.gl/p4D4rRKKaZU9jHMDA" target="_blank" rel="noopener">Bulharská 2, Košice</a>
+          <a href="https://space.saske.sk/">space.saske.sk</a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener">github.com/space-lab-sk</a>
+        </div>
       </div>
       <div class="footer__col">
         <h4>Follow</h4>
         <div class="social">
-          <a href="https://github.com/space-lab-sk" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.5V13h2.75v8h3.25z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.83-.9-1.5-1.74-1.72C19.27 5.2 12 5.2 12 5.2s-7.27 0-8.86.38c-.84.22-1.51.89-1.74 1.72C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.83.9 1.5 1.74 1.72 1.59.38 8.86.38 8.86.38s7.27 0 8.86-.38c.84-.22 1.51-.89 1.74-1.72.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-          <a href="#" aria-label="Meetup"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 13.2c-.3-.2-.4-.5-.3-.9.5-1.6-.2-3.4-1.7-4.2.1-.4.1-.8 0-1.2-.4-1.5-1.9-2.4-3.4-2.1-.6-1-1.8-1.5-3-1.2-.9.2-1.6.9-1.9 1.7-1.5-.2-2.9.8-3.2 2.3-.1.6 0 1.2.2 1.7-1.1.8-1.5 2.3-.9 3.6.2.4.5.8.9 1-.2 1.4.6 2.8 2 3.2.4.1.8.1 1.2 0 .7 1.1 2 1.6 3.2 1.2.5-.2 1-.5 1.3-.9 1.5.3 3-.6 3.4-2.1.1-.5.1-1 0-1.5.9-.3 1.3-1.3.9-2.1z"/></svg></a>
+          <a href="https://github.com/space-lab-sk" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.facebook.com/spacelabsk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.instagram.com/space.lab.sk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.youtube.com/channel/UCEwFN_Oja3aLrm-XGw3wvEQ" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" width="17" height="17"></a>
+          <a href="https://www.meetup.com/SPACE-TALK" target="_blank" rel="noopener" aria-label="Meetup"><img src="assets/icons/meetup.svg" alt="" width="17" height="17"></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 DSP IEP SAS · Košice, Slovakia</span>
+      <span class="credit-note">Photography: ESA · NASA/Steele Hill · IRF Kiruna · Košice Region Tourism · DSP IEP SAS</span>
     </div>
   </div>
 </footer>
-
 <script src="js/site.js"></script>
-<script src="js/edit.js"></script>
 </body>
 </html>
