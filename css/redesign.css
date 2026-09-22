@@ -254,6 +254,26 @@ blockquote.quote cite{font-style:normal;font-family:var(--font-mono);font-size:1
 /* ---------- NOTE ---------- */
 .note{font-family:var(--font-mono);font-size:13px;color:var(--text-muted);letter-spacing:.04em;padding-top:18px;margin:0}
 
+/* ---------- ANCHOR OFFSET ----------
+   Hash links arriving from another page are not handled by the sub-nav's
+   click handler, so targets need their own clearance under the fixed nav. */
+main section[id],main .anchor{scroll-margin-top:calc(var(--nav-h) + 68px)}
+
+/* ---------- EQUAL FIGURE PAIR ----------
+   .fig-split reserves a fixed 300px second column for a portrait; this is for
+   two figures of equal weight. */
+.figpair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;align-items:start}
+.figpair figure{margin:0}
+.figpair figure.tall{max-width:320px}
+
+/* Wide reading column: prose stays at a readable measure, figures and tables
+   may use the full width. */
+.prose--wide{max-width:none}
+.prose--wide>p,.prose--wide>h2,.prose--wide>h3{max-width:68ch}
+
+/* Site-style data chart */
+.chart{width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:var(--radius);background:rgba(37,42,64,.42)}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:1100px){
   .partners{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -308,6 +328,9 @@ blockquote.quote cite{font-style:normal;font-family:var(--font-mono);font-size:1
 .feature__body{padding:40px}
 .feature__body h3{margin:0 0 10px}
 .feature__body>p{color:var(--text-muted);margin:0}
+a.feature{transition:border-color var(--dur) ease,box-shadow var(--dur) ease}
+a.feature:hover{border-color:var(--sky-blue);box-shadow:var(--lift-shadow);color:inherit}
+a.feature:hover .card__more .arr{transform:translateX(3px);display:inline-block;transition:transform var(--dur) ease}
 .feature__data{display:flex;flex-wrap:wrap;gap:34px;margin-top:26px;border-top:1px solid var(--border);padding-top:22px}
 .feature__data div{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
 .feature__data b{display:block;font-family:var(--font-display);font-weight:900;font-size:26px;color:#fff;letter-spacing:.01em;margin-bottom:4px;text-transform:none}
@@ -335,6 +358,18 @@ blockquote.quote cite{font-style:normal;font-family:var(--font-mono);font-size:1
 .tl-item h3{font-size:20px;margin:0 0 12px;line-height:1.4}
 .tl-item p{font-size:16px;color:var(--text-muted);margin:0}
 .tl-hint{font-family:var(--font-mono);font-size:13.5px;color:var(--text-muted);margin-top:6px;display:flex;align-items:center;gap:8px}
+/* Vertical variant — for long, paragraph-length entries that cannot scroll sideways */
+.timeline--v .timeline__track{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible;padding-bottom:0}
+.timeline--v .tl-item{flex:none;padding:0 0 38px 34px}
+.timeline--v .tl-item::before{top:14px;bottom:0;left:6px;right:auto;width:1px;height:auto;background:linear-gradient(180deg,rgba(0,90,153,.85),var(--border))}
+.timeline--v .tl-item:last-child{padding-bottom:0}
+.timeline--v .tl-item:last-child::before{display:none}
+.timeline--v .tl-item .node{position:absolute;left:0;top:2px;margin:0}
+.timeline--v .tl-item .yr{font-size:17px;letter-spacing:.04em;margin-bottom:6px}
+.timeline--v .tl-item h3{font-size:19px;margin:0 0 12px}
+.timeline--v .tl-item p{margin:0 0 16px;line-height:1.75}
+.timeline--v .tl-item p:last-child{margin-bottom:0}
+.timeline--v .tl-item figure{margin:22px 0 0}
 .mission .title{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,3vw,30px);line-height:1.35;color:var(--text);margin:0;letter-spacing:.02em}
 .mission.mission{background:var(--glass);border:1px solid var(--glass-border);border-left:3px solid var(--sky-blue);border-radius:var(--radius);backdrop-filter:var(--glass-blur);padding:44px 48px;display:block}
 .mission .ambition{font-size:18px;line-height:1.6;color:var(--text-muted);margin:20px 0 0;padding-top:20px;border-top:1px solid var(--border)}
