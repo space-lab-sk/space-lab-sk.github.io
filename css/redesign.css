@@ -340,8 +340,8 @@ a.feature:hover .card__more .arr{transform:translateX(3px);display:inline-block;
    CARD the body copy must read like any other card paragraph. */
 .card.mission p{font-family:var(--font-body);font-weight:400;font-size:inherit;line-height:inherit;letter-spacing:normal;max-width:none;color:var(--text-muted)}
 .card.mission .role{font-family:var(--font-mono);font-size:13.5px;letter-spacing:.03em}
-.staff__photo{width:132px;height:132px;border-radius:50%;margin-bottom:22px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--text-muted)}
-.staff__photo img{width:100%;height:100%;object-fit:cover}
+.staff__photo{width:164px;height:164px;border-radius:50%;margin-bottom:22px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--text-muted)}
+.staff__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .staff h3{font-size:19px;margin:0 0 4px}
 .staff .meta{font-size:15px;color:var(--text-muted);margin:0 0 14px}
 .staff .focus{color:var(--text-muted);margin:0 0 16px;font-size:13.5px}
@@ -426,3 +426,8 @@ body.editing [contenteditable] { cursor: text }
 body.editing [contenteditable]:focus { outline: 2px solid var(--sky-blue); background: rgba(200,207,224,.1) }
 .edit-fab, .edit-tools, .edit-toast { font-family: var(--font-mono) }
 @media print { .edit-fab, .edit-tools, .edit-toast { display: none !important } }
+
+.drow .ldata{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px 24px;margin:18px 0 4px;padding-top:16px;border-top:1px solid var(--border)}
+.drow .ldata div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.drow .ldata dt{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+.drow .ldata dd{margin:0;font-family:var(--font-mono);font-size:13.5px;color:var(--text)}

@@ -51,7 +51,7 @@
   <div class="wrap">
     <span class="eyebrow">Space Cleanroom · Košice</span>
     <h1 class="display">Space cleanroom</h1>
-    <p class="lede">A speck of dust in the wrong place ends a mission. Since May 2026 the critical phases of our work — assembly, integration, environmental testing — happen in a room built to keep that speck out, in Košice, instead of in someone else&rsquo;s facility abroad.</p>
+    <p class="lede">A tiny particle can change a measurement. Since May 2026, the critical phases of our work — assembly, integration and environmental testing — take place in Košice, in a room built to keep such particles out, rather than in a facility abroad.</p>
   </div>
 </section>
 <nav class="subnav" aria-label="Section navigation">
@@ -66,37 +66,41 @@
 <div class="crumb"><a href="infrastructure.html">Infrastructure</a><span>·</span><span>Facility</span></div>
 <div class="reading">
   <div class="reading__col prose">
-<h3 id="cr-environment" style=>Why a cleanroom</h3>
+<h3 id="cr-environment">Why a cleanroom</h3>
           <p>Flight electronics fail for unglamorous reasons. A particle bridges two pads. A static discharge no one felt degrades a junction that then passes every test and dies in orbit. Neither is recoverable once the hardware has left the ground, so the standard answer is to control the environment in which the hardware is touched at all: particle count, temperature, humidity, and the electrostatic state of every surface and every person.</p>
-          <p>Our room holds 25 m² at ISO class 7, with an ISO class 5 laminar flow box inside it for the operations that need it — an order of magnitude cleaner, over the bench where the work actually happens. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through rather than through the door. Processes follow ECSS, the standards framework ESA projects are run to.</p>
-          <p>That last point is the one that matters institutionally. Until 2026, the critical phases of development and testing had to happen elsewhere. Now they happen here.</p>
-          <figure class=""><img src="assets/img/cleanroom/cr-03-interior-in-use.jpg" alt="A person in white cleanroom garb working at a laminar flow bench inside the cleanroom." loading="lazy"><figcaption>Work at the laminar flow bench, inside the ISO class 5 zone. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-through.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
-          <h3 id="cr-equipment" style=>Electronics assembly and inspection</h3>
+          <p>Our room holds 25 m² at ISO class 7, with an ISO class 5 laminar box inside it for the operations that need it — two orders of magnitude cleaner, over the bench where the work actually happens. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-box rather than through the door, and the room is held at overpressure in a cascade from cleanroom to gowning room to corridor. Processes follow ECSS, the standards framework ESA projects are run to.</p>
+          <p>That last point is the one that matters institutionally. Until 2026, formal test campaigns had to be carried out elsewhere. Now they happen here.</p>
+          <figure class=""><img src="assets/img/cleanroom/cr-03-interior-in-use.jpg" alt="A person in white cleanroom garb working at the laminar box inside the cleanroom." loading="lazy"><figcaption>Work in the ISO class 5 laminar box. Personnel enter through an air shower; material comes in through a 60 × 60 cm pass-box.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+          <h3 id="cr-equipment">Electronics assembly and inspection</h3>
           <p>The room is equipped for hand work on flight hardware and for looking at it closely afterwards.</p>
           <table class="spec"><tbody><tr><th>Soldering</th><td>Professional soldering workstations</td></tr><tr><th>Microscopy</th><td>DRV-Z1 3D stereo digital microscope</td></tr><tr><th>Joint inspection</th><td>Ersascope X Inspection System</td></tr><tr><th>Measurement</th><td>Oscilloscopes, power supplies, precision multimeters, function generator, counter</td></tr><tr><th>Weighing</th><td>Analytical precision balance</td></tr></tbody></table>
           <p>The Ersascope is there for the joints you cannot see — the ones under a package, where the only way to judge a solder fillet is to look at it sideways with optics built for the purpose.</p>
           <h3>Vibration testing</h3>
-          <p>A launch is a few minutes of violence. Qualifying hardware against it means reproducing the loads on the ground, on a shaker, with instrumentation fast enough to see what fails.</p>
-          <table class="spec"><tbody><tr><th>System</th><td>Brüel & Kjær LDS V780</td></tr><tr><th>Frequency</th><td>Up to 4000 Hz</td></tr><tr><th>Excitation force</th><td>Up to 5100 N, sine peak</td></tr><tr><th>Acceleration</th><td>Up to 1050 m·s⁻², sine peak</td></tr><tr><th>High-speed imaging</th><td>Chronos 2.1-HD camera</td></tr></tbody></table>
+          <p>Controlled vibration exposes weak joints, loose connections and resonances — on the ground, before launch does. Our shaker reproduces launch loads, with instrumentation fast enough to see what fails.</p>
+          <table class="spec"><tbody><tr><th>System</th><td>Brüel &amp; Kjær LDS V780 shaker, HPA-K amplifier (5 kVA, class D)</td></tr><tr><th>Frequency</th><td>DC – 4000 Hz</td></tr><tr><th>Sine force</th><td>5120 N peak</td></tr><tr><th>Random force</th><td>4230 N rms</td></tr><tr><th>Sine acceleration</th><td>1089 m·s⁻² (111 g) peak, bare armature</td></tr><tr><th>Random acceleration</th><td>480 m·s⁻² rms</td></tr><tr><th>Velocity</th><td>1.9 m·s⁻¹ peak</td></tr><tr><th>Displacement</th><td>25.4 mm peak-to-peak</td></tr><tr><th>Moving element mass</th><td>4.7 kg</td></tr><tr><th>Control</th><td>24-bit digital control, IEPE accelerometers</td></tr><tr><th>High-speed imaging</th><td>Chronos 2.1-HD camera</td></tr></tbody></table>
+          <p>Maximum system ratings. The usable test envelope depends on payload mass, fixture dynamics, axis and frequency.</p>
           <h3>Thermal-vacuum testing</h3>
           <div class="fig-split">
             <div>
-              <p>Orbit is a vacuum with a temperature gradient. The SPACEVAC chamber puts hardware in both at once, which is how thermal design, outgassing behaviour and the survival of an assembly across its full temperature range get verified before flight rather than after.</p>
-              <table class="spec"><tbody><tr><th>Chamber</th><td>Vakuum Praha SPACEVAC</td></tr><tr><th>Temperature</th><td>−100 °C to +160 °C</td></tr><tr><th>Vacuum</th><td>1 × 10⁻⁷ mbar</td></tr></tbody></table>
-              <p>This chamber has flight heritage. The <a href="mission-juice.html">Anti-Coincidence Module</a> we built for JUICE's Particle Environment Package was thermal-vacuum tested in it before delivery to IRF Kiruna — hardware now in cruise towards Jupiter, and due in orbit around Ganymede, was qualified in this vessel. It has since been moved into the cleanroom.</p>
+              <p>Orbit is a vacuum with a temperature gradient. The SPACEVAC chamber puts hardware in both at once, which is how thermal design and the survival of an assembly across its full temperature range get verified before flight rather than after.</p>
+              <p>Hardware inside is cycled between −100 °C and +160 °C in vacuum, down to 1 × 10⁻⁷ mbar (empty chamber, +25 °C), and exercised over its flight interfaces while the test runs.</p>
+              
+              
             </div>
-            <figure class="" style="margin:0"><img src="assets/img/cleanroom/cr-02-spacevac-rack.jpg" alt="A stainless steel thermal-vacuum chamber on a blue frame beside a rack of laboratory instruments." loading="lazy"><figcaption>The SPACEVAC chamber and its instrument rack. Hardware inside runs from −100 °C to +160 °C at 1 × 10⁻⁷ mbar, exercised over its flight interfaces while the test runs.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
+            <figure class="" style="margin:0"><img src="assets/img/cleanroom/cr-02-spacevac-rack.jpg" alt="A stainless steel thermal-vacuum chamber on a blue frame beside a rack of laboratory instruments." loading="lazy"><figcaption>The SPACEVAC chamber and its instrument rack.<span class="cred">Department of Space Physics, IEP SAS</span></figcaption></figure>
           </div>
+          <table class="spec"><tbody><tr><th>Chamber</th><td>Vakuum Praha SPACEVAC, 150 L bell chamber</td></tr><tr><th>Thermal interface</th><td>Ø 450 mm temperature-controlled copper base plate, radiation shroud</td></tr><tr><th>Temperature</th><td>−100 °C to +160 °C</td></tr><tr><th>Vacuum</th><td>1 × 10⁻⁷ mbar (empty chamber, +25 °C)</td></tr><tr><th>Pumping</th><td>Varian SH-110 dry scroll pump, Varian V301 Navigator turbomolecular pump</td></tr><tr><th>Pressure measurement</th><td>TPG 261 controller, PKR 251 FullRange gauge (Pirani + cold cathode)</td></tr><tr><th>Temperature logging</th><td>Up to 16 PT1000 channels</td></tr><tr><th>Feedthroughs</th><td>2 × 32 pins + 4 HV pins at the base, 9 pins in the upper bell</td></tr></tbody></table>
+          <p>This chamber has flight heritage. The <a href="mission-juice.html">Anti-Coincidence Module</a> we built for JUICE's Particle Environment Package underwent thermal-vacuum testing in this chamber before delivery to IRF Kiruna — hardware now in cruise towards Jupiter, and due in orbit around Ganymede. It has since been moved into the cleanroom.</p>
           <h3>Test automation and interfaces</h3>
           <p>Environmental testing produces long, dull, unrepeatable runs, so the useful part is automation: National Instruments measurement modules cover temperature, voltage, digital inputs and outputs and relays, driving the test rather than watching it.</p>
           <p>Devices under test connect over the buses spacecraft actually use — SpaceWire, MIL-STD-1553, Ethernet, CAN and RS-485/422 — so a unit can be exercised through its flight interfaces while it sits in the chamber or on the shaker.</p>
-          <h3 id="cr-opening" style=>Opened in May 2026</h3>
-          <p>The cleanroom opened officially on 15 May 2026 as the first space cleanroom in Slovakia, built with support from TIK STEPHANIK — the satellite platform consortium we are part of — and SAV OPEN LABS, both funded by the European Union.</p>
+          <h3 id="cr-opening">Opened in May 2026</h3>
+          <p>The cleanroom opened officially on 14 May 2026 as the first space cleanroom in Slovakia, built with support from TIK STEPHANIK — the satellite platform consortium we are part of — and SAV OPEN LABS, both funded by the European Union.</p>
           <blockquote class="quote"><p>
             The first scientific apparatus from our department flew into space in 1977. Since then we have contributed to more than 25 space missions. The new space cleanroom, with ISO class 7 air cleanliness, opens the door to taking part in the most demanding ESA projects — and it lets us carry out the critical phases of development and testing here at home.
           </p><cite>Šimon Mackovjak, Head of the Department of Space Physics, IEP SAS</cite></blockquote>
           <p>The opening was attended by guests from the Slovak Academy of Sciences, the STEPHANIK project consortium, the East Slovak Space Cluster, the Slovak Space Office, and partner universities and companies.</p>
-          <h3 id="cr-access" style=>Working with us</h3>
+          <h3 id="cr-access">Working with us</h3>
           <p>Capacity is divided three ways. The facility serves the space programme of IEP SAS first. A share is reserved for joint scientific and technological projects. A further share is available for commercial hire.</p>
           <p>If you are developing hardware that needs ISO class 7 assembly, vibration qualification or thermal-vacuum testing — as a research partner or as a customer — write to <a href="mailto:space-lab@saske.sk">space-lab@saske.sk</a>.</p>
   </div>
@@ -104,13 +108,14 @@
   <h3>Facility at a glance</h3>
   <dl>
     <div><dt>Clean space</dt><dd>25 m², ISO class 7</dd></div>
-    <div><dt>Local zone</dt><dd>ISO class 5, laminar flow box</dd></div>
-    <div><dt>Controlled</dt><dd>Temperature, humidity, particle concentration</dd></div>
+    <div><dt>Local zone</dt><dd>ISO class 5, laminar box</dd></div>
+    <div><dt>Controlled</dt><dd>Temperature 22 ± 3 °C, humidity 55 ± 10 % RH, particle concentration</dd></div>
+    <div><dt>Pressure</dt><dd>Overpressure cascade: cleanroom → gowning room → corridor</dd></div>
     <div><dt>Personnel entry</dt><dd>Air shower</dd></div>
-    <div><dt>Material pass-through</dt><dd>60 × 60 cm</dd></div>
+    <div><dt>Material pass-through</dt><dd>60 × 60 cm pass-box</dd></div>
     <div><dt>Work</dt><dd>Development, testing and integration of fine and critical space electronics, under ESD control</dd></div>
     <div><dt>Standards</dt><dd>Processes to ECSS — European Cooperation for Space Standardization</dd></div>
-    <div><dt>Opened</dt><dd>15 May 2026 — the first space cleanroom in Slovakia</dd></div>
+    <div><dt>Opened</dt><dd>14 May 2026 — the first space cleanroom in Slovakia</dd></div>
     <div><dt>Location</dt><dd>Institute of Experimental Physics SAS, Bulharská 2, Košice</dd></div>
     <div><dt>Enquiries</dt><dd>space-lab@saske.sk</dd></div>
   </dl>
@@ -121,7 +126,7 @@
 </div></section>
 <section id="enquire" class="band"><div class="wrap">
 <div class="enquire">
-  <div><h2>Talk to us about access</h2><p>Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under OPENLABS SAV (2026–2029, Programme Slovakia 2021–2027 · ERDF) — instrument hosting at Lomnický štít and serviced or supervised use of the cleanroom are agreed case by case, and enquiries about joint projects go to the same place.</p></div>
+  <div><h2>Talk to us about access</h2><p>Tell us what you need to measure or test and we will tell you honestly whether our facilities fit. Both facilities are opened to partners under SAV OPEN LABS (2026–2029, Programme Slovakia 2021–2027 · ERDF) — instrument hosting at Lomnický štít and serviced or supervised use of the cleanroom are agreed case by case, and enquiries about joint projects go to the same place.</p></div>
   <a class="btn btn--sky btn--lg" href="contact.html#info">Contacts for cooperation <span class="arr">→</span></a>
 </div>
 
