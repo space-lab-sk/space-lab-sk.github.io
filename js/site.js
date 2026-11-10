@@ -138,3 +138,26 @@
     window.addEventListener('resize', resize);
   }
 })();
+
+/* Partners map (home page): show the institutions at the selected place */
+(function(){
+  var map=document.querySelector('.pmap'); if(!map) return;
+  var panel=document.getElementById('pmap-panel');
+  var pins=map.querySelectorAll('.pin'), arcs=map.querySelectorAll('[data-arc]');
+  // announce=false for mouse hover, so screen readers only speak deliberate selections
+  function show(key,announce){
+    var t=document.getElementById('place-'+key); if(!t||!panel) return;
+    panel.setAttribute('aria-live',announce?'polite':'off');
+    panel.innerHTML=t.innerHTML;
+    pins.forEach(function(p){var on=p.getAttribute('data-place')===key;p.classList.toggle('is-on',on);p.setAttribute('aria-pressed',on?'true':'false');});
+    arcs.forEach(function(a){a.classList.toggle('is-on',a.getAttribute('data-arc')===key);});
+  }
+  pins.forEach(function(p){
+    var key=p.getAttribute('data-place');
+    p.setAttribute('aria-controls','pmap-panel');
+    p.addEventListener('click',function(){show(key,true);});
+    p.addEventListener('mouseenter',function(){show(key,false);});
+    p.addEventListener('focus',function(){show(key,true);});
+  });
+  show('kosice',false);
+})();

@@ -5,6 +5,8 @@ Physics, Slovak Academy of Sciences, Košice.
 
 Static HTML, CSS and two small vanilla JavaScript files. No build step, no framework,
 no dependencies. To preview, open `index.html` in a browser — it works straight from disk.
+The one generated part is the partners map on the home page; its generator lives in
+`tools/partners-map/` and is only needed when partners change.
 
 ## Deploying to GitHub Pages
 
@@ -20,7 +22,7 @@ deleting it takes the custom domain down.
 
 | File | Contents |
 |---|---|
-| `index.html` | Home — hero, pillars, partners, public teaser |
+| `index.html` | Home — hero, pillars, partners map, public teaser |
 | `about.html` | Mission, history, team, PhD students, cooperators |
 | `research.html` | Space science, missions, Lomnický štít, services |
 | `lomnicky-stit.html` | Lomnický štít — history, instruments, science, data, publications |
@@ -43,9 +45,11 @@ in papers, ESA reports and emails keep resolving.
 css/site.css      original stylesheet — untouched, so the two files can be merged
 css/redesign.css  additions for the 2026 redesign, loaded second; the rules at the
                   end cover references, source lines and mobile layout fixes
-js/site.js        nav, mobile menu, scroll-spy, filter chips, hero starfield
+js/site.js        nav, mobile menu, scroll-spy, filter chips, hero starfield,
+                  partners-map detail card
 js/edit.js        inline content editing for copy review
 assets/           logos, icons, photographs
+tools/            partners-map generator (Node + Python), see its README
 ```
 
 The site is fully readable with JavaScript off: mission and project disclosure rows use

@@ -1,0 +1,98 @@
+[
+ {
+  "key": "kosice",
+  "city": "Košice",
+  "lon": 21.2589,
+  "lat": 48.7077
+ },
+ {
+  "key": "lomnica",
+  "city": "Lomnický štít · Tatranská Lomnica",
+  "lon": 20.2153,
+  "lat": 49.1953
+ },
+ {
+  "key": "bratislava",
+  "city": "Bratislava",
+  "lon": 17.07,
+  "lat": 48.152
+ },
+ {
+  "key": "prague",
+  "city": "Prague",
+  "lon": 14.47,
+  "lat": 50.1
+ },
+ {
+  "key": "graz",
+  "city": "Graz",
+  "lon": 15.45,
+  "lat": 47.06
+ },
+ {
+  "key": "neustrelitz",
+  "city": "Neustrelitz",
+  "lon": 13.07,
+  "lat": 53.36
+ },
+ {
+  "key": "wessling",
+  "city": "Oberpfaffenhofen",
+  "lon": 11.28,
+  "lat": 48.083
+ },
+ {
+  "key": "uccle",
+  "city": "Brussels (Uccle)",
+  "lon": 4.358,
+  "lat": 50.798
+ },
+ {
+  "key": "kiruna",
+  "city": "Kiruna",
+  "lon": 20.41,
+  "lat": 67.84
+ },
+ {
+  "key": "turin",
+  "city": "Turin",
+  "lon": 7.662,
+  "lat": 45.062
+ },
+ {
+  "key": "genoa",
+  "city": "Genoa",
+  "lon": 8.96,
+  "lat": 44.41
+ },
+ {
+  "key": "madrid",
+  "city": "Madrid",
+  "lon": -3.7,
+  "lat": 40.42
+ },
+ {
+  "key": "toulouse",
+  "city": "Toulouse",
+  "lon": 1.47,
+  "lat": 43.57
+ },
+ {
+  "key": "paris",
+  "city": "Paris",
+  "lon": 2.35,
+  "lat": 48.857
+ },
+ {
+  "key": "mssl",
+  "city": "Holmbury St Mary",
+  "lon": -0.418,
+  "lat": 51.193
+ },
+ {
+  "key": "yerevan",
+  "city": "Yerevan",
+  "lon": 44.51,
+  "lat": 40.18
+ }
+]
