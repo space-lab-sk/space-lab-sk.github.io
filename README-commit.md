@@ -1,60 +1,60 @@
-# Commit package — Lomnický štít research page
+# Commit notes — staff photos, Lomnický štít review, mobile layout
 
-Unzip over the repository root. Paths are already correct; every file below
-replaces or adds at the same location.
+All paths are relative to the repository root.
 
 ## New
 
-- `lomnicky-stit.html` — the Lomnický štít research page
-- `assets/img/lomnicky/` — 10 figures (9 supplied with the copy deck, plus
-  `ls-05-measurement-building-1981-2012.jpg`)
+- `assets/img/staff/strharsky.jpg`, `usatiuk.jpg`, `maddox.jpg` — 480 × 480 greyscale
+  portraits, cropped so that face width (0.32 of the frame) and eye-line position match
+  the median of the twelve existing portraits.
+- `.nojekyll` — empty file, so GitHub Pages serves every file as-is (README already
+  described it as included).
+
+## Deleted
+
+- `assets/img/staff-mackovjak.jpg` — the old portrait; no page referenced it after
+  Contact moved to `assets/img/staff/mackovjak.jpg`.
 
 ## Modified
 
-- `css/redesign.css` — five additions at the end of the file:
-  `main section[id]` / `.anchor` scroll offset, `.figpair`, `.prose--wide`,
-  `.chart`, and the `.timeline--v` vertical timeline variant.
-  The `a.feature` hover rules were added alongside `.feature__body`.
-- `research.html` — the three Lomnický štít cards now link into the new page's
-  sections; the observatory feature block is itself a link to it; the
-  facility-page link moved inline into the section standfirst.
-- `facility-lomnicky.html` — hero h1 reads "Lomnický štít — facility"; the
-  "The science at Lomnický štít" link now points at `lomnicky-stit.html`
-  instead of `research.html#missions`.
+- `about.html` — portraits for Igor Strhárský, Pavlo Usatiuk and Romain Maddox;
+  e-mails `maddox@saske.sk` and `randuska@saske.sk`; the intro no longer claims
+  "one of Europe's longest cosmic-ray records".
+- `contact.html` — portraits for the four cooperation contacts; the contact-information
+  split moved from an inline `grid-template-columns` to the class `split--contact`, so it
+  collapses to one column on mobile.
+- `lomnicky-stit.html` — revised after the review by J. Kubančák:
+  - H1 is the official name, Space Physics Laboratory at Lomnický štít; shorter hero text.
+  - "Why this mountain" rewritten as four considerations (historical, altitude,
+    magnetic, practical); the primary is "predominantly a proton, of galactic or solar
+    origin".
+  - History: emulsion exposures in winter 1950 (both *Nature* papers of 8 December 1951,
+    authors' affiliations as printed); new 1954–1955 entry; 1957–1962 construction;
+    first outdoor monitor dated 1970; 12 t is the lead of the producer; expanded entries
+    for 3 June 1982, 2012, 2014 (SEVAN), August 2020 (RT-56, GASTRON) and 2025.
+  - Instruments: detailed neutron-monitor text added under the general explanation;
+    SEVAN and the thunderstorm instruments rewritten; per-section reference lists with
+    DOIs; specification tables updated (standard SEVAN geometry, 50 × 50 × 25 cm central
+    stack and 5 cm lead; reflector 7.8 cm, KOPOS Kolín; "Energy response" row removed).
+- `research.html` — Lomnický štít section: new heading and lede (solar neutrons of
+  3 June 1982), feature text from the review, a fourth figure "1951 · First cosmic ray
+  results in Nature".
+- `facility-lomnicky.html` — history and dates aligned with `lomnicky-stit.html`
+  (1950 / 1957–1962 / January 1958 / December 1981); instruments named; 3.84 GV added;
+  unsourced superlatives removed; the internal "framework" note removed from the page.
+- `infrastructure.html` — "SEVAN particle detector".
+- `index.html` — "Cosmic ray measurements at Lomnický štít since the 1950s, with a
+  continuous neutron monitor record since December 1981."
+- `css/redesign.css` — appended rules: `.refs` and `.src` (references and source lines),
+  `.prose h4`; `.feature__img{height:auto}` so the image fills a taller card;
+  responsive fixes — `.split--contact`, wrapping eyebrows below 640 px, wrapping long
+  links, the Data Portal button in the mobile menu, and adjustments below 400 px
+  (display headline size, button text wrapping, stacked `.kv` lists).
+- `README.md` — page table, page count for `js/edit.js`, image total and the
+  "Before launch" list brought up to date.
 
-## Bug fixes and refactors in this pass
+## Checked
 
-1. `og:image` pointed at the Skywalk photo, not the page's own hero — corrected
-   to `ls-02`.
-2. Hash links arriving from another page (`lomnicky-stit.html#history`) landed
-   under the fixed 72px nav. The sub-nav's click handler only offsets in-page
-   clicks, so anchor clearance is now a CSS rule on `main section[id]` and
-   `.anchor` — this fixes the same latent problem on every sub-page.
-3. Two figures of equal weight were laid out with `.fig-split`, which reserves a
-   fixed 300px second column for a portrait. New `.figpair` grid instead.
-4. `.reading__col--wide` sets `max-width:none`, which an inline `max-width:860px`
-   then fought. Replaced by `.prose--wide`, which keeps prose at 68ch while
-   letting tables, charts and figures use the full column.
-5. The spec tables and both charts were being squeezed into a 68ch measure in
-   the Instruments and Science sections — same fix.
-6. SVG chart presentation moved out of inline `style` attributes into `.chart`.
-7. The bar chart's value labels overlapped their bars, and a duplicate column
-   header sat above the first row.
-8. The enquiry band sat inside the hosting section with an inline margin; it is
-   now its own `#enquire` section, matching `facility-cleanroom.html`.
-9. Every image carries its real intrinsic `width`/`height`, so nothing shifts
-   while the page loads.
-10. `ls-05` shipped as a 1.4 MB PNG; converted to a 295 kB JPEG.
-11. The footer photography credit did not name the one licensed third-party
-    image. It now reads "Bubamara / Wikimedia Commons (CC BY-SA 3.0)".
-
-## Still open
-
-- Four figures are low-resolution extracts from a print PDF and are marked in
-  their credit lines as to be redrawn: `ls-09` (1940/1962 composite),
-  `ls-10` (shower illustration), `ls-11` (SEVAN schematic). The Forbush plot
-  was replaced by an SVG chart labelled as schematic.
-- `ls-09`'s rights holder is still being confirmed — the credit line says so.
-- `ls-04`'s date and photographer are unconfirmed.
-- Both SVG charts are drawn in site style: the 12 September 2021 bar chart uses
-  the published values; the Forbush trace is schematic and labelled as such.
+All 16 pages at 320, 360, 390, 430, 768, 1024, 1280, 1440 and 1920 px: no horizontal
+page scroll and no text overflowing its box. HTML of every changed page parses with
+balanced tags.

@@ -23,6 +23,7 @@ deleting it takes the custom domain down.
 | `index.html` | Home — hero, pillars, partners, public teaser |
 | `about.html` | Mission, history, team, PhD students, cooperators |
 | `research.html` | Space science, missions, Lomnický štít, services |
+| `lomnicky-stit.html` | Lomnický štít — history, instruments, science, data, publications |
 | `results.html` | Publications, projects by funder, data, conferences |
 | `infrastructure.html` | Hub for the two partner-facing facilities |
 | `facility-cleanroom.html` | Space cleanroom — specifications, equipment, access |
@@ -40,7 +41,8 @@ in papers, ESA reports and emails keep resolving.
 
 ```
 css/site.css      original stylesheet — untouched, so the two files can be merged
-css/redesign.css  additions for the 2026 redesign, loaded second
+css/redesign.css  additions for the 2026 redesign, loaded second; the rules at the
+                  end cover references, source lines and mobile layout fixes
 js/site.js        nav, mobile menu, scroll-spy, filter chips, hero starfield
 js/edit.js        inline content editing for copy review
 assets/           logos, icons, photographs
@@ -65,7 +67,7 @@ Keys are derived from each element's position in the document, so no special mar
 needed. Because they are positional, restructuring a page's markup orphans the edits made
 on it — export before a layout change. Navigation labels are deliberately not editable.
 
-To remove the feature, delete `js/edit.js` and its `<script>` tag from the 15 pages.
+To remove the feature, delete `js/edit.js` and its `<script>` tag from the 16 pages.
 
 ## Before launch
 
@@ -75,5 +77,9 @@ To remove the feature, delete `js/edit.js` and its `<script>` tag from the 15 pa
 - The Košice cathedral photograph on Contact is credited to Košice Region Tourism and
   needs written permission.
 - Slovak translation is not done; the SK/EN switch in the header is decorative.
-- Photographs are 1800 px JPEGs, ~5 MB in total. Re-exporting as WebP with 800 px
+- The Lomnický štít facility page still lacks stated access terms and two photographs.
+- About has no portrait yet for Samuel Štefánik, Jana Štetiarová, Ján Villim, Lukáš Randuška
+  and Lukáš Kostár; their cards show initials.
+- Lukáš Kostár's e-mail on About is the placeholder `name@institution.org`.
+- Photographs are 1800 px JPEGs, ~7 MB in total. Re-exporting as WebP with 800 px
   variants and `srcset` is a worthwhile optimisation.
