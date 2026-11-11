@@ -81,8 +81,8 @@ section=f'''<section class="band" id="partners"><div class="wrap">
 <div class="sec-head">
   <hr class="rule">
   <span class="eyebrow">Our Partners</span>
-  <h2>Working with leading institutions across Europe and beyond</h2>
-  <p class="lede">The European Space Agency and {npart-1} research institutes, universities and companies in {ncountries} countries. Select a point on the map to see who we work with there and on what.</p>
+  <h2>Partners across Europe and beyond</h2>
+  <p class="lede">Select a point on the map to see the institutes, universities and companies we work with there.</p>
 </div>
 <div class="pmap">
   <figure class="pmap__fig">
@@ -90,7 +90,6 @@ section=f'''<section class="band" id="partners"><div class="wrap">
       {"".join(svg)}
       {"".join(pins)}
     </div>
-    <figcaption>Lines connect our department in Košice with its partners.</figcaption>
   </figure>
   <div class="pmap__panel" id="pmap-panel" aria-live="polite">{place_html('kosice')}</div>
 </div>

@@ -518,3 +518,10 @@ body.editing [contenteditable]:focus { outline: 2px solid var(--sky-blue); backg
 .pin--edge-top{transform:translate(-14px,0)}
 .pmap__cons{margin-top:44px}
 .pmap__sub{font-family:var(--font-mono);font-weight:400;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin:0 0 18px}
+
+/* Compact hub pages: less vertical space between the hero and the first content */
+.page-hero--compact{padding:calc(var(--nav-h) + 56px) 0 48px}
+section.sec--tight{padding-top:56px}
+.sec--tight .sec-head{margin-bottom:32px}
+/* first section under a page sub-navigation starts closer to it */
+.subnav + section{padding-top:56px}
